@@ -1,0 +1,2727 @@
+// Created by Microsoft (R) C/C++ Compiler Version 12.00.9782.0 (08138cbd).
+//
+// cdoex.tli
+//
+// Wrapper implementations for Win32 type library c:\Program Files\Exchange SDK\SDK\Support\CDO\cdoex.tlb
+// compiler-generated file created 09/26/08 at 16:56:19 - DO NOT EDIT!
+
+#pragma once
+
+//
+// interface IBodyParts wrapper method implementations
+//
+
+inline long IBodyParts::GetCount ( ) {
+    long _result;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline IBodyPartPtr IBodyParts::GetItem ( long Index ) {
+    struct IBodyPart * _result;
+    HRESULT _hr = get_Item(Index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IBodyPartPtr(_result, false);
+}
+
+inline IUnknownPtr IBodyParts::Get_NewEnum ( ) {
+    IUnknown * _result;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+inline HRESULT IBodyParts::Delete ( const _variant_t & varBP ) {
+    HRESULT _hr = raw_Delete(varBP);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IBodyParts::DeleteAll ( ) {
+    HRESULT _hr = raw_DeleteAll();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IBodyPartPtr IBodyParts::Add ( long Index ) {
+    struct IBodyPart * _result;
+    HRESULT _hr = raw_Add(Index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IBodyPartPtr(_result, false);
+}
+
+//
+// interface IBodyPart wrapper method implementations
+//
+
+inline IBodyPartsPtr IBodyPart::GetBodyParts ( ) {
+    struct IBodyParts * _result;
+    HRESULT _hr = get_BodyParts(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IBodyPartsPtr(_result, false);
+}
+
+inline _bstr_t IBodyPart::GetContentTransferEncoding ( ) {
+    BSTR _result;
+    HRESULT _hr = get_ContentTransferEncoding(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IBodyPart::PutContentTransferEncoding ( _bstr_t pContentTransferEncoding ) {
+    HRESULT _hr = put_ContentTransferEncoding(pContentTransferEncoding);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IBodyPart::GetContentMediaType ( ) {
+    BSTR _result;
+    HRESULT _hr = get_ContentMediaType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IBodyPart::PutContentMediaType ( _bstr_t pContentMediaType ) {
+    HRESULT _hr = put_ContentMediaType(pContentMediaType);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline FieldsPtr IBodyPart::GetFields ( ) {
+    struct Fields * _result;
+    HRESULT _hr = get_Fields(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return FieldsPtr(_result, false);
+}
+
+inline _bstr_t IBodyPart::GetCharset ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Charset(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IBodyPart::PutCharset ( _bstr_t pCharset ) {
+    HRESULT _hr = put_Charset(pCharset);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IBodyPart::GetFileName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_FileName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline IDataSourcePtr IBodyPart::GetDataSource ( ) {
+    struct IDataSource * _result;
+    HRESULT _hr = get_DataSource(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDataSourcePtr(_result, false);
+}
+
+inline _bstr_t IBodyPart::GetContentClass ( ) {
+    BSTR _result;
+    HRESULT _hr = get_ContentClass(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IBodyPart::PutContentClass ( _bstr_t pContentClass ) {
+    HRESULT _hr = put_ContentClass(pContentClass);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IBodyPart::GetContentClassName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_ContentClassName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IBodyPart::PutContentClassName ( _bstr_t pContentClassName ) {
+    HRESULT _hr = put_ContentClassName(pContentClassName);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline IBodyPartPtr IBodyPart::GetParent ( ) {
+    struct IBodyPart * _result;
+    HRESULT _hr = get_Parent(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IBodyPartPtr(_result, false);
+}
+
+inline IBodyPartPtr IBodyPart::AddBodyPart ( long Index ) {
+    struct IBodyPart * _result;
+    HRESULT _hr = raw_AddBodyPart(Index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IBodyPartPtr(_result, false);
+}
+
+inline HRESULT IBodyPart::SaveToFile ( _bstr_t FileName ) {
+    HRESULT _hr = raw_SaveToFile(FileName);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _StreamPtr IBodyPart::GetEncodedContentStream ( ) {
+    struct _Stream * _result;
+    HRESULT _hr = raw_GetEncodedContentStream(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _StreamPtr(_result, false);
+}
+
+inline _StreamPtr IBodyPart::GetDecodedContentStream ( ) {
+    struct _Stream * _result;
+    HRESULT _hr = raw_GetDecodedContentStream(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _StreamPtr(_result, false);
+}
+
+inline _StreamPtr IBodyPart::GetStream ( ) {
+    struct _Stream * _result;
+    HRESULT _hr = raw_GetStream(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _StreamPtr(_result, false);
+}
+
+inline _bstr_t IBodyPart::GetFieldParameter ( _bstr_t FieldName, _bstr_t Parameter ) {
+    BSTR _result;
+    HRESULT _hr = raw_GetFieldParameter(FieldName, Parameter, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline IDispatchPtr IBodyPart::GetInterface ( _bstr_t Interface ) {
+    IDispatch * _result;
+    HRESULT _hr = raw_GetInterface(Interface, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+//
+// interface IDataSource wrapper method implementations
+//
+
+inline _bstr_t IDataSource::GetSourceClass ( ) {
+    BSTR _result;
+    HRESULT _hr = get_SourceClass(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline IUnknownPtr IDataSource::GetSource ( ) {
+    IUnknown * _result;
+    HRESULT _hr = get_Source(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+inline VARIANT_BOOL IDataSource::GetIsDirty ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_IsDirty(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IDataSource::PutIsDirty ( VARIANT_BOOL pIsDirty ) {
+    HRESULT _hr = put_IsDirty(pIsDirty);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IDataSource::GetSourceURL ( ) {
+    BSTR _result;
+    HRESULT _hr = get_SourceURL(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _ConnectionPtr IDataSource::GetActiveConnection ( ) {
+    struct _Connection * _result;
+    HRESULT _hr = get_ActiveConnection(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _ConnectionPtr(_result, false);
+}
+
+inline HRESULT IDataSource::SaveToObject ( IUnknown * Source, _bstr_t InterfaceName ) {
+    HRESULT _hr = raw_SaveToObject(Source, InterfaceName);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IDataSource::OpenObject ( IUnknown * Source, _bstr_t InterfaceName ) {
+    HRESULT _hr = raw_OpenObject(Source, InterfaceName);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IDataSource::SaveTo ( _bstr_t SourceURL, IDispatch * ActiveConnection, enum ConnectModeEnum Mode, enum RecordCreateOptionsEnum CreateOptions, enum RecordOpenOptionsEnum Options, _bstr_t UserName, _bstr_t Password ) {
+    HRESULT _hr = raw_SaveTo(SourceURL, ActiveConnection, Mode, CreateOptions, Options, UserName, Password);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IDataSource::Open ( _bstr_t SourceURL, IDispatch * ActiveConnection, enum ConnectModeEnum Mode, enum RecordCreateOptionsEnum CreateOptions, enum RecordOpenOptionsEnum Options, _bstr_t UserName, _bstr_t Password ) {
+    HRESULT _hr = raw_Open(SourceURL, ActiveConnection, Mode, CreateOptions, Options, UserName, Password);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IDataSource::Save ( ) {
+    HRESULT _hr = raw_Save();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IDataSource::SaveToContainer ( _bstr_t ContainerURL, IDispatch * ActiveConnection, enum ConnectModeEnum Mode, enum RecordCreateOptionsEnum CreateOptions, enum RecordOpenOptionsEnum Options, _bstr_t UserName, _bstr_t Password ) {
+    HRESULT _hr = raw_SaveToContainer(ContainerURL, ActiveConnection, Mode, CreateOptions, Options, UserName, Password);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IMessages wrapper method implementations
+//
+
+inline IMessagePtr IMessages::GetItem ( long Index ) {
+    struct IMessage * _result;
+    HRESULT _hr = get_Item(Index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMessagePtr(_result, false);
+}
+
+inline long IMessages::GetCount ( ) {
+    long _result;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IMessages::Delete ( long Index ) {
+    HRESULT _hr = raw_Delete(Index);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IMessages::DeleteAll ( ) {
+    HRESULT _hr = raw_DeleteAll();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IUnknownPtr IMessages::Get_NewEnum ( ) {
+    IUnknown * _result;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+inline _bstr_t IMessages::GetFileName ( const _variant_t & var ) {
+    BSTR _result;
+    HRESULT _hr = get_FileName(var, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+//
+// interface IMessage wrapper method implementations
+//
+
+inline _bstr_t IMessage::GetBCC ( ) {
+    BSTR _result;
+    HRESULT _hr = get_BCC(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IMessage::PutBCC ( _bstr_t pBCC ) {
+    HRESULT _hr = put_BCC(pBCC);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IMessage::GetCC ( ) {
+    BSTR _result;
+    HRESULT _hr = get_CC(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IMessage::PutCC ( _bstr_t pCC ) {
+    HRESULT _hr = put_CC(pCC);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IMessage::GetFollowUpTo ( ) {
+    BSTR _result;
+    HRESULT _hr = get_FollowUpTo(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IMessage::PutFollowUpTo ( _bstr_t pFollowUpTo ) {
+    HRESULT _hr = put_FollowUpTo(pFollowUpTo);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IMessage::GetFrom ( ) {
+    BSTR _result;
+    HRESULT _hr = get_From(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IMessage::PutFrom ( _bstr_t pFrom ) {
+    HRESULT _hr = put_From(pFrom);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IMessage::GetKeywords ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Keywords(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IMessage::PutKeywords ( _bstr_t pKeywords ) {
+    HRESULT _hr = put_Keywords(pKeywords);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IMessage::GetMimeFormatted ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_MimeFormatted(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMessage::PutMimeFormatted ( VARIANT_BOOL pMimeFormatted ) {
+    HRESULT _hr = put_MimeFormatted(pMimeFormatted);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IMessage::GetNewsgroups ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Newsgroups(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IMessage::PutNewsgroups ( _bstr_t pNewsgroups ) {
+    HRESULT _hr = put_Newsgroups(pNewsgroups);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IMessage::GetOrganization ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Organization(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IMessage::PutOrganization ( _bstr_t pOrganization ) {
+    HRESULT _hr = put_Organization(pOrganization);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline DATE IMessage::GetReceivedTime ( ) {
+    DATE _result;
+    HRESULT _hr = get_ReceivedTime(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IMessage::GetReplyTo ( ) {
+    BSTR _result;
+    HRESULT _hr = get_ReplyTo(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IMessage::PutReplyTo ( _bstr_t pReplyTo ) {
+    HRESULT _hr = put_ReplyTo(pReplyTo);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline enum CdoDSNOptions IMessage::GetDSNOptions ( ) {
+    enum CdoDSNOptions _result;
+    HRESULT _hr = get_DSNOptions(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMessage::PutDSNOptions ( enum CdoDSNOptions pDSNOptions ) {
+    HRESULT _hr = put_DSNOptions(pDSNOptions);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline DATE IMessage::GetSentOn ( ) {
+    DATE _result;
+    HRESULT _hr = get_SentOn(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IMessage::GetSubject ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Subject(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IMessage::PutSubject ( _bstr_t pSubject ) {
+    HRESULT _hr = put_Subject(pSubject);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IMessage::GetTo ( ) {
+    BSTR _result;
+    HRESULT _hr = get_To(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IMessage::PutTo ( _bstr_t pTo ) {
+    HRESULT _hr = put_To(pTo);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IMessage::GetTextBody ( ) {
+    BSTR _result;
+    HRESULT _hr = get_TextBody(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IMessage::PutTextBody ( _bstr_t pTextBody ) {
+    HRESULT _hr = put_TextBody(pTextBody);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IMessage::GetHTMLBody ( ) {
+    BSTR _result;
+    HRESULT _hr = get_HTMLBody(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IMessage::PutHTMLBody ( _bstr_t pHTMLBody ) {
+    HRESULT _hr = put_HTMLBody(pHTMLBody);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline IBodyPartsPtr IMessage::GetAttachments ( ) {
+    struct IBodyParts * _result;
+    HRESULT _hr = get_Attachments(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IBodyPartsPtr(_result, false);
+}
+
+inline _bstr_t IMessage::GetSender ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Sender(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IMessage::PutSender ( _bstr_t pSender ) {
+    HRESULT _hr = put_Sender(pSender);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline IConfigurationPtr IMessage::GetConfiguration ( ) {
+    struct IConfiguration * _result;
+    HRESULT _hr = get_Configuration(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IConfigurationPtr(_result, false);
+}
+
+inline void IMessage::PutConfiguration ( struct IConfiguration * pConfiguration ) {
+    HRESULT _hr = put_Configuration(pConfiguration);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline void IMessage::PutRefConfiguration ( struct IConfiguration * pConfiguration ) {
+    HRESULT _hr = putref_Configuration(pConfiguration);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IMessage::GetAutoGenerateTextBody ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_AutoGenerateTextBody(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMessage::PutAutoGenerateTextBody ( VARIANT_BOOL pAutoGenerateTextBody ) {
+    HRESULT _hr = put_AutoGenerateTextBody(pAutoGenerateTextBody);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline FieldsPtr IMessage::GetEnvelopeFields ( ) {
+    struct Fields * _result;
+    HRESULT _hr = get_EnvelopeFields(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return FieldsPtr(_result, false);
+}
+
+inline IBodyPartPtr IMessage::GetTextBodyPart ( ) {
+    struct IBodyPart * _result;
+    HRESULT _hr = get_TextBodyPart(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IBodyPartPtr(_result, false);
+}
+
+inline IBodyPartPtr IMessage::GetHTMLBodyPart ( ) {
+    struct IBodyPart * _result;
+    HRESULT _hr = get_HTMLBodyPart(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IBodyPartPtr(_result, false);
+}
+
+inline IBodyPartPtr IMessage::GetBodyPart ( ) {
+    struct IBodyPart * _result;
+    HRESULT _hr = get_BodyPart(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IBodyPartPtr(_result, false);
+}
+
+inline IDataSourcePtr IMessage::GetDataSource ( ) {
+    struct IDataSource * _result;
+    HRESULT _hr = get_DataSource(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDataSourcePtr(_result, false);
+}
+
+inline FieldsPtr IMessage::GetFields ( ) {
+    struct Fields * _result;
+    HRESULT _hr = get_Fields(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return FieldsPtr(_result, false);
+}
+
+inline VARIANT_BOOL IMessage::GetMDNRequested ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_MDNRequested(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IMessage::PutMDNRequested ( VARIANT_BOOL pMDNRequested ) {
+    HRESULT _hr = put_MDNRequested(pMDNRequested);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline IBodyPartPtr IMessage::AddRelatedBodyPart ( _bstr_t URL, _bstr_t Reference, enum CdoReferenceType ReferenceType, _bstr_t UserName, _bstr_t Password ) {
+    struct IBodyPart * _result;
+    HRESULT _hr = raw_AddRelatedBodyPart(URL, Reference, ReferenceType, UserName, Password, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IBodyPartPtr(_result, false);
+}
+
+inline IBodyPartPtr IMessage::AddAttachment ( _bstr_t URL, _bstr_t UserName, _bstr_t Password ) {
+    struct IBodyPart * _result;
+    HRESULT _hr = raw_AddAttachment(URL, UserName, Password, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IBodyPartPtr(_result, false);
+}
+
+inline HRESULT IMessage::CreateMHTMLBody ( _bstr_t URL, enum CdoMHTMLFlags Flags, _bstr_t UserName, _bstr_t Password ) {
+    HRESULT _hr = raw_CreateMHTMLBody(URL, Flags, UserName, Password);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IMessagePtr IMessage::Forward ( ) {
+    struct IMessage * _result;
+    HRESULT _hr = raw_Forward(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMessagePtr(_result, false);
+}
+
+inline HRESULT IMessage::Post ( ) {
+    HRESULT _hr = raw_Post();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IMessagePtr IMessage::PostReply ( ) {
+    struct IMessage * _result;
+    HRESULT _hr = raw_PostReply(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMessagePtr(_result, false);
+}
+
+inline IMessagePtr IMessage::Reply ( ) {
+    struct IMessage * _result;
+    HRESULT _hr = raw_Reply(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMessagePtr(_result, false);
+}
+
+inline IMessagePtr IMessage::ReplyAll ( ) {
+    struct IMessage * _result;
+    HRESULT _hr = raw_ReplyAll(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMessagePtr(_result, false);
+}
+
+inline HRESULT IMessage::Send ( ) {
+    HRESULT _hr = raw_Send();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _StreamPtr IMessage::GetStream ( ) {
+    struct _Stream * _result;
+    HRESULT _hr = raw_GetStream(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _StreamPtr(_result, false);
+}
+
+inline IDispatchPtr IMessage::GetInterface ( _bstr_t Interface ) {
+    IDispatch * _result;
+    HRESULT _hr = raw_GetInterface(Interface, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+//
+// interface IConfiguration wrapper method implementations
+//
+
+inline FieldsPtr IConfiguration::GetFields ( ) {
+    struct Fields * _result;
+    HRESULT _hr = get_Fields(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return FieldsPtr(_result, false);
+}
+
+inline HRESULT IConfiguration::Load ( enum CdoConfigSource LoadFrom, _bstr_t URL ) {
+    HRESULT _hr = raw_Load(LoadFrom, URL);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IDispatchPtr IConfiguration::GetInterface ( _bstr_t Interface ) {
+    IDispatch * _result;
+    HRESULT _hr = raw_GetInterface(Interface, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+//
+// interface IDropDirectory wrapper method implementations
+//
+
+inline IMessagesPtr IDropDirectory::GetMessages ( _bstr_t DirName ) {
+    struct IMessages * _result;
+    HRESULT _hr = raw_GetMessages(DirName, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMessagesPtr(_result, false);
+}
+
+//
+// interface ISMTPOnArrival wrapper method implementations
+//
+
+inline HRESULT ISMTPOnArrival::OnArrival ( struct IMessage * Msg, enum CdoEventStatus * EventStatus ) {
+    HRESULT _hr = raw_OnArrival(Msg, EventStatus);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface INNTPOnPostEarly wrapper method implementations
+//
+
+inline HRESULT INNTPOnPostEarly::OnPostEarly ( struct IMessage * Msg, enum CdoEventStatus * EventStatus ) {
+    HRESULT _hr = raw_OnPostEarly(Msg, EventStatus);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface INNTPOnPost wrapper method implementations
+//
+
+inline HRESULT INNTPOnPost::OnPost ( struct IMessage * Msg, enum CdoEventStatus * EventStatus ) {
+    HRESULT _hr = raw_OnPost(Msg, EventStatus);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface INNTPOnPostFinal wrapper method implementations
+//
+
+inline HRESULT INNTPOnPostFinal::OnPostFinal ( struct IMessage * Msg, enum CdoEventStatus * EventStatus ) {
+    HRESULT _hr = raw_OnPostFinal(Msg, EventStatus);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IItem wrapper method implementations
+//
+
+inline IDispatchPtr IItem::GetInterface ( _bstr_t Interface ) {
+    IDispatch * _result;
+    HRESULT _hr = raw_GetInterface(Interface, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+inline _StreamPtr IItem::GetStream ( ) {
+    struct _Stream * _result;
+    HRESULT _hr = raw_GetStream(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _StreamPtr(_result, false);
+}
+
+inline long IItem::GetChildCount ( ) {
+    long _result;
+    HRESULT _hr = get_ChildCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline IConfigurationPtr IItem::GetConfiguration ( ) {
+    struct IConfiguration * _result;
+    HRESULT _hr = get_Configuration(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IConfigurationPtr(_result, false);
+}
+
+inline void IItem::PutConfiguration ( struct IConfiguration * pConfiguration ) {
+    HRESULT _hr = put_Configuration(pConfiguration);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline void IItem::PutRefConfiguration ( struct IConfiguration * pConfiguration ) {
+    HRESULT _hr = putref_Configuration(pConfiguration);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IItem::GetContentClass ( ) {
+    BSTR _result;
+    HRESULT _hr = get_ContentClass(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IItem::PutContentClass ( _bstr_t pContentClass ) {
+    HRESULT _hr = put_ContentClass(pContentClass);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline DATE IItem::GetCreationDate ( ) {
+    DATE _result;
+    HRESULT _hr = get_CreationDate(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline IDataSourcePtr IItem::GetDataSource ( ) {
+    struct IDataSource * _result;
+    HRESULT _hr = get_DataSource(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDataSourcePtr(_result, false);
+}
+
+inline _bstr_t IItem::GetDisplayName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_DisplayName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline FieldsPtr IItem::GetFields ( ) {
+    struct Fields * _result;
+    HRESULT _hr = get_Fields(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return FieldsPtr(_result, false);
+}
+
+inline VARIANT_BOOL IItem::GetIsCollection ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_IsCollection(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IItem::GetIsHidden ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_IsHidden(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IItem::PutIsHidden ( VARIANT_BOOL pIsHidden ) {
+    HRESULT _hr = put_IsHidden(pIsHidden);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IItem::GetIsStructuredDocument ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_IsStructuredDocument(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline DATE IItem::GetLastModified ( ) {
+    DATE _result;
+    HRESULT _hr = get_LastModified(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IItem::GetObjectCount ( ) {
+    long _result;
+    HRESULT _hr = get_ObjectCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IItem::GetParentURL ( ) {
+    BSTR _result;
+    HRESULT _hr = get_ParentURL(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline long IItem::GetVisibleCount ( ) {
+    long _result;
+    HRESULT _hr = get_VisibleCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IAppointment wrapper method implementations
+//
+
+inline IBodyPartsPtr IAppointment::GetAttachments ( ) {
+    struct IBodyParts * _result;
+    HRESULT _hr = get_Attachments(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IBodyPartsPtr(_result, false);
+}
+
+inline IAttendeesPtr IAppointment::GetAttendees ( ) {
+    struct IAttendees * _result;
+    HRESULT _hr = get_Attendees(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IAttendeesPtr(_result, false);
+}
+
+inline _bstr_t IAppointment::GetBusyStatus ( ) {
+    BSTR _result;
+    HRESULT _hr = get_BusyStatus(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IAppointment::PutBusyStatus ( _bstr_t pBusyStatus ) {
+    HRESULT _hr = put_BusyStatus(pBusyStatus);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _variant_t IAppointment::GetKeywords ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Keywords(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline void IAppointment::PutKeywords ( const _variant_t & pKeywords ) {
+    HRESULT _hr = put_Keywords(pKeywords);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline IConfigurationPtr IAppointment::GetConfiguration ( ) {
+    struct IConfiguration * _result;
+    HRESULT _hr = get_Configuration(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IConfigurationPtr(_result, false);
+}
+
+inline void IAppointment::PutConfiguration ( struct IConfiguration * pConfiguration ) {
+    HRESULT _hr = put_Configuration(pConfiguration);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline void IAppointment::PutRefConfiguration ( struct IConfiguration * pConfiguration ) {
+    HRESULT _hr = putref_Configuration(pConfiguration);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IAppointment::GetContact ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Contact(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IAppointment::PutContact ( _bstr_t pContact ) {
+    HRESULT _hr = put_Contact(pContact);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IAppointment::GetContactURL ( ) {
+    BSTR _result;
+    HRESULT _hr = get_ContactURL(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IAppointment::PutContactURL ( _bstr_t pContactURL ) {
+    HRESULT _hr = put_ContactURL(pContactURL);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline IDataSourcePtr IAppointment::GetDataSource ( ) {
+    struct IDataSource * _result;
+    HRESULT _hr = get_DataSource(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDataSourcePtr(_result, false);
+}
+
+inline DATE IAppointment::GetEndTime ( ) {
+    DATE _result;
+    HRESULT _hr = get_EndTime(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IAppointment::PutEndTime ( DATE pEndTime ) {
+    HRESULT _hr = put_EndTime(pEndTime);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline IExceptionsPtr IAppointment::GetExceptions ( ) {
+    struct IExceptions * _result;
+    HRESULT _hr = get_Exceptions(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IExceptionsPtr(_result, false);
+}
+
+inline long IAppointment::GetDuration ( ) {
+    long _result;
+    HRESULT _hr = get_Duration(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IAppointment::PutDuration ( long pDuration ) {
+    HRESULT _hr = put_Duration(pDuration);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline FieldsPtr IAppointment::GetFields ( ) {
+    struct Fields * _result;
+    HRESULT _hr = get_Fields(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return FieldsPtr(_result, false);
+}
+
+inline _bstr_t IAppointment::GetLocation ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Location(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IAppointment::PutLocation ( _bstr_t pLocation ) {
+    HRESULT _hr = put_Location(pLocation);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IAppointment::GetLocationURL ( ) {
+    BSTR _result;
+    HRESULT _hr = get_LocationURL(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IAppointment::PutLocationURL ( _bstr_t pLocationURL ) {
+    HRESULT _hr = put_LocationURL(pLocationURL);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IAppointment::GetPriority ( ) {
+    long _result;
+    HRESULT _hr = get_Priority(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IAppointment::PutPriority ( long pPriority ) {
+    HRESULT _hr = put_Priority(pPriority);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline DATE IAppointment::GetReplyTime ( ) {
+    DATE _result;
+    HRESULT _hr = get_ReplyTime(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IAppointment::GetResources ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Resources(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IAppointment::PutResources ( _bstr_t pResources ) {
+    HRESULT _hr = put_Resources(pResources);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IAppointment::GetResponseRequested ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_ResponseRequested(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IAppointment::PutResponseRequested ( VARIANT_BOOL pResponseRequested ) {
+    HRESULT _hr = put_ResponseRequested(pResponseRequested);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline IRecurrencePatternsPtr IAppointment::GetRecurrencePatterns ( ) {
+    struct IRecurrencePatterns * _result;
+    HRESULT _hr = get_RecurrencePatterns(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRecurrencePatternsPtr(_result, false);
+}
+
+inline long IAppointment::GetSensitivity ( ) {
+    long _result;
+    HRESULT _hr = get_Sensitivity(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IAppointment::PutSensitivity ( long pSensitivity ) {
+    HRESULT _hr = put_Sensitivity(pSensitivity);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline DATE IAppointment::GetStartTime ( ) {
+    DATE _result;
+    HRESULT _hr = get_StartTime(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IAppointment::PutStartTime ( DATE pStartTime ) {
+    HRESULT _hr = put_StartTime(pStartTime);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IAppointment::GetMeetingStatus ( ) {
+    BSTR _result;
+    HRESULT _hr = get_MeetingStatus(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IAppointment::PutMeetingStatus ( _bstr_t pMeetingStatus ) {
+    HRESULT _hr = put_MeetingStatus(pMeetingStatus);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IAppointment::GetSubject ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Subject(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IAppointment::PutSubject ( _bstr_t pSubject ) {
+    HRESULT _hr = put_Subject(pSubject);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IAppointment::GetTransparent ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Transparent(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IAppointment::PutTransparent ( _bstr_t pTransparent ) {
+    HRESULT _hr = put_Transparent(pTransparent);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline IBodyPartPtr IAppointment::GetBodyPart ( ) {
+    struct IBodyPart * _result;
+    HRESULT _hr = get_BodyPart(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IBodyPartPtr(_result, false);
+}
+
+inline double IAppointment::GetGEOLatitude ( ) {
+    double _result;
+    HRESULT _hr = get_GEOLatitude(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IAppointment::PutGEOLatitude ( double pGEOLatitude ) {
+    HRESULT _hr = put_GEOLatitude(pGEOLatitude);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline double IAppointment::GetGEOLongitude ( ) {
+    double _result;
+    HRESULT _hr = get_GEOLongitude(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IAppointment::PutGEOLongitude ( double pGEOLongitude ) {
+    HRESULT _hr = put_GEOLongitude(pGEOLongitude);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IAppointment::GetAllDayEvent ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_AllDayEvent(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IAppointment::PutAllDayEvent ( VARIANT_BOOL pAllDayEvent ) {
+    HRESULT _hr = put_AllDayEvent(pAllDayEvent);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IAppointment::GetTextBody ( ) {
+    BSTR _result;
+    HRESULT _hr = get_TextBody(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IAppointment::PutTextBody ( _bstr_t pTextBody ) {
+    HRESULT _hr = put_TextBody(pTextBody);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IAppointment::GetResponseText ( ) {
+    BSTR _result;
+    HRESULT _hr = get_ResponseText(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IAppointment::PutResponseText ( _bstr_t pResponseText ) {
+    HRESULT _hr = put_ResponseText(pResponseText);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline ICalendarMessagePtr IAppointment::Accept ( ) {
+    struct ICalendarMessage * _result;
+    HRESULT _hr = raw_Accept(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICalendarMessagePtr(_result, false);
+}
+
+inline ICalendarMessagePtr IAppointment::AcceptTentative ( ) {
+    struct ICalendarMessage * _result;
+    HRESULT _hr = raw_AcceptTentative(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICalendarMessagePtr(_result, false);
+}
+
+inline ICalendarMessagePtr IAppointment::Cancel ( _bstr_t EmailList, VARIANT_BOOL CleanupCalendar, _bstr_t UserName, _bstr_t Password ) {
+    struct ICalendarMessage * _result;
+    HRESULT _hr = raw_Cancel(EmailList, CleanupCalendar, UserName, Password, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICalendarMessagePtr(_result, false);
+}
+
+inline ICalendarMessagePtr IAppointment::CreateRequest ( ) {
+    struct ICalendarMessage * _result;
+    HRESULT _hr = raw_CreateRequest(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICalendarMessagePtr(_result, false);
+}
+
+inline ICalendarMessagePtr IAppointment::Decline ( VARIANT_BOOL CleanupCalendar, _bstr_t UserName, _bstr_t Password ) {
+    struct ICalendarMessage * _result;
+    HRESULT _hr = raw_Decline(CleanupCalendar, UserName, Password, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICalendarMessagePtr(_result, false);
+}
+
+inline ICalendarMessagePtr IAppointment::Invite ( _bstr_t EmailList ) {
+    struct ICalendarMessage * _result;
+    HRESULT _hr = raw_Invite(EmailList, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICalendarMessagePtr(_result, false);
+}
+
+inline ICalendarMessagePtr IAppointment::Publish ( ) {
+    struct ICalendarMessage * _result;
+    HRESULT _hr = raw_Publish(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICalendarMessagePtr(_result, false);
+}
+
+inline IAppointmentPtr IAppointment::GetFirstInstance ( DATE MinDate, DATE MaxDate ) {
+    struct IAppointment * _result;
+    HRESULT _hr = raw_GetFirstInstance(MinDate, MaxDate, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IAppointmentPtr(_result, false);
+}
+
+inline IAppointmentPtr IAppointment::GetNextInstance ( ) {
+    struct IAppointment * _result;
+    HRESULT _hr = raw_GetNextInstance(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IAppointmentPtr(_result, false);
+}
+
+inline IDispatchPtr IAppointment::GetInterface ( _bstr_t Interface ) {
+    IDispatch * _result;
+    HRESULT _hr = raw_GetInterface(Interface, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+inline IAppointmentPtr IAppointment::GetRecurringMaster ( _bstr_t CalendarLocation, _bstr_t UserName, _bstr_t Password ) {
+    struct IAppointment * _result;
+    HRESULT _hr = raw_GetRecurringMaster(CalendarLocation, UserName, Password, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IAppointmentPtr(_result, false);
+}
+
+//
+// interface IAttendees wrapper method implementations
+//
+
+inline IAttendeePtr IAttendees::GetItem ( long Index ) {
+    struct IAttendee * _result;
+    HRESULT _hr = get_Item(Index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IAttendeePtr(_result, false);
+}
+
+inline long IAttendees::GetCount ( ) {
+    long _result;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IAttendees::Delete ( long Index ) {
+    HRESULT _hr = raw_Delete(Index);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IAttendeePtr IAttendees::Add ( _bstr_t Address ) {
+    struct IAttendee * _result;
+    HRESULT _hr = raw_Add(Address, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IAttendeePtr(_result, false);
+}
+
+inline IUnknownPtr IAttendees::Get_NewEnum ( ) {
+    IUnknown * _result;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+//
+// interface IAttendee wrapper method implementations
+//
+
+inline _bstr_t IAttendee::GetDisplayName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_DisplayName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IAttendee::PutDisplayName ( _bstr_t pDisplayName ) {
+    HRESULT _hr = put_DisplayName(pDisplayName);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IAttendee::GetType ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Type(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IAttendee::PutType ( _bstr_t pType ) {
+    HRESULT _hr = put_Type(pType);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IAttendee::GetAddress ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Address(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IAttendee::PutAddress ( _bstr_t pAddress ) {
+    HRESULT _hr = put_Address(pAddress);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IAttendee::GetIsOrganizer ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_IsOrganizer(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IAttendee::PutIsOrganizer ( VARIANT_BOOL pIsOrganizer ) {
+    HRESULT _hr = put_IsOrganizer(pIsOrganizer);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline enum CdoAttendeeRoleValues IAttendee::GetRole ( ) {
+    enum CdoAttendeeRoleValues _result;
+    HRESULT _hr = get_Role(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IAttendee::PutRole ( enum CdoAttendeeRoleValues pRole ) {
+    HRESULT _hr = put_Role(pRole);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline enum CdoAttendeeStatusValues IAttendee::GetStatus ( ) {
+    enum CdoAttendeeStatusValues _result;
+    HRESULT _hr = get_Status(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IAttendee::PutStatus ( enum CdoAttendeeStatusValues pStatus ) {
+    HRESULT _hr = put_Status(pStatus);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IExceptions wrapper method implementations
+//
+
+inline IExceptionPtr IExceptions::GetItem ( long Index ) {
+    struct IException * _result;
+    HRESULT _hr = get_Item(Index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IExceptionPtr(_result, false);
+}
+
+inline long IExceptions::GetCount ( ) {
+    long _result;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IExceptions::Delete ( long Index ) {
+    HRESULT _hr = raw_Delete(Index);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IExceptionPtr IExceptions::Add ( _bstr_t Type ) {
+    struct IException * _result;
+    HRESULT _hr = raw_Add(Type, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IExceptionPtr(_result, false);
+}
+
+inline IUnknownPtr IExceptions::Get_NewEnum ( ) {
+    IUnknown * _result;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+//
+// interface IException wrapper method implementations
+//
+
+inline _bstr_t IException::GetType ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Type(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IException::GetRecurrenceIDRange ( ) {
+    BSTR _result;
+    HRESULT _hr = get_RecurrenceIDRange(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IException::PutRecurrenceIDRange ( _bstr_t pRecurrenceIDRange ) {
+    HRESULT _hr = put_RecurrenceIDRange(pRecurrenceIDRange);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline DATE IException::GetRecurrenceID ( ) {
+    DATE _result;
+    HRESULT _hr = get_RecurrenceID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IException::PutRecurrenceID ( DATE pRecurrenceID ) {
+    HRESULT _hr = put_RecurrenceID(pRecurrenceID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline DATE IException::GetStartTime ( ) {
+    DATE _result;
+    HRESULT _hr = get_StartTime(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IException::PutStartTime ( DATE pStartTime ) {
+    HRESULT _hr = put_StartTime(pStartTime);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline DATE IException::GetEndTime ( ) {
+    DATE _result;
+    HRESULT _hr = get_EndTime(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IException::PutEndTime ( DATE pEndTime ) {
+    HRESULT _hr = put_EndTime(pEndTime);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline FieldsPtr IException::GetFields ( ) {
+    struct Fields * _result;
+    HRESULT _hr = get_Fields(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return FieldsPtr(_result, false);
+}
+
+//
+// interface IRecurrencePatterns wrapper method implementations
+//
+
+inline IRecurrencePatternPtr IRecurrencePatterns::GetItem ( long Index ) {
+    struct IRecurrencePattern * _result;
+    HRESULT _hr = get_Item(Index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRecurrencePatternPtr(_result, false);
+}
+
+inline long IRecurrencePatterns::GetCount ( ) {
+    long _result;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IRecurrencePatterns::Delete ( long Index ) {
+    HRESULT _hr = raw_Delete(Index);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IRecurrencePatternPtr IRecurrencePatterns::Add ( _bstr_t Type ) {
+    struct IRecurrencePattern * _result;
+    HRESULT _hr = raw_Add(Type, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRecurrencePatternPtr(_result, false);
+}
+
+inline IUnknownPtr IRecurrencePatterns::Get_NewEnum ( ) {
+    IUnknown * _result;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+//
+// interface IRecurrencePattern wrapper method implementations
+//
+
+inline long IRecurrencePattern::GetInterval ( ) {
+    long _result;
+    HRESULT _hr = get_Interval(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IRecurrencePattern::PutInterval ( long pInterval ) {
+    HRESULT _hr = put_Interval(pInterval);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IRecurrencePattern::GetInstances ( ) {
+    long _result;
+    HRESULT _hr = get_Instances(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IRecurrencePattern::PutInstances ( long pInstances ) {
+    HRESULT _hr = put_Instances(pInstances);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline enum CdoFrequency IRecurrencePattern::GetFrequency ( ) {
+    enum CdoFrequency _result;
+    HRESULT _hr = get_Frequency(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IRecurrencePattern::PutFrequency ( enum CdoFrequency pFrequency ) {
+    HRESULT _hr = put_Frequency(pFrequency);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline DATE IRecurrencePattern::GetPatternEndDate ( ) {
+    DATE _result;
+    HRESULT _hr = get_PatternEndDate(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IRecurrencePattern::PutPatternEndDate ( DATE pPatternEndDate ) {
+    HRESULT _hr = put_PatternEndDate(pPatternEndDate);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IRecurrencePattern::GetType ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Type(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline enum CdoPatternEndType IRecurrencePattern::GetEndType ( ) {
+    enum CdoPatternEndType _result;
+    HRESULT _hr = get_EndType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IRecurrencePattern::PutEndType ( enum CdoPatternEndType pEndType ) {
+    HRESULT _hr = put_EndType(pEndType);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline enum CdoDayOfWeek IRecurrencePattern::GetFirstDayOfWeek ( ) {
+    enum CdoDayOfWeek _result;
+    HRESULT _hr = get_FirstDayOfWeek(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IRecurrencePattern::PutFirstDayOfWeek ( enum CdoDayOfWeek pFirstDayOfWeek ) {
+    HRESULT _hr = put_FirstDayOfWeek(pFirstDayOfWeek);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline IIntegersPtr IRecurrencePattern::GetDaysOfMonth ( ) {
+    struct IIntegers * _result;
+    HRESULT _hr = get_DaysOfMonth(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IIntegersPtr(_result, false);
+}
+
+inline IIntegersPtr IRecurrencePattern::GetDaysOfWeek ( ) {
+    struct IIntegers * _result;
+    HRESULT _hr = get_DaysOfWeek(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IIntegersPtr(_result, false);
+}
+
+inline IIntegersPtr IRecurrencePattern::GetDaysOfYear ( ) {
+    struct IIntegers * _result;
+    HRESULT _hr = get_DaysOfYear(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IIntegersPtr(_result, false);
+}
+
+inline IIntegersPtr IRecurrencePattern::GetSecondsOfMinute ( ) {
+    struct IIntegers * _result;
+    HRESULT _hr = get_SecondsOfMinute(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IIntegersPtr(_result, false);
+}
+
+inline IIntegersPtr IRecurrencePattern::GetMinutesOfHour ( ) {
+    struct IIntegers * _result;
+    HRESULT _hr = get_MinutesOfHour(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IIntegersPtr(_result, false);
+}
+
+inline IIntegersPtr IRecurrencePattern::GetHoursOfDay ( ) {
+    struct IIntegers * _result;
+    HRESULT _hr = get_HoursOfDay(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IIntegersPtr(_result, false);
+}
+
+inline IVariantsPtr IRecurrencePattern::GetWeekDays ( ) {
+    struct IVariants * _result;
+    HRESULT _hr = get_WeekDays(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IVariantsPtr(_result, false);
+}
+
+inline IIntegersPtr IRecurrencePattern::GetWeeksOfYear ( ) {
+    struct IIntegers * _result;
+    HRESULT _hr = get_WeeksOfYear(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IIntegersPtr(_result, false);
+}
+
+inline IIntegersPtr IRecurrencePattern::GetMonthsOfYear ( ) {
+    struct IIntegers * _result;
+    HRESULT _hr = get_MonthsOfYear(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IIntegersPtr(_result, false);
+}
+
+inline IIntegersPtr IRecurrencePattern::GetByPosition ( ) {
+    struct IIntegers * _result;
+    HRESULT _hr = get_ByPosition(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IIntegersPtr(_result, false);
+}
+
+//
+// interface IIntegers wrapper method implementations
+//
+
+inline long IIntegers::GetItem ( long Index ) {
+    long _result;
+    HRESULT _hr = get_Item(Index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IIntegers::GetCount ( ) {
+    long _result;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IIntegers::Delete ( long * Value ) {
+    HRESULT _hr = raw_Delete(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IIntegers::Add ( long NewValue ) {
+    HRESULT _hr = raw_Add(NewValue);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IUnknownPtr IIntegers::Get_NewEnum ( ) {
+    IUnknown * _result;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+//
+// interface IVariants wrapper method implementations
+//
+
+inline _variant_t IVariants::GetItem ( long Index ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Item(Index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline long IVariants::GetCount ( ) {
+    long _result;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IVariants::Delete ( VARIANT * Value ) {
+    HRESULT _hr = raw_Delete(Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IVariants::Add ( const _variant_t & NewValue ) {
+    HRESULT _hr = raw_Add(NewValue);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IUnknownPtr IVariants::Get_NewEnum ( ) {
+    IUnknown * _result;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+//
+// interface ICalendarMessage wrapper method implementations
+//
+
+inline IDispatchPtr ICalendarMessage::GetInterface ( _bstr_t Interface ) {
+    IDispatch * _result;
+    HRESULT _hr = raw_GetInterface(Interface, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+inline ICalendarPartsPtr ICalendarMessage::GetCalendarParts ( ) {
+    struct ICalendarParts * _result;
+    HRESULT _hr = get_CalendarParts(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICalendarPartsPtr(_result, false);
+}
+
+inline IMessagePtr ICalendarMessage::GetMessage ( ) {
+    struct IMessage * _result;
+    HRESULT _hr = get_Message(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IMessagePtr(_result, false);
+}
+
+inline IDataSourcePtr ICalendarMessage::GetDataSource ( ) {
+    struct IDataSource * _result;
+    HRESULT _hr = get_DataSource(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDataSourcePtr(_result, false);
+}
+
+inline IConfigurationPtr ICalendarMessage::GetConfiguration ( ) {
+    struct IConfiguration * _result;
+    HRESULT _hr = get_Configuration(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IConfigurationPtr(_result, false);
+}
+
+inline void ICalendarMessage::PutConfiguration ( struct IConfiguration * pConfiguration ) {
+    HRESULT _hr = put_Configuration(pConfiguration);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline void ICalendarMessage::PutRefConfiguration ( struct IConfiguration * pConfiguration ) {
+    HRESULT _hr = putref_Configuration(pConfiguration);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface ICalendarParts wrapper method implementations
+//
+
+inline ICalendarPartPtr ICalendarParts::GetItem ( long Index ) {
+    struct ICalendarPart * _result;
+    HRESULT _hr = get_Item(Index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICalendarPartPtr(_result, false);
+}
+
+inline long ICalendarParts::GetCount ( ) {
+    long _result;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT ICalendarParts::Delete ( long Index ) {
+    HRESULT _hr = raw_Delete(Index);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICalendarParts::Add ( IUnknown * CalendarPart, enum CdoComponentType ComponentType ) {
+    HRESULT _hr = raw_Add(CalendarPart, ComponentType);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IUnknownPtr ICalendarParts::Get_NewEnum ( ) {
+    IUnknown * _result;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+//
+// interface ICalendarPart wrapper method implementations
+//
+
+inline IDispatchPtr ICalendarPart::GetAssociatedItem ( _bstr_t CalendarLocation, _bstr_t UserName, _bstr_t Password ) {
+    IDispatch * _result;
+    HRESULT _hr = raw_GetAssociatedItem(CalendarLocation, UserName, Password, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+inline IDispatchPtr ICalendarPart::GetInterface ( _bstr_t Interface ) {
+    IDispatch * _result;
+    HRESULT _hr = raw_GetInterface(Interface, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+inline enum CdoComponentType ICalendarPart::GetComponentType ( ) {
+    enum CdoComponentType _result;
+    HRESULT _hr = get_ComponentType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t ICalendarPart::GetProdID ( ) {
+    BSTR _result;
+    HRESULT _hr = get_ProdID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t ICalendarPart::GetCalendarVersion ( ) {
+    BSTR _result;
+    HRESULT _hr = get_CalendarVersion(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t ICalendarPart::GetCalendarMethod ( ) {
+    BSTR _result;
+    HRESULT _hr = get_CalendarMethod(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline IDispatchPtr ICalendarPart::GetUpdatedItem ( _bstr_t CalendarLocation, _bstr_t UserName, _bstr_t Password ) {
+    IDispatch * _result;
+    HRESULT _hr = raw_GetUpdatedItem(CalendarLocation, UserName, Password, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+//
+// interface IFolder wrapper method implementations
+//
+
+inline _bstr_t IFolder::GetDisplayName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_DisplayName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline IConfigurationPtr IFolder::GetConfiguration ( ) {
+    struct IConfiguration * _result;
+    HRESULT _hr = get_Configuration(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IConfigurationPtr(_result, false);
+}
+
+inline void IFolder::PutConfiguration ( struct IConfiguration * pConfiguration ) {
+    HRESULT _hr = put_Configuration(pConfiguration);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline void IFolder::PutRefConfiguration ( struct IConfiguration * pConfiguration ) {
+    HRESULT _hr = putref_Configuration(pConfiguration);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline IDataSourcePtr IFolder::GetDataSource ( ) {
+    struct IDataSource * _result;
+    HRESULT _hr = get_DataSource(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDataSourcePtr(_result, false);
+}
+
+inline _bstr_t IFolder::GetEmailAddress ( ) {
+    BSTR _result;
+    HRESULT _hr = get_EmailAddress(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline long IFolder::GetUnreadItemCount ( ) {
+    long _result;
+    HRESULT _hr = get_UnreadItemCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IFolder::GetVisibleCount ( ) {
+    long _result;
+    HRESULT _hr = get_VisibleCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IFolder::GetItemCount ( ) {
+    long _result;
+    HRESULT _hr = get_ItemCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IFolder::GetHasSubFolders ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_HasSubFolders(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IFolder::GetDescription ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Description(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IFolder::PutDescription ( _bstr_t pDescription ) {
+    HRESULT _hr = put_Description(pDescription);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline FieldsPtr IFolder::GetFields ( ) {
+    struct Fields * _result;
+    HRESULT _hr = get_Fields(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return FieldsPtr(_result, false);
+}
+
+inline _bstr_t IFolder::GetContentClass ( ) {
+    BSTR _result;
+    HRESULT _hr = get_ContentClass(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IFolder::PutContentClass ( _bstr_t pContentClass ) {
+    HRESULT _hr = put_ContentClass(pContentClass);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline IDispatchPtr IFolder::GetInterface ( _bstr_t Interface ) {
+    IDispatch * _result;
+    HRESULT _hr = raw_GetInterface(Interface, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+//
+// interface IPerson wrapper method implementations
+//
+
+inline IDataSourcePtr IPerson::GetDataSource ( ) {
+    struct IDataSource * _result;
+    HRESULT _hr = get_DataSource(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDataSourcePtr(_result, false);
+}
+
+inline IConfigurationPtr IPerson::GetConfiguration ( ) {
+    struct IConfiguration * _result;
+    HRESULT _hr = get_Configuration(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IConfigurationPtr(_result, false);
+}
+
+inline void IPerson::PutConfiguration ( struct IConfiguration * pConfiguration ) {
+    HRESULT _hr = put_Configuration(pConfiguration);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline void IPerson::PutRefConfiguration ( struct IConfiguration * pConfiguration ) {
+    HRESULT _hr = putref_Configuration(pConfiguration);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline FieldsPtr IPerson::GetFields ( ) {
+    struct Fields * _result;
+    HRESULT _hr = get_Fields(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return FieldsPtr(_result, false);
+}
+
+inline enum CdoMailingAddressIdValues IPerson::GetMailingAddressID ( ) {
+    enum CdoMailingAddressIdValues _result;
+    HRESULT _hr = get_MailingAddressID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IPerson::PutMailingAddressID ( enum CdoMailingAddressIdValues pMailingAddressID ) {
+    HRESULT _hr = put_MailingAddressID(pMailingAddressID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IPerson::GetMailingAddress ( ) {
+    BSTR _result;
+    HRESULT _hr = get_MailingAddress(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline enum CdoFileAsMappingId IPerson::GetFileAsMapping ( ) {
+    enum CdoFileAsMappingId _result;
+    HRESULT _hr = get_FileAsMapping(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IPerson::PutFileAsMapping ( enum CdoFileAsMappingId pFileAsMapping ) {
+    HRESULT _hr = put_FileAsMapping(pFileAsMapping);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IPerson::GetFileAs ( ) {
+    BSTR _result;
+    HRESULT _hr = get_FileAs(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IPerson::PutFileAs ( _bstr_t pFileAs ) {
+    HRESULT _hr = put_FileAs(pFileAs);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IPerson::GetWorkPhone ( ) {
+    BSTR _result;
+    HRESULT _hr = get_WorkPhone(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IPerson::PutWorkPhone ( _bstr_t pWorkPhone ) {
+    HRESULT _hr = put_WorkPhone(pWorkPhone);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IPerson::GetWorkFax ( ) {
+    BSTR _result;
+    HRESULT _hr = get_WorkFax(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IPerson::PutWorkFax ( _bstr_t pWorkFax ) {
+    HRESULT _hr = put_WorkFax(pWorkFax);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IPerson::GetHomePhone ( ) {
+    BSTR _result;
+    HRESULT _hr = get_HomePhone(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IPerson::PutHomePhone ( _bstr_t pHomePhone ) {
+    HRESULT _hr = put_HomePhone(pHomePhone);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IPerson::GetMobilePhone ( ) {
+    BSTR _result;
+    HRESULT _hr = get_MobilePhone(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IPerson::PutMobilePhone ( _bstr_t pMobilePhone ) {
+    HRESULT _hr = put_MobilePhone(pMobilePhone);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IPerson::GetFirstName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_FirstName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IPerson::PutFirstName ( _bstr_t pFirstName ) {
+    HRESULT _hr = put_FirstName(pFirstName);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IPerson::GetLastName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_LastName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IPerson::PutLastName ( _bstr_t pLastName ) {
+    HRESULT _hr = put_LastName(pLastName);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IPerson::GetNamePrefix ( ) {
+    BSTR _result;
+    HRESULT _hr = get_NamePrefix(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IPerson::PutNamePrefix ( _bstr_t pNamePrefix ) {
+    HRESULT _hr = put_NamePrefix(pNamePrefix);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IPerson::GetNameSuffix ( ) {
+    BSTR _result;
+    HRESULT _hr = get_NameSuffix(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IPerson::PutNameSuffix ( _bstr_t pNameSuffix ) {
+    HRESULT _hr = put_NameSuffix(pNameSuffix);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IPerson::GetEmail ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Email(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IPerson::PutEmail ( _bstr_t pEmail ) {
+    HRESULT _hr = put_Email(pEmail);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IPerson::GetEmail2 ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Email2(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IPerson::PutEmail2 ( _bstr_t pEmail2 ) {
+    HRESULT _hr = put_Email2(pEmail2);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IPerson::GetEmail3 ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Email3(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IPerson::PutEmail3 ( _bstr_t pEmail3 ) {
+    HRESULT _hr = put_Email3(pEmail3);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _StreamPtr IPerson::GetVCardStream ( ) {
+    struct _Stream * _result;
+    HRESULT _hr = raw_GetVCardStream(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _StreamPtr(_result, false);
+}
+
+inline IDispatchPtr IPerson::GetInterface ( _bstr_t Interface ) {
+    IDispatch * _result;
+    HRESULT _hr = raw_GetInterface(Interface, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+inline _bstr_t IPerson::GetWorkStreet ( ) {
+    BSTR _result;
+    HRESULT _hr = get_WorkStreet(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IPerson::PutWorkStreet ( _bstr_t pWorkStreet ) {
+    HRESULT _hr = put_WorkStreet(pWorkStreet);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IPerson::GetWorkCity ( ) {
+    BSTR _result;
+    HRESULT _hr = get_WorkCity(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IPerson::PutWorkCity ( _bstr_t pWorkCity ) {
+    HRESULT _hr = put_WorkCity(pWorkCity);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IPerson::GetWorkCountry ( ) {
+    BSTR _result;
+    HRESULT _hr = get_WorkCountry(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IPerson::PutWorkCountry ( _bstr_t pWorkCountry ) {
+    HRESULT _hr = put_WorkCountry(pWorkCountry);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IPerson::GetWorkPostalCode ( ) {
+    BSTR _result;
+    HRESULT _hr = get_WorkPostalCode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IPerson::PutWorkPostalCode ( _bstr_t pWorkPostalCode ) {
+    HRESULT _hr = put_WorkPostalCode(pWorkPostalCode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IPerson::GetWorkPostOfficeBox ( ) {
+    BSTR _result;
+    HRESULT _hr = get_WorkPostOfficeBox(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IPerson::PutWorkPostOfficeBox ( _bstr_t pWorkPostOfficeBox ) {
+    HRESULT _hr = put_WorkPostOfficeBox(pWorkPostOfficeBox);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IPerson::GetWorkPostalAddress ( ) {
+    BSTR _result;
+    HRESULT _hr = get_WorkPostalAddress(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IPerson::GetWorkState ( ) {
+    BSTR _result;
+    HRESULT _hr = get_WorkState(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IPerson::PutWorkState ( _bstr_t pWorkState ) {
+    HRESULT _hr = put_WorkState(pWorkState);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IPerson::GetWorkPager ( ) {
+    BSTR _result;
+    HRESULT _hr = get_WorkPager(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IPerson::PutWorkPager ( _bstr_t pWorkPager ) {
+    HRESULT _hr = put_WorkPager(pWorkPager);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IPerson::GetHomeStreet ( ) {
+    BSTR _result;
+    HRESULT _hr = get_HomeStreet(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IPerson::PutHomeStreet ( _bstr_t pHomeStreet ) {
+    HRESULT _hr = put_HomeStreet(pHomeStreet);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IPerson::GetHomeCity ( ) {
+    BSTR _result;
+    HRESULT _hr = get_HomeCity(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IPerson::PutHomeCity ( _bstr_t pHomeCity ) {
+    HRESULT _hr = put_HomeCity(pHomeCity);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IPerson::GetHomeCountry ( ) {
+    BSTR _result;
+    HRESULT _hr = get_HomeCountry(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IPerson::PutHomeCountry ( _bstr_t pHomeCountry ) {
+    HRESULT _hr = put_HomeCountry(pHomeCountry);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IPerson::GetHomePostalCode ( ) {
+    BSTR _result;
+    HRESULT _hr = get_HomePostalCode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IPerson::PutHomePostalCode ( _bstr_t pHomePostalCode ) {
+    HRESULT _hr = put_HomePostalCode(pHomePostalCode);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IPerson::GetHomePostOfficeBox ( ) {
+    BSTR _result;
+    HRESULT _hr = get_HomePostOfficeBox(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IPerson::PutHomePostOfficeBox ( _bstr_t pHomePostOfficeBox ) {
+    HRESULT _hr = put_HomePostOfficeBox(pHomePostOfficeBox);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IPerson::GetHomePostalAddress ( ) {
+    BSTR _result;
+    HRESULT _hr = get_HomePostalAddress(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IPerson::GetHomeState ( ) {
+    BSTR _result;
+    HRESULT _hr = get_HomeState(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IPerson::PutHomeState ( _bstr_t pHomeState ) {
+    HRESULT _hr = put_HomeState(pHomeState);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IPerson::GetHomeFax ( ) {
+    BSTR _result;
+    HRESULT _hr = get_HomeFax(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IPerson::PutHomeFax ( _bstr_t pHomeFax ) {
+    HRESULT _hr = put_HomeFax(pHomeFax);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IPerson::GetMiddleName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_MiddleName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IPerson::PutMiddleName ( _bstr_t pMiddleName ) {
+    HRESULT _hr = put_MiddleName(pMiddleName);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IPerson::GetInitials ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Initials(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IPerson::PutInitials ( _bstr_t pInitials ) {
+    HRESULT _hr = put_Initials(pInitials);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _variant_t IPerson::GetEmailAddresses ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_EmailAddresses(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline void IPerson::PutEmailAddresses ( const _variant_t & pEmailAddresses ) {
+    HRESULT _hr = put_EmailAddresses(pEmailAddresses);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IPerson::GetCompany ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Company(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IPerson::PutCompany ( _bstr_t pCompany ) {
+    HRESULT _hr = put_Company(pCompany);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IPerson::GetTitle ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Title(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IPerson::PutTitle ( _bstr_t pTitle ) {
+    HRESULT _hr = put_Title(pTitle);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IMailbox wrapper method implementations
+//
+
+inline _bstr_t IMailbox::GetBaseFolder ( ) {
+    BSTR _result;
+    HRESULT _hr = get_BaseFolder(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IMailbox::GetRootFolder ( ) {
+    BSTR _result;
+    HRESULT _hr = get_RootFolder(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IMailbox::GetInbox ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Inbox(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IMailbox::GetOutbox ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Outbox(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IMailbox::GetSentItems ( ) {
+    BSTR _result;
+    HRESULT _hr = get_SentItems(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IMailbox::GetDrafts ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Drafts(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IMailbox::GetDeletedItems ( ) {
+    BSTR _result;
+    HRESULT _hr = get_DeletedItems(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IMailbox::GetCalendar ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Calendar(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IMailbox::GetTasks ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Tasks(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IMailbox::GetContacts ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Contacts(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IMailbox::GetNotes ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Notes(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IMailbox::GetJournal ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Journal(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+//
+// interface IAddressee wrapper method implementations
+//
+
+inline FieldsPtr IAddressee::GetFields ( ) {
+    struct Fields * _result;
+    HRESULT _hr = get_Fields(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return FieldsPtr(_result, false);
+}
+
+inline IConfigurationPtr IAddressee::GetConfiguration ( ) {
+    struct IConfiguration * _result;
+    HRESULT _hr = get_Configuration(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IConfigurationPtr(_result, false);
+}
+
+inline void IAddressee::PutConfiguration ( struct IConfiguration * pConfiguration ) {
+    HRESULT _hr = put_Configuration(pConfiguration);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline void IAddressee::PutRefConfiguration ( struct IConfiguration * pConfiguration ) {
+    HRESULT _hr = putref_Configuration(pConfiguration);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IAddressee::GetDisplayName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_DisplayName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IAddressee::PutDisplayName ( _bstr_t pDisplayName ) {
+    HRESULT _hr = put_DisplayName(pDisplayName);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IAddressee::GetEmailAddress ( ) {
+    BSTR _result;
+    HRESULT _hr = get_EmailAddress(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IAddressee::PutEmailAddress ( _bstr_t pEmailAddress ) {
+    HRESULT _hr = put_EmailAddress(pEmailAddress);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline IDataSourcePtr IAddressee::GetDataSource ( ) {
+    struct IDataSource * _result;
+    HRESULT _hr = get_DataSource(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDataSourcePtr(_result, false);
+}
+
+inline _bstr_t IAddressee::GetDirURL ( ) {
+    BSTR _result;
+    HRESULT _hr = get_DirURL(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline enum CdoResolvedStatus IAddressee::GetResolvedStatus ( ) {
+    enum CdoResolvedStatus _result;
+    HRESULT _hr = get_ResolvedStatus(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IAddressee::PutResolvedStatus ( enum CdoResolvedStatus pResolvedStatus ) {
+    HRESULT _hr = put_ResolvedStatus(pResolvedStatus);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IAddressee::GetContentClass ( ) {
+    BSTR _result;
+    HRESULT _hr = get_ContentClass(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline IAddresseesPtr IAddressee::GetAmbiguousNames ( ) {
+    struct IAddressees * _result;
+    HRESULT _hr = get_AmbiguousNames(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IAddresseesPtr(_result, false);
+}
+
+inline IDispatchPtr IAddressee::GetInterface ( _bstr_t Interface ) {
+    IDispatch * _result;
+    HRESULT _hr = raw_GetInterface(Interface, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+inline _bstr_t IAddressee::GetFreeBusy ( DATE StartTime, DATE EndTime, long Interval, _bstr_t HTTPHost, _bstr_t VRoot, _bstr_t UserName, _bstr_t Password ) {
+    BSTR _result;
+    HRESULT _hr = raw_GetFreeBusy(StartTime, EndTime, Interval, HTTPHost, VRoot, UserName, Password, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline VARIANT_BOOL IAddressee::CheckName ( _bstr_t Directory, _bstr_t UserName, _bstr_t Password ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = raw_CheckName(Directory, UserName, Password, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IAddressees wrapper method implementations
+//
+
+inline IAddresseePtr IAddressees::GetItem ( long Index ) {
+    struct IAddressee * _result;
+    HRESULT _hr = get_Item(Index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IAddresseePtr(_result, false);
+}
+
+inline long IAddressees::GetCount ( ) {
+    long _result;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline IUnknownPtr IAddressees::Get_NewEnum ( ) {
+    IUnknown * _result;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}

@@ -1,0 +1,3461 @@
+// Created by Microsoft (R) C/C++ Compiler Version 12.00.9782.0 (08138cbd).
+//
+// cdoex.tlh
+//
+// C++ source equivalent of Win32 type library c:\Program Files\Exchange SDK\SDK\Support\CDO\cdoex.tlb
+// compiler-generated file created 09/26/08 at 16:56:19 - DO NOT EDIT!
+
+//
+// Cross-referenced type libraries:
+//
+//  #import "C:\Program Files\Common Files\system\ado\msado25.tlb"
+//
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("cd000023-8b95-11d1-82db-00c04fb1625d"))
+/* dual interface */ IBodyParts;
+struct __declspec(uuid("cd000021-8b95-11d1-82db-00c04fb1625d"))
+/* dual interface */ IBodyPart;
+struct __declspec(uuid("cd000029-8b95-11d1-82db-00c04fb1625d"))
+/* dual interface */ IDataSource;
+struct __declspec(uuid("cd000025-8b95-11d1-82db-00c04fb1625d"))
+/* dual interface */ IMessages;
+struct __declspec(uuid("cd000020-8b95-11d1-82db-00c04fb1625d"))
+/* dual interface */ IMessage;
+struct __declspec(uuid("cd000022-8b95-11d1-82db-00c04fb1625d"))
+/* dual interface */ IConfiguration;
+struct /* coclass */ Message;
+struct /* coclass */ Configuration;
+struct /* coclass */ DropDirectory;
+struct __declspec(uuid("cd000024-8b95-11d1-82db-00c04fb1625d"))
+/* dual interface */ IDropDirectory;
+struct /* coclass */ SMTPConnector;
+struct __declspec(uuid("cd000030-8b95-11d1-82db-00c04fb1625d"))
+/* dual interface */ ISMTPScriptConnector;
+struct __declspec(uuid("cd000026-8b95-11d1-82db-00c04fb1625d"))
+/* dual interface */ ISMTPOnArrival;
+struct /* coclass */ NNTPEarlyConnector;
+struct __declspec(uuid("cd000034-8b95-11d1-82db-00c04fb1625d"))
+/* dual interface */ INNTPEarlyScriptConnector;
+struct __declspec(uuid("cd000033-8b95-11d1-82db-00c04fb1625d"))
+/* dual interface */ INNTPOnPostEarly;
+struct /* coclass */ NNTPPostConnector;
+struct __declspec(uuid("cd000031-8b95-11d1-82db-00c04fb1625d"))
+/* dual interface */ INNTPPostScriptConnector;
+struct __declspec(uuid("cd000027-8b95-11d1-82db-00c04fb1625d"))
+/* dual interface */ INNTPOnPost;
+struct /* coclass */ NNTPFinalConnector;
+struct __declspec(uuid("cd000032-8b95-11d1-82db-00c04fb1625d"))
+/* dual interface */ INNTPFinalScriptConnector;
+struct __declspec(uuid("cd000028-8b95-11d1-82db-00c04fb1625d"))
+/* dual interface */ INNTPOnPostFinal;
+struct /* coclass */ Item;
+struct __declspec(uuid("cd000126-8b95-11d1-82db-00c04fb1625d"))
+/* dual interface */ IItem;
+struct /* coclass */ Appointment;
+struct __declspec(uuid("cd000120-8b95-11d1-82db-00c04fb1625d"))
+/* dual interface */ IAppointment;
+struct __declspec(uuid("cd000136-8b95-11d1-82db-00c04fb1625d"))
+/* dual interface */ IAttendees;
+struct __declspec(uuid("cd000135-8b95-11d1-82db-00c04fb1625d"))
+/* dual interface */ IAttendee;
+struct __declspec(uuid("cd00012d-8b95-11d1-82db-00c04fb1625d"))
+/* dual interface */ IExceptions;
+struct __declspec(uuid("cd000124-8b95-11d1-82db-00c04fb1625d"))
+/* dual interface */ IException;
+struct __declspec(uuid("cd00012c-8b95-11d1-82db-00c04fb1625d"))
+/* dual interface */ IRecurrencePatterns;
+struct __declspec(uuid("cd000123-8b95-11d1-82db-00c04fb1625d"))
+/* dual interface */ IRecurrencePattern;
+struct __declspec(uuid("cd00012e-8b95-11d1-82db-00c04fb1625d"))
+/* dual interface */ IIntegers;
+struct __declspec(uuid("cd00012f-8b95-11d1-82db-00c04fb1625d"))
+/* dual interface */ IVariants;
+struct __declspec(uuid("cd000122-8b95-11d1-82db-00c04fb1625d"))
+/* dual interface */ ICalendarMessage;
+struct __declspec(uuid("cd000130-8b95-11d1-82db-00c04fb1625d"))
+/* dual interface */ ICalendarParts;
+struct __declspec(uuid("cd000133-8b95-11d1-82db-00c04fb1625d"))
+/* dual interface */ ICalendarPart;
+struct /* coclass */ CalendarMessage;
+struct /* coclass */ Folder;
+struct __declspec(uuid("cd000132-8b95-11d1-82db-00c04fb1625d"))
+/* dual interface */ IFolder;
+struct /* coclass */ Person;
+struct __declspec(uuid("cd000127-8b95-11d1-82db-00c04fb1625d"))
+/* dual interface */ IPerson;
+struct __declspec(uuid("cd000125-8b95-11d1-82db-00c04fb1625d"))
+/* dual interface */ IMailbox;
+struct /* coclass */ Attendee;
+struct /* coclass */ Addressee;
+struct __declspec(uuid("cd000139-8b95-11d1-82db-00c04fb1625d"))
+/* dual interface */ IAddressee;
+struct __declspec(uuid("cd000142-8b95-11d1-82db-00c04fb1625d"))
+/* dual interface */ IAddressees;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IBodyParts, __uuidof(IBodyParts));
+_COM_SMARTPTR_TYPEDEF(IBodyPart, __uuidof(IBodyPart));
+_COM_SMARTPTR_TYPEDEF(IDataSource, __uuidof(IDataSource));
+_COM_SMARTPTR_TYPEDEF(IMessages, __uuidof(IMessages));
+_COM_SMARTPTR_TYPEDEF(IMessage, __uuidof(IMessage));
+_COM_SMARTPTR_TYPEDEF(IConfiguration, __uuidof(IConfiguration));
+_COM_SMARTPTR_TYPEDEF(IDropDirectory, __uuidof(IDropDirectory));
+_COM_SMARTPTR_TYPEDEF(ISMTPScriptConnector, __uuidof(ISMTPScriptConnector));
+_COM_SMARTPTR_TYPEDEF(ISMTPOnArrival, __uuidof(ISMTPOnArrival));
+_COM_SMARTPTR_TYPEDEF(INNTPEarlyScriptConnector, __uuidof(INNTPEarlyScriptConnector));
+_COM_SMARTPTR_TYPEDEF(INNTPOnPostEarly, __uuidof(INNTPOnPostEarly));
+_COM_SMARTPTR_TYPEDEF(INNTPPostScriptConnector, __uuidof(INNTPPostScriptConnector));
+_COM_SMARTPTR_TYPEDEF(INNTPOnPost, __uuidof(INNTPOnPost));
+_COM_SMARTPTR_TYPEDEF(INNTPFinalScriptConnector, __uuidof(INNTPFinalScriptConnector));
+_COM_SMARTPTR_TYPEDEF(INNTPOnPostFinal, __uuidof(INNTPOnPostFinal));
+_COM_SMARTPTR_TYPEDEF(IItem, __uuidof(IItem));
+_COM_SMARTPTR_TYPEDEF(IAppointment, __uuidof(IAppointment));
+_COM_SMARTPTR_TYPEDEF(IAttendees, __uuidof(IAttendees));
+_COM_SMARTPTR_TYPEDEF(IAttendee, __uuidof(IAttendee));
+_COM_SMARTPTR_TYPEDEF(IExceptions, __uuidof(IExceptions));
+_COM_SMARTPTR_TYPEDEF(IException, __uuidof(IException));
+_COM_SMARTPTR_TYPEDEF(IRecurrencePatterns, __uuidof(IRecurrencePatterns));
+_COM_SMARTPTR_TYPEDEF(IRecurrencePattern, __uuidof(IRecurrencePattern));
+_COM_SMARTPTR_TYPEDEF(IIntegers, __uuidof(IIntegers));
+_COM_SMARTPTR_TYPEDEF(IVariants, __uuidof(IVariants));
+_COM_SMARTPTR_TYPEDEF(ICalendarMessage, __uuidof(ICalendarMessage));
+_COM_SMARTPTR_TYPEDEF(ICalendarParts, __uuidof(ICalendarParts));
+_COM_SMARTPTR_TYPEDEF(ICalendarPart, __uuidof(ICalendarPart));
+_COM_SMARTPTR_TYPEDEF(IFolder, __uuidof(IFolder));
+_COM_SMARTPTR_TYPEDEF(IPerson, __uuidof(IPerson));
+_COM_SMARTPTR_TYPEDEF(IMailbox, __uuidof(IMailbox));
+_COM_SMARTPTR_TYPEDEF(IAddressee, __uuidof(IAddressee));
+_COM_SMARTPTR_TYPEDEF(IAddressees, __uuidof(IAddressees));
+
+//
+// Type library items
+//
+
+enum CdoAttendeeRoleValues
+{
+    cdoRequiredParticipant = 0,
+    cdoOptionalParticipant = 1,
+    cdoNonParticipant = 2,
+    cdoChair = 3
+};
+
+enum CdoAttendeeStatusValues
+{
+    cdoAccepted = 0,
+    cdoDeclined = 1,
+    cdoAttendeeStatusTentative = 2,
+    cdoNeedsAction = 3,
+    cdoDelegated = 4,
+    cdoCompleted = 5,
+    cdoInProgress = 6
+};
+
+enum CdoComponentType
+{
+    cdoComponentTypeUnknown = 0,
+    cdoComponentTypeAppointment = 1
+};
+
+enum CdoConfigSource
+{
+    cdoDefaults = -1,
+    cdoIIS = 1,
+    cdoOutlookExpress = 2,
+    cdoDirectory = 3
+};
+
+enum CdoDayOfWeek
+{
+    cdoSunday = 0,
+    cdoMonday = 1,
+    cdoTuesday = 2,
+    cdoWednesday = 3,
+    cdoThursday = 4,
+    cdoFriday = 5,
+    cdoSaturday = 6
+};
+
+enum CdoDSNOptions
+{
+    cdoDSNDefault = 0,
+    cdoDSNNever = 1,
+    cdoDSNFailure = 2,
+    cdoDSNSuccess = 4,
+    cdoDSNDelay = 8,
+    cdoDSNSuccessFailOrDelay = 14
+};
+
+enum CdoEventStatus
+{
+    cdoRunNextSink = 0,
+    cdoSkipRemainingSinks = 1
+};
+
+enum CdoFileAsMappingId
+{
+    cdoMapToNone = 0,
+    cdoMapToLastFirst = 1,
+    cdoMapToFirstLast = 2,
+    cdoMapToOrg = 3,
+    cdoMapToLastFirstOrg = 4,
+    cdoMapToOrgLastFirst = 5,
+    cdoMapToLastFirstNoSpace = 6,
+    cdoMapToLastFirstNoSpaceOrg = 7,
+    cdoMapToOrgLastFirstNoSpace = 8,
+    cdoMapToLastFirstSuffix = 9,
+    cdoMapToLastFirstSpaceOnlyOrg = 10,
+    cdoMapToOrgLastFirstSpaceOnly = 11,
+    cdoMapToLastFirstSpaceOnly = 12
+};
+
+enum CdoFrequency
+{
+    cdoSecondly = 1,
+    cdoMinutely = 2,
+    cdoHourly = 3,
+    cdoDaily = 4,
+    cdoWeekly = 5,
+    cdoMonthly = 6,
+    cdoYearly = 7
+};
+
+enum CdoGenderValues
+{
+    cdoGenderUnspecified = 0,
+    cdoFemale = 1,
+    cdoMale = 2
+};
+
+enum cdoImportanceValues
+{
+    cdoLow = 0,
+    cdoNormal = 1,
+    cdoHigh = 2
+};
+
+enum CdoInstanceTypes
+{
+    cdoSingle = 0,
+    cdoMaster = 1,
+    cdoInstance = 2,
+    cdoException = 3
+};
+
+enum CdoMailingAddressIdValues
+{
+    cdoNoAddress = 0,
+    cdoHomeAddress = 1,
+    cdoBusinessAddress = 2,
+    cdoOtherAddress = 3
+};
+
+enum CdoMessageStat
+{
+    cdoStatSuccess = 0,
+    cdoStatAbortDelivery = 2,
+    cdoStatBadMail = 3
+};
+
+enum CdoMHTMLFlags
+{
+    cdoSuppressNone = 0,
+    cdoSuppressImages = 1,
+    cdoSuppressBGSounds = 2,
+    cdoSuppressFrames = 4,
+    cdoSuppressObjects = 8,
+    cdoSuppressStyleSheets = 16,
+    cdoSuppressAll = 31
+};
+
+enum CdoNNTPProcessingField
+{
+    cdoPostMessage = 1,
+    cdoProcessControl = 2,
+    cdoProcessModerator = 4
+};
+
+enum CdoPatternEndType
+{
+    cdoNoEndDate = 0,
+    cdoEndByInstances = 1,
+    cdoEndByDate = 2
+};
+
+enum CdoPostUsing
+{
+    cdoPostUsingPickup = 1,
+    cdoPostUsingPort = 2,
+    cdoPostUsingExchange = 3
+};
+
+enum cdoPriorityValues
+{
+    cdoPriorityNonUrgent = -1,
+    cdoPriorityNormal = 0,
+    cdoPriorityUrgent = 1
+};
+
+enum CdoProtocolsAuthentication
+{
+    cdoAnonymous = 0,
+    cdoBasic = 1,
+    cdoNTLM = 2
+};
+
+enum CdoReferenceType
+{
+    cdoRefTypeId = 0,
+    cdoRefTypeLocation = 1
+};
+
+enum CdoResolvedStatus
+{
+    cdoUnresolved = 0,
+    cdoResolved = 1,
+    cdoAmbiguous = 2
+};
+
+enum CdoSendUsing
+{
+    cdoSendUsingPickup = 1,
+    cdoSendUsingPort = 2,
+    cdoSendUsingExchange = 3
+};
+
+enum cdoSensitivityValues
+{
+    cdoSensitivityNone = 0,
+    cdoPersonal = 1,
+    cdoPrivate = 2,
+    cdoCompanyConfidential = 3
+};
+
+enum CdoTimeZoneId
+{
+    cdoUTC = 0,
+    cdoGMT = 1,
+    cdoSarajevo = 2,
+    cdoParis = 3,
+    cdoBerlin = 4,
+    cdoEasternEurope = 5,
+    cdoPrague = 6,
+    cdoAthens = 7,
+    cdoBrasilia = 8,
+    cdoAtlanticCanada = 9,
+    cdoEastern = 10,
+    cdoCentral = 11,
+    cdoMountain = 12,
+    cdoPacific = 13,
+    cdoAlaska = 14,
+    cdoHawaii = 15,
+    cdoMidwayIsland = 16,
+    cdoWellington = 17,
+    cdoBrisbane = 18,
+    cdoAdelaide = 19,
+    cdoTokyo = 20,
+    cdoSingapore = 21,
+    cdoBangkok = 22,
+    cdoBombay = 23,
+    cdoAbuDhabi = 24,
+    cdoTehran = 25,
+    cdoBaghdad = 26,
+    cdoIsrael = 27,
+    cdoNewfoundland = 28,
+    cdoAzores = 29,
+    cdoMidAtlantic = 30,
+    cdoMonrovia = 31,
+    cdoBuenosAires = 32,
+    cdoCaracas = 33,
+    cdoIndiana = 34,
+    cdoBogota = 35,
+    cdoSaskatchewan = 36,
+    cdoMexicoCity = 37,
+    cdoArizona = 38,
+    cdoEniwetok = 39,
+    cdoFiji = 40,
+    cdoMagadan = 41,
+    cdoHobart = 42,
+    cdoGuam = 43,
+    cdoDarwin = 44,
+    cdoBeijing = 45,
+    cdoAlmaty = 46,
+    cdoIslamabad = 47,
+    cdoKabul = 48,
+    cdoCairo = 49,
+    cdoHarare = 50,
+    cdoMoscow = 51,
+    cdoFloating = 52,
+    cdoCapeVerde = 53,
+    cdoCaucasus = 54,
+    cdoCentralAmerica = 55,
+    cdoEastAfrica = 56,
+    cdoMelbourne = 57,
+    cdoEkaterinburg = 58,
+    cdoHelsinki = 59,
+    cdoGreenland = 60,
+    cdoRangoon = 61,
+    cdoNepal = 62,
+    cdoIrkutsk = 63,
+    cdoKrasnoyarsk = 64,
+    cdoSantiago = 65,
+    cdoSriLanka = 66,
+    cdoTonga = 67,
+    cdoVladivostok = 68,
+    cdoWestCentralAfrica = 69,
+    cdoYakutsk = 70,
+    cdoDhaka = 71,
+    cdoSeoul = 72,
+    cdoPerth = 73,
+    cdoArab = 74,
+    cdoTaipei = 75,
+    cdoSydney2000 = 76,
+    cdoChihuahua = 77,
+    cdoInvalidTimeZone = 78
+};
+
+enum cdoURLSourceValues
+{
+    cdoExchangeServerURL = 0,
+    cdoClientStoreURL = 1
+};
+    const BSTR cdoBusy = (unsigned short*) L"Busy";
+    const BSTR cdoFree = (unsigned short*) L"Free";
+    const BSTR cdoOOF = (unsigned short*) L"OOF";
+    const BSTR cdoTentative = (unsigned short*) L"Tentative";
+    const BSTR cdoAllDayEvent = (unsigned short*) L"urn:schemas:calendar:alldayevent";
+    const BSTR cdoAttendeeRole = (unsigned short*) L"urn:schemas:calendar:attendeerole";
+    const BSTR cdoAttendeeStatus = (unsigned short*) L"urn:schemas:calendar:attendeestatus";
+    const BSTR cdoBusyStatus = (unsigned short*) L"urn:schemas:calendar:busystatus";
+    const BSTR cdoCalendarComment = (unsigned short*) L"urn:schemas:calendar:comment";
+    const BSTR cdoCalendarLastModified = (unsigned short*) L"urn:schemas:calendar:lastmodified";
+    const BSTR cdoCalendarUID = (unsigned short*) L"urn:schemas:calendar:uid";
+    const BSTR cdoContact = (unsigned short*) L"urn:schemas:calendar:contact";
+    const BSTR cdoContactURL = (unsigned short*) L"urn:schemas:calendar:contacturl";
+    const BSTR cdoCreated = (unsigned short*) L"urn:schemas:calendar:created";
+    const BSTR cdoDelegatedFrom = (unsigned short*) L"urn:schemas:calendar:delegated-from";
+    const BSTR cdoDelegatedTo = (unsigned short*) L"urn:schemas:calendar:delegated-to";
+    const BSTR cdoDescriptionURL = (unsigned short*) L"urn:schemas:calendar:descriptionurl";
+    const BSTR cdoDTEnd = (unsigned short*) L"urn:schemas:calendar:dtend";
+    const BSTR cdoDTStamp = (unsigned short*) L"urn:schemas:calendar:dtstamp";
+    const BSTR cdoDTStart = (unsigned short*) L"urn:schemas:calendar:dtstart";
+    const BSTR cdoDuration = (unsigned short*) L"urn:schemas:calendar:duration";
+    const BSTR cdoExDate = (unsigned short*) L"urn:schemas:calendar:exdate";
+    const BSTR cdoExRule = (unsigned short*) L"urn:schemas:calendar:exrule";
+    const BSTR cdoFburl = (unsigned short*) L"urn:schemas:calendar:fburl";
+    const BSTR cdoGEOLatitude = (unsigned short*) L"urn:schemas:calendar:geolatitude";
+    const BSTR cdoGEOLongitude = (unsigned short*) L"urn:schemas:calendar:geolongitude";
+    const BSTR cdoInstanceType = (unsigned short*) L"urn:schemas:calendar:instancetype";
+    const BSTR cdoIsOrganizer = (unsigned short*) L"urn:schemas:calendar:isorganizer";
+    const BSTR cdoLastModifiedTime = (unsigned short*) L"urn:schemas:calendar:lastmodifiedtime";
+    const BSTR cdoLocation = (unsigned short*) L"urn:schemas:calendar:location";
+    const BSTR cdoLocationURL = (unsigned short*) L"urn:schemas:calendar:locationurl";
+    const BSTR cdoMeetingStatus = (unsigned short*) L"urn:schemas:calendar:meetingstatus";
+    const BSTR cdoMethod = (unsigned short*) L"urn:schemas:calendar:method";
+    const BSTR cdoProdId = (unsigned short*) L"urn:schemas:calendar:prodid";
+    const BSTR cdoRDate = (unsigned short*) L"urn:schemas:calendar:rdate";
+    const BSTR cdoRecurrenceId = (unsigned short*) L"urn:schemas:calendar:recurrenceid";
+    const BSTR cdoRecurrenceIdRange = (unsigned short*) L"urn:schemas:calendar:recurrenceidrange";
+    const BSTR cdoReminderOffset = (unsigned short*) L"urn:schemas:calendar:reminderoffset";
+    const BSTR cdoReplyTime = (unsigned short*) L"urn:schemas:calendar:replytime";
+    const BSTR cdoResources = (unsigned short*) L"urn:schemas:calendar:resources";
+    const BSTR cdoResponseRequested = (unsigned short*) L"urn:schemas:calendar:responserequested";
+    const BSTR cdoRRule = (unsigned short*) L"urn:schemas:calendar:rrule";
+    const BSTR cdoRSVP = (unsigned short*) L"urn:schemas:calendar:rsvp";
+    const BSTR cdoSentBy = (unsigned short*) L"urn:schemas:calendar:sent-by";
+    const BSTR cdoSequence = (unsigned short*) L"urn:schemas:calendar:sequence";
+    const BSTR cdoTimeZoneIDURN = (unsigned short*) L"urn:schemas:calendar:timezoneid";
+    const BSTR cdoTimeZoneURN = (unsigned short*) L"urn:schemas:calendar:timezone";
+    const BSTR cdoTransparency = (unsigned short*) L"urn:schemas:calendar:transparent";
+    const BSTR cdoVersion = (unsigned short*) L"urn:schemas:calendar:version";
+    const BSTR cdoBIG5 = (unsigned short*) L"big5";
+    const BSTR cdoEUC_JP = (unsigned short*) L"euc-jp";
+    const BSTR cdoEUC_KR = (unsigned short*) L"euc-kr";
+    const BSTR cdoGB2312 = (unsigned short*) L"gb2312";
+    const BSTR cdoISO_2022_JP = (unsigned short*) L"iso-2022-jp";
+    const BSTR cdoISO_2022_KR = (unsigned short*) L"iso-2022-kr";
+    const BSTR cdoISO_8859_1 = (unsigned short*) L"iso-8859-1";
+    const BSTR cdoISO_8859_2 = (unsigned short*) L"iso-8859-2";
+    const BSTR cdoISO_8859_3 = (unsigned short*) L"iso-8859-3";
+    const BSTR cdoISO_8859_4 = (unsigned short*) L"iso-8859-4";
+    const BSTR cdoISO_8859_5 = (unsigned short*) L"iso-8859-5";
+    const BSTR cdoISO_8859_6 = (unsigned short*) L"iso-8859-6";
+    const BSTR cdoISO_8859_7 = (unsigned short*) L"iso-8859-7";
+    const BSTR cdoISO_8859_8 = (unsigned short*) L"iso-8859-8";
+    const BSTR cdoISO_8859_9 = (unsigned short*) L"iso-8859-9";
+    const BSTR cdoKOI8_R = (unsigned short*) L"koi8-r";
+    const BSTR cdoShift_JIS = (unsigned short*) L"shift-jis";
+    const BSTR cdoUS_ASCII = (unsigned short*) L"us-ascii";
+    const BSTR cdoUTF_7 = (unsigned short*) L"utf-7";
+    const BSTR cdoUTF_8 = (unsigned short*) L"utf-8";
+    const BSTR cdoISO_8859_15 = (unsigned short*) L"iso-8859-15";
+    const BSTR cdoActiveConnection = (unsigned short*) L"http://schemas.microsoft.com/cdo/configuration/activeconnection";
+    const BSTR cdoAutoPromoteBodyParts = (unsigned short*) L"http://schemas.microsoft.com/cdo/configuration/autopromotebodyparts";
+    const BSTR cdoFlushBuffersOnWrite = (unsigned short*) L"http://schemas.microsoft.com/cdo/configuration/flushbuffersonwrite";
+    const BSTR cdoHTTPCookies = (unsigned short*) L"http://schemas.microsoft.com/cdo/configuration/httpcookies";
+    const BSTR cdoLanguageCode = (unsigned short*) L"http://schemas.microsoft.com/cdo/configuration/languagecode";
+    const BSTR cdoMailboxURL = (unsigned short*) L"http://schemas.microsoft.com/cdo/configuration/mailboxurl";
+    const BSTR cdoNNTPAccountName = (unsigned short*) L"http://schemas.microsoft.com/cdo/configuration/nntpaccountname";
+    const BSTR cdoNNTPAuthenticate = (unsigned short*) L"http://schemas.microsoft.com/cdo/configuration/nntpauthenticate";
+    const BSTR cdoNNTPConnectionTimeout = (unsigned short*) L"http://schemas.microsoft.com/cdo/configuration/nntpconnectiontimeout";
+    const BSTR cdoNNTPServer = (unsigned short*) L"http://schemas.microsoft.com/cdo/configuration/nntpserver";
+    const BSTR cdoNNTPServerPickupDirectory = (unsigned short*) L"http://schemas.microsoft.com/cdo/configuration/nntpserverpickupdirectory";
+    const BSTR cdoNNTPServerPort = (unsigned short*) L"http://schemas.microsoft.com/cdo/configuration/nntpserverport";
+    const BSTR cdoNNTPUseSSL = (unsigned short*) L"http://schemas.microsoft.com/cdo/configuration/nntpusessl";
+    const BSTR cdoPostEmailAddress = (unsigned short*) L"http://schemas.microsoft.com/cdo/configuration/postemailaddress";
+    const BSTR cdoPostPassword = (unsigned short*) L"http://schemas.microsoft.com/cdo/configuration/postpassword";
+    const BSTR cdoPostUserName = (unsigned short*) L"http://schemas.microsoft.com/cdo/configuration/postusername";
+    const BSTR cdoPostUserReplyEmailAddress = (unsigned short*) L"http://schemas.microsoft.com/cdo/configuration/postuserreplyemailaddress";
+    const BSTR cdoPostUsingMethod = (unsigned short*) L"http://schemas.microsoft.com/cdo/configuration/postusing";
+    const BSTR cdoSaveSentItems = (unsigned short*) L"http://schemas.microsoft.com/cdo/configuration/savesentitems";
+    const BSTR cdoSendEmailAddress = (unsigned short*) L"http://schemas.microsoft.com/cdo/configuration/sendemailaddress";
+    const BSTR cdoSendPassword = (unsigned short*) L"http://schemas.microsoft.com/cdo/configuration/sendpassword";
+    const BSTR cdoSendUserName = (unsigned short*) L"http://schemas.microsoft.com/cdo/configuration/sendusername";
+    const BSTR cdoSendUserReplyEmailAddress = (unsigned short*) L"http://schemas.microsoft.com/cdo/configuration/senduserreplyemailaddress";
+    const BSTR cdoSendUsingMethod = (unsigned short*) L"http://schemas.microsoft.com/cdo/configuration/sendusing";
+    const BSTR cdoSMTPAccountName = (unsigned short*) L"http://schemas.microsoft.com/cdo/configuration/smtpaccountname";
+    const BSTR cdoSMTPAuthenticate = (unsigned short*) L"http://schemas.microsoft.com/cdo/configuration/smtpauthenticate";
+    const BSTR cdoSMTPConnectionTimeout = (unsigned short*) L"http://schemas.microsoft.com/cdo/configuration/smtpconnectiontimeout";
+    const BSTR cdoSMTPServer = (unsigned short*) L"http://schemas.microsoft.com/cdo/configuration/smtpserver";
+    const BSTR cdoSMTPServerPickupDirectory = (unsigned short*) L"http://schemas.microsoft.com/cdo/configuration/smtpserverpickupdirectory";
+    const BSTR cdoSMTPServerPort = (unsigned short*) L"http://schemas.microsoft.com/cdo/configuration/smtpserverport";
+    const BSTR cdoSMTPUseSSL = (unsigned short*) L"http://schemas.microsoft.com/cdo/configuration/smtpusessl";
+    const BSTR cdoURLGetLatestVersion = (unsigned short*) L"http://schemas.microsoft.com/cdo/configuration/urlgetlatestversion";
+    const BSTR cdoURLProxyBypass = (unsigned short*) L"http://schemas.microsoft.com/cdo/configuration/urlproxybypass";
+    const BSTR cdoURLProxyServer = (unsigned short*) L"http://schemas.microsoft.com/cdo/configuration/urlproxyserver";
+    const BSTR cdoURLSource = (unsigned short*) L"http://schemas.microsoft.com/cdo/configuration/urlsource";
+    const BSTR cdoUseMessageResponseText = (unsigned short*) L"http://schemas.microsoft.com/cdo/configuration/usemessageresponsetext";
+    const BSTR cdoAccount = (unsigned short*) L"urn:schemas:contacts:account";
+    const BSTR cdoBirthday = (unsigned short*) L"urn:schemas:contacts:bday";
+    const BSTR cdoCallbackPhone = (unsigned short*) L"urn:schemas:contacts:callbackphone";
+    const BSTR cdoChildrensNames = (unsigned short*) L"urn:schemas:contacts:childrensnames";
+    const BSTR cdoCommonName = (unsigned short*) L"urn:schemas:contacts:cn";
+    const BSTR cdoComputerNetworkName = (unsigned short*) L"urn:schemas:contacts:computernetworkname";
+    const BSTR cdoCustomerId = (unsigned short*) L"urn:schemas:contacts:customerid";
+    const BSTR cdoDepartment = (unsigned short*) L"urn:schemas:contacts:department";
+    const BSTR cdoDistinguishedName = (unsigned short*) L"urn:schemas:contacts:dn";
+    const BSTR cdoEmail1Address = (unsigned short*) L"urn:schemas:contacts:email1";
+    const BSTR cdoEmail2Address = (unsigned short*) L"urn:schemas:contacts:email2";
+    const BSTR cdoEmail3Address = (unsigned short*) L"urn:schemas:contacts:email3";
+    const BSTR cdoEmployeeNumber = (unsigned short*) L"urn:schemas:contacts:employeenumber";
+    const BSTR cdoFileAs = (unsigned short*) L"urn:schemas:contacts:fileas";
+    const BSTR cdoFileAsId = (unsigned short*) L"urn:schemas:contacts:fileasid";
+    const BSTR cdoFirstName = (unsigned short*) L"urn:schemas:contacts:givenName";
+    const BSTR cdoFtpSite = (unsigned short*) L"urn:schemas:contacts:ftpsite";
+    const BSTR cdoGender = (unsigned short*) L"urn:schemas:contacts:gender";
+    const BSTR cdoGovernmentId = (unsigned short*) L"urn:schemas:contacts:governmentid";
+    const BSTR cdoHobbies = (unsigned short*) L"urn:schemas:contacts:hobbies";
+    const BSTR cdoHomeCity = (unsigned short*) L"urn:schemas:contacts:homeCity";
+    const BSTR cdoHomeCountry = (unsigned short*) L"urn:schemas:contacts:homeCountry";
+    const BSTR cdoHomeFax = (unsigned short*) L"urn:schemas:contacts:homefax";
+    const BSTR cdoHomeLatitude = (unsigned short*) L"urn:schemas:contacts:homelatitude";
+    const BSTR cdoHomeLongitude = (unsigned short*) L"urn:schemas:contacts:homelongitude";
+    const BSTR cdoHomePhone = (unsigned short*) L"urn:schemas:contacts:homePhone";
+    const BSTR cdoHomePhone2 = (unsigned short*) L"urn:schemas:contacts:homephone2";
+    const BSTR cdoHomePostalAddress = (unsigned short*) L"urn:schemas:contacts:homepostaladdress";
+    const BSTR cdoHomePostalCode = (unsigned short*) L"urn:schemas:contacts:homePostalCode";
+    const BSTR cdoHomePostOfficeBox = (unsigned short*) L"urn:schemas:contacts:homepostofficebox";
+    const BSTR cdoHomeState = (unsigned short*) L"urn:schemas:contacts:homeState";
+    const BSTR cdoHomeStreet = (unsigned short*) L"urn:schemas:contacts:homeStreet";
+    const BSTR cdoHomeTimeZone = (unsigned short*) L"urn:schemas:contacts:hometimezone";
+    const BSTR cdoInitials = (unsigned short*) L"urn:schemas:contacts:initials";
+    const BSTR cdoInternationalISDNNumber = (unsigned short*) L"urn:schemas:contacts:internationalisdnnumber";
+    const BSTR cdoLanguage = (unsigned short*) L"urn:schemas:contacts:language";
+    const BSTR cdoLastName = (unsigned short*) L"urn:schemas:contacts:sn";
+    const BSTR cdoMailingAddressId = (unsigned short*) L"urn:schemas:contacts:mailingaddressid";
+    const BSTR cdoMailingCity = (unsigned short*) L"urn:schemas:contacts:mailingcity";
+    const BSTR cdoMailingCountry = (unsigned short*) L"urn:schemas:contacts:mailingcountry";
+    const BSTR cdoMailingPostalAddress = (unsigned short*) L"urn:schemas:contacts:mailingpostaladdress";
+    const BSTR cdoMailingPostalCode = (unsigned short*) L"urn:schemas:contacts:mailingpostalcode";
+    const BSTR cdoMailingPostOfficeBox = (unsigned short*) L"urn:schemas:contacts:mailingpostofficebox";
+    const BSTR cdoMailingState = (unsigned short*) L"urn:schemas:contacts:mailingstate";
+    const BSTR cdoMailingStreet = (unsigned short*) L"urn:schemas:contacts:mailingstreet";
+    const BSTR cdoManager = (unsigned short*) L"urn:schemas:contacts:manager";
+    const BSTR cdoMapURL = (unsigned short*) L"urn:schemas:contacts:mapurl";
+    const BSTR cdoMiddleName = (unsigned short*) L"urn:schemas:contacts:middlename";
+    const BSTR cdoNamePrefix = (unsigned short*) L"urn:schemas:contacts:personaltitle";
+    const BSTR cdoNameSuffix = (unsigned short*) L"urn:schemas:contacts:namesuffix";
+    const BSTR cdoNickname = (unsigned short*) L"urn:schemas:contacts:nickname";
+    const BSTR cdoOrganizationName = (unsigned short*) L"urn:schemas:contacts:o";
+    const BSTR cdoOriginalAuthor = (unsigned short*) L"urn:schemas:contacts:authorig";
+    const BSTR cdoOtherCity = (unsigned short*) L"urn:schemas:contacts:othercity";
+    const BSTR cdoOtherCountry = (unsigned short*) L"urn:schemas:contacts:othercountry";
+    const BSTR cdoOtherCountryCode = (unsigned short*) L"urn:schemas:contacts:othercountrycode";
+    const BSTR cdoOtherFax = (unsigned short*) L"urn:schemas:contacts:otherfax";
+    const BSTR cdoOtherMobile = (unsigned short*) L"urn:schemas:contacts:othermobile";
+    const BSTR cdoOtherPager = (unsigned short*) L"urn:schemas:contacts:otherpager";
+    const BSTR cdoOtherPostalAddress = (unsigned short*) L"urn:schemas:contacts:otherpostaladdress";
+    const BSTR cdoOtherPostalCode = (unsigned short*) L"urn:schemas:contacts:otherpostalcode";
+    const BSTR cdoOtherPostOfficeBox = (unsigned short*) L"urn:schemas:contacts:otherpostofficebox";
+    const BSTR cdoOtherState = (unsigned short*) L"urn:schemas:contacts:otherstate";
+    const BSTR cdoOtherStreet = (unsigned short*) L"urn:schemas:contacts:otherstreet";
+    const BSTR cdoOtherTimeZone = (unsigned short*) L"urn:schemas:contacts:othertimezone";
+    const BSTR cdoOtherWorkPhone = (unsigned short*) L"urn:schemas:contacts:otherTelephone";
+    const BSTR cdoPersonalURL = (unsigned short*) L"urn:schemas:contacts:personalHomePage";
+    const BSTR cdoProfession = (unsigned short*) L"urn:schemas:contacts:profession";
+    const BSTR cdoProxyAddresses = (unsigned short*) L"urn:schemas:contacts:proxyaddresses";
+    const BSTR cdoRoomNumber = (unsigned short*) L"urn:schemas:contacts:roomnumber";
+    const BSTR cdoSecretary = (unsigned short*) L"urn:schemas:contacts:secretary";
+    const BSTR cdoSecretaryCommonName = (unsigned short*) L"urn:schemas:contacts:secretarycn";
+    const BSTR cdoSecretaryURL = (unsigned short*) L"urn:schemas:contacts:secretaryurl";
+    const BSTR cdoSourceURL = (unsigned short*) L"urn:schemas:contacts:sourceurl";
+    const BSTR cdoSpouseCommonName = (unsigned short*) L"urn:schemas:contacts:spousecn";
+    const BSTR cdoSubmissionContLength = (unsigned short*) L"urn:schemas:contacts:submissioncontlength";
+    const BSTR cdoTelexNumber = (unsigned short*) L"urn:schemas:contacts:telexnumber";
+    const BSTR cdoTitle = (unsigned short*) L"urn:schemas:contacts:title";
+    const BSTR cdoUserCertificate = (unsigned short*) L"urn:schemas:contacts:usercertificate";
+    const BSTR cdoWeddingAnniversary = (unsigned short*) L"urn:schemas:contacts:weddinganniversary";
+    const BSTR cdoWorkAddress = (unsigned short*) L"urn:schemas:contacts:workaddress";
+    const BSTR cdoWorkCity = (unsigned short*) L"urn:schemas:contacts:l";
+    const BSTR cdoWorkCountry = (unsigned short*) L"urn:schemas:contacts:co";
+    const BSTR cdoWorkCountryAbbreviation = (unsigned short*) L"urn:schemas:contacts:c";
+    const BSTR cdoWorkFax = (unsigned short*) L"urn:schemas:contacts:facsimiletelephonenumber";
+    const BSTR cdoWorkMobilePhone = (unsigned short*) L"urn:schemas:contacts:mobile";
+    const BSTR cdoWorkPager = (unsigned short*) L"urn:schemas:contacts:pager";
+    const BSTR cdoWorkPhone = (unsigned short*) L"urn:schemas:contacts:telephoneNumber";
+    const BSTR cdoWorkPhone2 = (unsigned short*) L"urn:schemas:contacts:telephonenumber2";
+    const BSTR cdoWorkPostalCode = (unsigned short*) L"urn:schemas:contacts:postalcode";
+    const BSTR cdoWorkPostOfficeBox = (unsigned short*) L"urn:schemas:contacts:postofficebox";
+    const BSTR cdoWorkState = (unsigned short*) L"urn:schemas:contacts:st";
+    const BSTR cdoWorkStreet = (unsigned short*) L"urn:schemas:contacts:street";
+    const BSTR cdoGif = (unsigned short*) L"image/gif";
+    const BSTR cdoJpeg = (unsigned short*) L"image/jpeg";
+    const BSTR cdoMessageExternalBody = (unsigned short*) L"message/external-body";
+    const BSTR cdoMessagePartial = (unsigned short*) L"message/partial";
+    const BSTR cdoMessageRFC822 = (unsigned short*) L"message/rfc822";
+    const BSTR cdoMultipartAlternative = (unsigned short*) L"multipart/alternative";
+    const BSTR cdoMultipartDigest = (unsigned short*) L"multipart/digest";
+    const BSTR cdoMultipartMixed = (unsigned short*) L"multipart/mixed";
+    const BSTR cdoMultipartRelated = (unsigned short*) L"multipart/related";
+    const BSTR cdoTextHTML = (unsigned short*) L"text/html";
+    const BSTR cdoTextPlain = (unsigned short*) L"text/plain";
+    const BSTR cdoAbstract = (unsigned short*) L"DAV:abstract";
+    const BSTR cdoChildCount = (unsigned short*) L"DAV:childcount";
+    const BSTR cdoContentClass = (unsigned short*) L"DAV:contentclass";
+    const BSTR cdoCreationDate = (unsigned short*) L"DAV:creationdate";
+    const BSTR cdoDAVComment = (unsigned short*) L"DAV:comment";
+    const BSTR cdoDefaultDocument = (unsigned short*) L"DAV:defaultdocument";
+    const BSTR cdoDisplayName = (unsigned short*) L"DAV:displayname";
+    const BSTR cdoGetContentLanguage = (unsigned short*) L"DAV:getcontentlanguage";
+    const BSTR cdoGetContentLength = (unsigned short*) L"DAV:getcontentlength";
+    const BSTR cdoGetContentType = (unsigned short*) L"DAV:getcontenttype";
+    const BSTR cdoGetEtag = (unsigned short*) L"DAV:getetag";
+    const BSTR cdoGetLastModified = (unsigned short*) L"DAV:getlastmodified";
+    const BSTR cdoHasChildren = (unsigned short*) L"DAV:haschildren";
+    const BSTR cdoHasSubs = (unsigned short*) L"DAV:hassubs";
+    const BSTR cdoHref = (unsigned short*) L"DAV:href";
+    const BSTR cdoId = (unsigned short*) L"DAV:id";
+    const BSTR cdoIsCollection = (unsigned short*) L"DAV:iscollection";
+    const BSTR cdoIsFolder = (unsigned short*) L"DAV:isfolder";
+    const BSTR cdoIsHidden = (unsigned short*) L"DAV:ishidden";
+    const BSTR cdoIsRoot = (unsigned short*) L"DAV:isroot";
+    const BSTR cdoIsStructuredDocument = (unsigned short*) L"DAV:isstructureddocument";
+    const BSTR cdoLastAccessed = (unsigned short*) L"DAV:lastaccessed";
+    const BSTR cdoLastModified = (unsigned short*) L"DAV:lastmodified";
+    const BSTR cdoLockDiscovery = (unsigned short*) L"DAV:lockdiscovery";
+    const BSTR cdoNoSubs = (unsigned short*) L"DAV:nosubs";
+    const BSTR cdoObjectCount = (unsigned short*) L"DAV:objectcount";
+    const BSTR cdoParentName = (unsigned short*) L"DAV:parentname";
+    const BSTR cdoResourceType = (unsigned short*) L"DAV:resourcetype";
+    const BSTR cdoSupportedLock = (unsigned short*) L"DAV:supportedlock";
+    const BSTR cdoUID = (unsigned short*) L"DAV:uid";
+    const BSTR cdoVisibleCount = (unsigned short*) L"DAV:visiblecount";
+    const BSTR cdo7bit = (unsigned short*) L"7bit";
+    const BSTR cdo8bit = (unsigned short*) L"8bit";
+    const BSTR cdoBase64 = (unsigned short*) L"base64";
+    const BSTR cdoBinary = (unsigned short*) L"binary";
+    const BSTR cdoMacBinHex40 = (unsigned short*) L"mac-binhex40";
+    const BSTR cdoQuotedPrintable = (unsigned short*) L"quoted-printable";
+    const BSTR cdoUuencode = (unsigned short*) L"uuencode";
+    const BSTR cdoAltRecipient = (unsigned short*) L"http://schemas.microsoft.com/exchange/altrecipient";
+    const BSTR cdoCompanies = (unsigned short*) L"http://schemas.microsoft.com/exchange/companies";
+    const BSTR cdoFolderSize = (unsigned short*) L"http://schemas.microsoft.com/exchange/foldersize";
+    const BSTR cdoHardLinkList = (unsigned short*) L"http://schemas.microsoft.com/exchange/hardlinklist";
+    const BSTR cdoSensitivity = (unsigned short*) L"http://schemas.microsoft.com/exchange/sensitivity";
+    const BSTR cdoAttachmentFilename = (unsigned short*) L"urn:schemas:httpmail:attachmentfilename";
+    const BSTR cdoBcc = (unsigned short*) L"urn:schemas:httpmail:bcc";
+    const BSTR cdoCalendarFolderURL = (unsigned short*) L"urn:schemas:httpmail:calendar";
+    const BSTR cdoCc = (unsigned short*) L"urn:schemas:httpmail:cc";
+    const BSTR cdoContactFolderURL = (unsigned short*) L"urn:schemas:httpmail:contacts";
+    const BSTR cdoContentDispositionType = (unsigned short*) L"urn:schemas:httpmail:content-disposition-type";
+    const BSTR cdoContentMediaType = (unsigned short*) L"urn:schemas:httpmail:content-media-type";
+    const BSTR cdoDate = (unsigned short*) L"urn:schemas:httpmail:date";
+    const BSTR cdoDateReceived = (unsigned short*) L"urn:schemas:httpmail:datereceived";
+    const BSTR cdoDeletedItems = (unsigned short*) L"urn:schemas:httpmail:deleteditems";
+    const BSTR cdoFrom = (unsigned short*) L"urn:schemas:httpmail:from";
+    const BSTR cdoHasAttachment = (unsigned short*) L"urn:schemas:httpmail:hasattachment";
+    const BSTR cdoHTMLDescription = (unsigned short*) L"urn:schemas:httpmail:htmldescription";
+    const BSTR cdoImportance = (unsigned short*) L"urn:schemas:httpmail:importance";
+    const BSTR cdoInbox = (unsigned short*) L"urn:schemas:httpmail:inbox";
+    const BSTR cdoJournal = (unsigned short*) L"urn:schemas:httpmail:journal";
+    const BSTR cdoMsgFolderRoot = (unsigned short*) L"urn:schemas:httpmail:msgfolderroot";
+    const BSTR cdoNormalizedSubject = (unsigned short*) L"urn:schemas:httpmail:normalizedsubject";
+    const BSTR cdoNotes = (unsigned short*) L"urn:schemas:httpmail:notes";
+    const BSTR cdoOutbox = (unsigned short*) L"urn:schemas:httpmail:outbox";
+    const BSTR cdoPriority = (unsigned short*) L"urn:schemas:httpmail:priority";
+    const BSTR cdoRead = (unsigned short*) L"urn:schemas:httpmail:read";
+    const BSTR cdoReplyTo = (unsigned short*) L"urn:schemas:httpmail:reply-to";
+    const BSTR cdoSender = (unsigned short*) L"urn:schemas:httpmail:sender";
+    const BSTR cdoSendMsg = (unsigned short*) L"urn:schemas:httpmail:sendmsg";
+    const BSTR cdoSentItems = (unsigned short*) L"urn:schemas:httpmail:sentitems";
+    const BSTR cdoSpecial = (unsigned short*) L"urn:schemas:httpmail:special";
+    const BSTR cdoSubject = (unsigned short*) L"urn:schemas:httpmail:subject";
+    const BSTR cdoSubmitted = (unsigned short*) L"urn:schemas:httpmail:submitted";
+    const BSTR cdoTasks = (unsigned short*) L"urn:schemas:httpmail:tasks";
+    const BSTR cdoTextDescription = (unsigned short*) L"urn:schemas:httpmail:textdescription";
+    const BSTR cdoThreadTopic = (unsigned short*) L"urn:schemas:httpmail:thread-topic";
+    const BSTR cdoTo = (unsigned short*) L"urn:schemas:httpmail:to";
+    const BSTR cdoUnreadCount = (unsigned short*) L"urn:schemas:httpmail:unreadcount";
+    const BSTR cdoAdoRecord = (unsigned short*) L"_Record";
+    const BSTR cdoAdoRecordset = (unsigned short*) L"_Recordset";
+    const BSTR cdoAdoStream = (unsigned short*) L"_Stream";
+    const BSTR cdoIAddressee = (unsigned short*) L"IAddressee";
+    const BSTR cdoIAppointment = (unsigned short*) L"IAppointment";
+    const BSTR cdoIBodyPart = (unsigned short*) L"IBodyPart";
+    const BSTR cdoICalendarMessage = (unsigned short*) L"ICalendarMessage";
+    const BSTR cdoICalendarPart = (unsigned short*) L"ICalendarPart";
+    const BSTR cdoICalendarParts = (unsigned short*) L"ICalendarParts";
+    const BSTR cdoIConfiguration = (unsigned short*) L"IConfiguration";
+    const BSTR cdoIDataSource = (unsigned short*) L"IDataSource";
+    const BSTR cdoIFolder = (unsigned short*) L"IFolder";
+    const BSTR cdoIItem = (unsigned short*) L"IItem";
+    const BSTR cdoIMailbox = (unsigned short*) L"IMailbox";
+    const BSTR cdoIMessage = (unsigned short*) L"IMessage";
+    const BSTR cdoIPerson = (unsigned short*) L"IPerson";
+    const BSTR cdoIRow = (unsigned short*) L"IRow";
+    const BSTR cdoIRowset = (unsigned short*) L"IRowset";
+    const BSTR cdoIStream = (unsigned short*) L"IStream";
+    const BSTR cdoApproved = (unsigned short*) L"urn:schemas:mailheader:approved";
+    const BSTR cdoComment = (unsigned short*) L"urn:schemas:mailheader:comment";
+    const BSTR cdoContentBase = (unsigned short*) L"urn:schemas:mailheader:content-base";
+    const BSTR cdoContentDescription = (unsigned short*) L"urn:schemas:mailheader:content-description";
+    const BSTR cdoContentDisposition = (unsigned short*) L"urn:schemas:mailheader:content-disposition";
+    const BSTR cdoContentId = (unsigned short*) L"urn:schemas:mailheader:content-id";
+    const BSTR cdoContentLanguage = (unsigned short*) L"urn:schemas:mailheader:content-language";
+    const BSTR cdoContentLocation = (unsigned short*) L"urn:schemas:mailheader:content-location";
+    const BSTR cdoContentTransferEncoding = (unsigned short*) L"urn:schemas:mailheader:content-transfer-encoding";
+    const BSTR cdoContentType = (unsigned short*) L"urn:schemas:mailheader:content-type";
+    const BSTR cdoControl = (unsigned short*) L"urn:schemas:mailheader:control";
+    const BSTR cdoDisposition = (unsigned short*) L"urn:schemas:mailheader:disposition";
+    const BSTR cdoDispositionNotificationTo = (unsigned short*) L"urn:schemas:mailheader:disposition-notification-to";
+    const BSTR cdoDistribution = (unsigned short*) L"urn:schemas:mailheader:distribution";
+    const BSTR cdoExpires = (unsigned short*) L"urn:schemas:mailheader:expires";
+    const BSTR cdoFollowupTo = (unsigned short*) L"urn:schemas:mailheader:followup-to";
+    const BSTR cdoInReplyTo = (unsigned short*) L"urn:schemas:mailheader:in-reply-to";
+    const BSTR cdoLines = (unsigned short*) L"urn:schemas:mailheader:lines";
+    const BSTR cdoMessageId = (unsigned short*) L"urn:schemas:mailheader:message-id";
+    const BSTR cdoMIMEVersion = (unsigned short*) L"urn:schemas:mailheader:mime-version";
+    const BSTR cdoNewsgroups = (unsigned short*) L"urn:schemas:mailheader:newsgroups";
+    const BSTR cdoOrganization = (unsigned short*) L"urn:schemas:mailheader:organization";
+    const BSTR cdoOriginalRecipient = (unsigned short*) L"urn:schemas:mailheader:original-recipient";
+    const BSTR cdoPath = (unsigned short*) L"urn:schemas:mailheader:path";
+    const BSTR cdoPostingVersion = (unsigned short*) L"urn:schemas:mailheader:posting-version";
+    const BSTR cdoReceived = (unsigned short*) L"urn:schemas:mailheader:received";
+    const BSTR cdoReferences = (unsigned short*) L"urn:schemas:mailheader:references";
+    const BSTR cdoRelayVersion = (unsigned short*) L"urn:schemas:mailheader:relay-version";
+    const BSTR cdoReturnPath = (unsigned short*) L"urn:schemas:mailheader:return-path";
+    const BSTR cdoReturnReceiptTo = (unsigned short*) L"urn:schemas:mailheader:return-receipt-to";
+    const BSTR cdoSummary = (unsigned short*) L"urn:schemas:mailheader:summary";
+    const BSTR cdoThreadIndex = (unsigned short*) L"urn:schemas:mailheader:thread-index";
+    const BSTR cdoXMailer = (unsigned short*) L"urn:schemas:mailheader:x-mailer";
+    const BSTR cdoXref = (unsigned short*) L"urn:schemas:mailheader:xref";
+    const BSTR cdoXUnsent = (unsigned short*) L"urn:schemas:mailheader:x-unsent";
+    const BSTR cdoXFidelity = (unsigned short*) L"urn:schemas:mailheader:x-cdostreamhighfidelity";
+    const BSTR cdoMeetingStatusCancelled = (unsigned short*) L"Cancelled";
+    const BSTR cdoMeetingStatusConfirmed = (unsigned short*) L"Confirmed";
+    const BSTR cdoMeetingStatusTentative = (unsigned short*) L"Tentative";
+    const BSTR cdoAdd = (unsigned short*) L"Add";
+    const BSTR cdoCancel = (unsigned short*) L"Cancel";
+    const BSTR cdoCounter = (unsigned short*) L"Counter";
+    const BSTR cdoDeclineCounter = (unsigned short*) L"DeclineCounter";
+    const BSTR cdoPublish = (unsigned short*) L"Publish";
+    const BSTR cdoRefresh = (unsigned short*) L"Refresh";
+    const BSTR cdoReply = (unsigned short*) L"Reply";
+    const BSTR cdoRequest = (unsigned short*) L"Request";
+    const BSTR cdoNSCalendar = (unsigned short*) L"urn:schemas:calendar:";
+    const BSTR cdoNSConfiguration = (unsigned short*) L"http://schemas.microsoft.com/cdo/configuration/";
+    const BSTR cdoNSContacts = (unsigned short*) L"urn:schemas:contacts:";
+    const BSTR cdoNSDAV = (unsigned short*) L"DAV:";
+    const BSTR cdoNSHTTPMail = (unsigned short*) L"urn:schemas:httpmail:";
+    const BSTR cdoNSMailHeader = (unsigned short*) L"urn:schemas:mailheader:";
+    const BSTR cdoNSNNTPEnvelope = (unsigned short*) L"http://schemas.microsoft.com/cdo/nntpenvelope/";
+    const BSTR cdoNSSMTPEnvelope = (unsigned short*) L"http://schemas.microsoft.com/cdo/smtpenvelope/";
+    const BSTR cdoNSVCAL = (unsigned short*) L"urn:schemas:vcal:";
+    const BSTR cdoNewsgroupList = (unsigned short*) L"http://schemas.microsoft.com/cdo/nntpenvelope/newsgrouplist";
+    const BSTR cdoNNTPProcessing = (unsigned short*) L"http://schemas.microsoft.com/cdo/nntpenvelope/nntpprocessing";
+    const BSTR cdoKeywords = (unsigned short*) L"urn:schemas-microsoft-com:office:office#Keywords";
+    const BSTR cdoNone = (unsigned short*) L"None";
+    const BSTR cdoThisAndFuture = (unsigned short*) L"ThisAndFuture";
+    const BSTR cdoThisAndPrior = (unsigned short*) L"ThisAndPrior";
+    const BSTR cdoArrivalTime = (unsigned short*) L"http://schemas.microsoft.com/cdo/smtpenvelope/arrivaltime";
+    const BSTR cdoClientIPAddress = (unsigned short*) L"http://schemas.microsoft.com/cdo/smtpenvelope/clientipaddress";
+    const BSTR cdoMessageStatus = (unsigned short*) L"http://schemas.microsoft.com/cdo/smtpenvelope/messagestatus";
+    const BSTR cdoPickupFileName = (unsigned short*) L"http://schemas.microsoft.com/cdo/smtpenvelope/pickupfilename";
+    const BSTR cdoRecipientList = (unsigned short*) L"http://schemas.microsoft.com/cdo/smtpenvelope/recipientlist";
+    const BSTR cdoSenderEmailAddress = (unsigned short*) L"http://schemas.microsoft.com/cdo/smtpenvelope/senderemailaddress";
+    const BSTR cdoOpaque = (unsigned short*) L"Opaque";
+    const BSTR cdoTransparent = (unsigned short*) L"Transparent";
+    const long CDO_E_UNCAUGHT_EXCEPTION = -2147220991;
+    const long CDO_E_NOT_OPENED = -2147220990;
+    const long CDO_E_UNSUPPORTED_DATASOURCE = -2147220989;
+    const long CDO_E_INVALID_PROPERTYNAME = -2147220988;
+    const long CDO_E_PROP_UNSUPPORTED = -2147220987;
+    const long CDO_E_INACTIVE = -2147220986;
+    const long CDO_E_NO_SUPPORT_FOR_OBJECTS = -2147220985;
+    const long CDO_E_NOT_AVAILABLE = -2147220984;
+    const long CDO_E_NO_DEFAULT_DROP_DIR = -2147220983;
+    const long CDO_E_SMTP_SERVER_REQUIRED = -2147220982;
+    const long CDO_E_NNTP_SERVER_REQUIRED = -2147220981;
+    const long CDO_E_RECIPIENT_MISSING = -2147220980;
+    const long CDO_E_FROM_MISSING = -2147220979;
+    const long CDO_E_SENDER_REJECTED = -2147220978;
+    const long CDO_E_RECIPIENTS_REJECTED = -2147220977;
+    const long CDO_E_NNTP_POST_FAILED = -2147220976;
+    const long CDO_E_SMTP_SEND_FAILED = -2147220975;
+    const long CDO_E_CONNECTION_DROPPED = -2147220974;
+    const long CDO_E_FAILED_TO_CONNECT = -2147220973;
+    const long CDO_E_INVALID_POST = -2147220972;
+    const long CDO_E_AUTHENTICATION_FAILURE = -2147220971;
+    const long CDO_E_INVALID_CONTENT_TYPE = -2147220970;
+    const long CDO_E_LOGON_FAILURE = -2147220969;
+    const long CDO_E_HTTP_NOT_FOUND = -2147220968;
+    const long CDO_E_HTTP_FORBIDDEN = -2147220967;
+    const long CDO_E_HTTP_FAILED = -2147220966;
+    const long CDO_E_MULTIPART_NO_DATA = -2147220965;
+    const long CDO_E_INVALID_ENCODING_FOR_MULTIPART = -2147220964;
+    const long CDO_E_UNSAFE_OPERATION = -2147220963;
+    const long CDO_E_PROP_NOT_FOUND = -2147220962;
+    const long CDO_E_INVALID_SEND_OPTION = -2147220960;
+    const long CDO_E_INVALID_POST_OPTION = -2147220959;
+    const long CDO_E_NO_PICKUP_DIR = -2147220958;
+    const long CDO_E_NOT_ALL_DELETED = -2147220957;
+    const long CDO_E_NO_METHOD = -2147220956;
+    const long CDO_E_PROP_READONLY = -2147220953;
+    const long CDO_E_PROP_CANNOT_DELETE = -2147220952;
+    const long CDO_E_BAD_DATA = -2147220951;
+    const long CDO_E_PROP_NONHEADER = -2147220950;
+    const long CDO_E_INVALID_CHARSET = -2147220949;
+    const long CDO_E_ADOSTREAM_NOT_BOUND = -2147220948;
+    const long CDO_E_CONTENTPROPXML_NOT_FOUND = -2147220947;
+    const long CDO_E_CONTENTPROPXML_WRONG_CHARSET = -2147220946;
+    const long CDO_E_CONTENTPROPXML_PARSE_FAILED = -2147220945;
+    const long CDO_E_CONTENTPROPXML_CONVERT_FAILED = -2147220944;
+    const long CDO_E_NO_DIRECTORIES_SPECIFIED = -2147220943;
+    const long CDO_E_DIRECTORIES_UNREACHABLE = -2147220942;
+    const long CDO_E_BAD_SENDER = -2147220941;
+    const long CDO_E_SELF_BINDING = -2147220940;
+    const long CDO_E_BAD_ATTENDEE_DATA = -2147220939;
+    const long CDO_E_ROLE_NOMORE_AVAILABLE = -2147220938;
+    const long CDO_E_OUTOFDATE = -2147220935;
+    const long CDO_E_ARGUMENT1 = -2147205120;
+    const long CDO_E_ARGUMENT2 = -2147205119;
+    const long CDO_E_ARGUMENT3 = -2147205118;
+    const long CDO_E_ARGUMENT4 = -2147205117;
+    const long CDO_E_ARGUMENT5 = -2147205116;
+    const long CDO_E_NOT_FOUND = -2146644475;
+    const long CDO_E_INVALID_ENCODING_TYPE = -2146644451;
+
+struct __declspec(uuid("cd000023-8b95-11d1-82db-00c04fb1625d"))
+IBodyParts : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetItem))
+    IBodyPartPtr Item[];
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetCount ( );
+    IBodyPartPtr GetItem (
+        long Index );
+    IUnknownPtr Get_NewEnum ( );
+    HRESULT Delete (
+        const _variant_t & varBP );
+    HRESULT DeleteAll ( );
+    IBodyPartPtr Add (
+        long Index );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_Count (
+        long * varCount ) = 0;
+    virtual HRESULT __stdcall get_Item (
+        long Index,
+        struct IBodyPart * * ppBody ) = 0;
+    virtual HRESULT __stdcall get__NewEnum (
+        IUnknown * * retval ) = 0;
+    virtual HRESULT __stdcall raw_Delete (
+        VARIANT varBP ) = 0;
+    virtual HRESULT __stdcall raw_DeleteAll ( ) = 0;
+    virtual HRESULT __stdcall raw_Add (
+        long Index,
+        struct IBodyPart * * ppPart ) = 0;
+};
+
+struct __declspec(uuid("cd000021-8b95-11d1-82db-00c04fb1625d"))
+IBodyPart : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetBodyParts))
+    IBodyPartsPtr BodyParts;
+    __declspec(property(get=GetContentTransferEncoding,put=PutContentTransferEncoding))
+    _bstr_t ContentTransferEncoding;
+    __declspec(property(get=GetContentMediaType,put=PutContentMediaType))
+    _bstr_t ContentMediaType;
+    __declspec(property(get=GetFields))
+    FieldsPtr Fields;
+    __declspec(property(get=GetCharset,put=PutCharset))
+    _bstr_t Charset;
+    __declspec(property(get=GetFileName))
+    _bstr_t FileName;
+    __declspec(property(get=GetDataSource))
+    IDataSourcePtr DataSource;
+    __declspec(property(get=GetContentClass,put=PutContentClass))
+    _bstr_t ContentClass;
+    __declspec(property(get=GetContentClassName,put=PutContentClassName))
+    _bstr_t ContentClassName;
+    __declspec(property(get=GetParent))
+    IBodyPartPtr Parent;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IBodyPartsPtr GetBodyParts ( );
+    _bstr_t GetContentTransferEncoding ( );
+    void PutContentTransferEncoding (
+        _bstr_t pContentTransferEncoding );
+    _bstr_t GetContentMediaType ( );
+    void PutContentMediaType (
+        _bstr_t pContentMediaType );
+    FieldsPtr GetFields ( );
+    _bstr_t GetCharset ( );
+    void PutCharset (
+        _bstr_t pCharset );
+    _bstr_t GetFileName ( );
+    IDataSourcePtr GetDataSource ( );
+    _bstr_t GetContentClass ( );
+    void PutContentClass (
+        _bstr_t pContentClass );
+    _bstr_t GetContentClassName ( );
+    void PutContentClassName (
+        _bstr_t pContentClassName );
+    IBodyPartPtr GetParent ( );
+    IBodyPartPtr AddBodyPart (
+        long Index );
+    HRESULT SaveToFile (
+        _bstr_t FileName );
+    _StreamPtr GetEncodedContentStream ( );
+    _StreamPtr GetDecodedContentStream ( );
+    _StreamPtr GetStream ( );
+    _bstr_t GetFieldParameter (
+        _bstr_t FieldName,
+        _bstr_t Parameter );
+    IDispatchPtr GetInterface (
+        _bstr_t Interface );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_BodyParts (
+        struct IBodyParts * * varBodyParts ) = 0;
+    virtual HRESULT __stdcall get_ContentTransferEncoding (
+        BSTR * pContentTransferEncoding ) = 0;
+    virtual HRESULT __stdcall put_ContentTransferEncoding (
+        BSTR pContentTransferEncoding ) = 0;
+    virtual HRESULT __stdcall get_ContentMediaType (
+        BSTR * pContentMediaType ) = 0;
+    virtual HRESULT __stdcall put_ContentMediaType (
+        BSTR pContentMediaType ) = 0;
+    virtual HRESULT __stdcall get_Fields (
+        struct Fields * * varFields ) = 0;
+    virtual HRESULT __stdcall get_Charset (
+        BSTR * pCharset ) = 0;
+    virtual HRESULT __stdcall put_Charset (
+        BSTR pCharset ) = 0;
+    virtual HRESULT __stdcall get_FileName (
+        BSTR * varFileName ) = 0;
+    virtual HRESULT __stdcall get_DataSource (
+        struct IDataSource * * varDataSource ) = 0;
+    virtual HRESULT __stdcall get_ContentClass (
+        BSTR * pContentClass ) = 0;
+    virtual HRESULT __stdcall put_ContentClass (
+        BSTR pContentClass ) = 0;
+    virtual HRESULT __stdcall get_ContentClassName (
+        BSTR * pContentClassName ) = 0;
+    virtual HRESULT __stdcall put_ContentClassName (
+        BSTR pContentClassName ) = 0;
+    virtual HRESULT __stdcall get_Parent (
+        struct IBodyPart * * varParent ) = 0;
+    virtual HRESULT __stdcall raw_AddBodyPart (
+        long Index,
+        struct IBodyPart * * ppPart ) = 0;
+    virtual HRESULT __stdcall raw_SaveToFile (
+        BSTR FileName ) = 0;
+    virtual HRESULT __stdcall raw_GetEncodedContentStream (
+        struct _Stream * * ppStream ) = 0;
+    virtual HRESULT __stdcall raw_GetDecodedContentStream (
+        struct _Stream * * ppStream ) = 0;
+    virtual HRESULT __stdcall raw_GetStream (
+        struct _Stream * * ppStream ) = 0;
+    virtual HRESULT __stdcall raw_GetFieldParameter (
+        BSTR FieldName,
+        BSTR Parameter,
+        BSTR * pbstrValue ) = 0;
+    virtual HRESULT __stdcall raw_GetInterface (
+        BSTR Interface,
+        IDispatch * * ppUnknown ) = 0;
+};
+
+struct __declspec(uuid("cd000029-8b95-11d1-82db-00c04fb1625d"))
+IDataSource : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetSourceClass))
+    _bstr_t SourceClass;
+    __declspec(property(get=GetSource))
+    IUnknownPtr Source;
+    __declspec(property(get=GetIsDirty,put=PutIsDirty))
+    VARIANT_BOOL IsDirty;
+    __declspec(property(get=GetSourceURL))
+    _bstr_t SourceURL;
+    __declspec(property(get=GetActiveConnection))
+    _ConnectionPtr ActiveConnection;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _bstr_t GetSourceClass ( );
+    IUnknownPtr GetSource ( );
+    VARIANT_BOOL GetIsDirty ( );
+    void PutIsDirty (
+        VARIANT_BOOL pIsDirty );
+    _bstr_t GetSourceURL ( );
+    _ConnectionPtr GetActiveConnection ( );
+    HRESULT SaveToObject (
+        IUnknown * Source,
+        _bstr_t InterfaceName );
+    HRESULT OpenObject (
+        IUnknown * Source,
+        _bstr_t InterfaceName );
+    HRESULT SaveTo (
+        _bstr_t SourceURL,
+        IDispatch * ActiveConnection,
+        enum ConnectModeEnum Mode,
+        enum RecordCreateOptionsEnum CreateOptions,
+        enum RecordOpenOptionsEnum Options,
+        _bstr_t UserName,
+        _bstr_t Password );
+    HRESULT Open (
+        _bstr_t SourceURL,
+        IDispatch * ActiveConnection,
+        enum ConnectModeEnum Mode,
+        enum RecordCreateOptionsEnum CreateOptions,
+        enum RecordOpenOptionsEnum Options,
+        _bstr_t UserName,
+        _bstr_t Password );
+    HRESULT Save ( );
+    HRESULT SaveToContainer (
+        _bstr_t ContainerURL,
+        IDispatch * ActiveConnection,
+        enum ConnectModeEnum Mode,
+        enum RecordCreateOptionsEnum CreateOptions,
+        enum RecordOpenOptionsEnum Options,
+        _bstr_t UserName,
+        _bstr_t Password );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_SourceClass (
+        BSTR * varSourceClass ) = 0;
+    virtual HRESULT __stdcall get_Source (
+        IUnknown * * varSource ) = 0;
+    virtual HRESULT __stdcall get_IsDirty (
+        VARIANT_BOOL * pIsDirty ) = 0;
+    virtual HRESULT __stdcall put_IsDirty (
+        VARIANT_BOOL pIsDirty ) = 0;
+    virtual HRESULT __stdcall get_SourceURL (
+        BSTR * varSourceURL ) = 0;
+    virtual HRESULT __stdcall get_ActiveConnection (
+        struct _Connection * * varActiveConnection ) = 0;
+    virtual HRESULT __stdcall raw_SaveToObject (
+        IUnknown * Source,
+        BSTR InterfaceName ) = 0;
+    virtual HRESULT __stdcall raw_OpenObject (
+        IUnknown * Source,
+        BSTR InterfaceName ) = 0;
+    virtual HRESULT __stdcall raw_SaveTo (
+        BSTR SourceURL,
+        IDispatch * ActiveConnection,
+        enum ConnectModeEnum Mode,
+        enum RecordCreateOptionsEnum CreateOptions,
+        enum RecordOpenOptionsEnum Options,
+        BSTR UserName,
+        BSTR Password ) = 0;
+    virtual HRESULT __stdcall raw_Open (
+        BSTR SourceURL,
+        IDispatch * ActiveConnection,
+        enum ConnectModeEnum Mode,
+        enum RecordCreateOptionsEnum CreateOptions,
+        enum RecordOpenOptionsEnum Options,
+        BSTR UserName,
+        BSTR Password ) = 0;
+    virtual HRESULT __stdcall raw_Save ( ) = 0;
+    virtual HRESULT __stdcall raw_SaveToContainer (
+        BSTR ContainerURL,
+        IDispatch * ActiveConnection,
+        enum ConnectModeEnum Mode,
+        enum RecordCreateOptionsEnum CreateOptions,
+        enum RecordOpenOptionsEnum Options,
+        BSTR UserName,
+        BSTR Password ) = 0;
+};
+
+struct __declspec(uuid("cd000025-8b95-11d1-82db-00c04fb1625d"))
+IMessages : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IMessagePtr GetItem (
+        long Index );
+    long GetCount ( );
+    HRESULT Delete (
+        long Index );
+    HRESULT DeleteAll ( );
+    IUnknownPtr Get_NewEnum ( );
+    _bstr_t GetFileName (
+        const _variant_t & var );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_Item (
+        long Index,
+        struct IMessage * * ppMessage ) = 0;
+    virtual HRESULT __stdcall get_Count (
+        long * varCount ) = 0;
+    virtual HRESULT __stdcall raw_Delete (
+        long Index ) = 0;
+    virtual HRESULT __stdcall raw_DeleteAll ( ) = 0;
+    virtual HRESULT __stdcall get__NewEnum (
+        IUnknown * * retval ) = 0;
+    virtual HRESULT __stdcall get_FileName (
+        VARIANT var,
+        BSTR * FileName ) = 0;
+};
+
+struct __declspec(uuid("cd000020-8b95-11d1-82db-00c04fb1625d"))
+IMessage : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetBodyPart))
+    IBodyPartPtr BodyPart;
+    __declspec(property(get=GetDataSource))
+    IDataSourcePtr DataSource;
+    __declspec(property(get=GetFields))
+    FieldsPtr Fields;
+    __declspec(property(get=GetMDNRequested,put=PutMDNRequested))
+    VARIANT_BOOL MDNRequested;
+    __declspec(property(get=GetBCC,put=PutBCC))
+    _bstr_t BCC;
+    __declspec(property(get=GetCC,put=PutCC))
+    _bstr_t CC;
+    __declspec(property(get=GetFollowUpTo,put=PutFollowUpTo))
+    _bstr_t FollowUpTo;
+    __declspec(property(get=GetFrom,put=PutFrom))
+    _bstr_t From;
+    __declspec(property(get=GetKeywords,put=PutKeywords))
+    _bstr_t Keywords;
+    __declspec(property(get=GetMimeFormatted,put=PutMimeFormatted))
+    VARIANT_BOOL MimeFormatted;
+    __declspec(property(get=GetNewsgroups,put=PutNewsgroups))
+    _bstr_t Newsgroups;
+    __declspec(property(get=GetOrganization,put=PutOrganization))
+    _bstr_t Organization;
+    __declspec(property(get=GetReceivedTime))
+    DATE ReceivedTime;
+    __declspec(property(get=GetReplyTo,put=PutReplyTo))
+    _bstr_t ReplyTo;
+    __declspec(property(get=GetDSNOptions,put=PutDSNOptions))
+    enum CdoDSNOptions DSNOptions;
+    __declspec(property(get=GetSentOn))
+    DATE SentOn;
+    __declspec(property(get=GetSubject,put=PutSubject))
+    _bstr_t Subject;
+    __declspec(property(get=GetTo,put=PutTo))
+    _bstr_t To;
+    __declspec(property(get=GetTextBody,put=PutTextBody))
+    _bstr_t TextBody;
+    __declspec(property(get=GetHTMLBody,put=PutHTMLBody))
+    _bstr_t HTMLBody;
+    __declspec(property(get=GetAttachments))
+    IBodyPartsPtr Attachments;
+    __declspec(property(get=GetSender,put=PutSender))
+    _bstr_t Sender;
+    __declspec(property(get=GetConfiguration,put=PutRefConfiguration))
+    IConfigurationPtr Configuration;
+    __declspec(property(get=GetAutoGenerateTextBody,put=PutAutoGenerateTextBody))
+    VARIANT_BOOL AutoGenerateTextBody;
+    __declspec(property(get=GetEnvelopeFields))
+    FieldsPtr EnvelopeFields;
+    __declspec(property(get=GetTextBodyPart))
+    IBodyPartPtr TextBodyPart;
+    __declspec(property(get=GetHTMLBodyPart))
+    IBodyPartPtr HTMLBodyPart;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _bstr_t GetBCC ( );
+    void PutBCC (
+        _bstr_t pBCC );
+    _bstr_t GetCC ( );
+    void PutCC (
+        _bstr_t pCC );
+    _bstr_t GetFollowUpTo ( );
+    void PutFollowUpTo (
+        _bstr_t pFollowUpTo );
+    _bstr_t GetFrom ( );
+    void PutFrom (
+        _bstr_t pFrom );
+    _bstr_t GetKeywords ( );
+    void PutKeywords (
+        _bstr_t pKeywords );
+    VARIANT_BOOL GetMimeFormatted ( );
+    void PutMimeFormatted (
+        VARIANT_BOOL pMimeFormatted );
+    _bstr_t GetNewsgroups ( );
+    void PutNewsgroups (
+        _bstr_t pNewsgroups );
+    _bstr_t GetOrganization ( );
+    void PutOrganization (
+        _bstr_t pOrganization );
+    DATE GetReceivedTime ( );
+    _bstr_t GetReplyTo ( );
+    void PutReplyTo (
+        _bstr_t pReplyTo );
+    enum CdoDSNOptions GetDSNOptions ( );
+    void PutDSNOptions (
+        enum CdoDSNOptions pDSNOptions );
+    DATE GetSentOn ( );
+    _bstr_t GetSubject ( );
+    void PutSubject (
+        _bstr_t pSubject );
+    _bstr_t GetTo ( );
+    void PutTo (
+        _bstr_t pTo );
+    _bstr_t GetTextBody ( );
+    void PutTextBody (
+        _bstr_t pTextBody );
+    _bstr_t GetHTMLBody ( );
+    void PutHTMLBody (
+        _bstr_t pHTMLBody );
+    IBodyPartsPtr GetAttachments ( );
+    _bstr_t GetSender ( );
+    void PutSender (
+        _bstr_t pSender );
+    IConfigurationPtr GetConfiguration ( );
+    void PutConfiguration (
+        struct IConfiguration * pConfiguration );
+    void PutRefConfiguration (
+        struct IConfiguration * pConfiguration );
+    VARIANT_BOOL GetAutoGenerateTextBody ( );
+    void PutAutoGenerateTextBody (
+        VARIANT_BOOL pAutoGenerateTextBody );
+    FieldsPtr GetEnvelopeFields ( );
+    IBodyPartPtr GetTextBodyPart ( );
+    IBodyPartPtr GetHTMLBodyPart ( );
+    IBodyPartPtr GetBodyPart ( );
+    IDataSourcePtr GetDataSource ( );
+    FieldsPtr GetFields ( );
+    VARIANT_BOOL GetMDNRequested ( );
+    void PutMDNRequested (
+        VARIANT_BOOL pMDNRequested );
+    IBodyPartPtr AddRelatedBodyPart (
+        _bstr_t URL,
+        _bstr_t Reference,
+        enum CdoReferenceType ReferenceType,
+        _bstr_t UserName,
+        _bstr_t Password );
+    IBodyPartPtr AddAttachment (
+        _bstr_t URL,
+        _bstr_t UserName,
+        _bstr_t Password );
+    HRESULT CreateMHTMLBody (
+        _bstr_t URL,
+        enum CdoMHTMLFlags Flags,
+        _bstr_t UserName,
+        _bstr_t Password );
+    IMessagePtr Forward ( );
+    HRESULT Post ( );
+    IMessagePtr PostReply ( );
+    IMessagePtr Reply ( );
+    IMessagePtr ReplyAll ( );
+    HRESULT Send ( );
+    _StreamPtr GetStream ( );
+    IDispatchPtr GetInterface (
+        _bstr_t Interface );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_BCC (
+        BSTR * pBCC ) = 0;
+    virtual HRESULT __stdcall put_BCC (
+        BSTR pBCC ) = 0;
+    virtual HRESULT __stdcall get_CC (
+        BSTR * pCC ) = 0;
+    virtual HRESULT __stdcall put_CC (
+        BSTR pCC ) = 0;
+    virtual HRESULT __stdcall get_FollowUpTo (
+        BSTR * pFollowUpTo ) = 0;
+    virtual HRESULT __stdcall put_FollowUpTo (
+        BSTR pFollowUpTo ) = 0;
+    virtual HRESULT __stdcall get_From (
+        BSTR * pFrom ) = 0;
+    virtual HRESULT __stdcall put_From (
+        BSTR pFrom ) = 0;
+    virtual HRESULT __stdcall get_Keywords (
+        BSTR * pKeywords ) = 0;
+    virtual HRESULT __stdcall put_Keywords (
+        BSTR pKeywords ) = 0;
+    virtual HRESULT __stdcall get_MimeFormatted (
+        VARIANT_BOOL * pMimeFormatted ) = 0;
+    virtual HRESULT __stdcall put_MimeFormatted (
+        VARIANT_BOOL pMimeFormatted ) = 0;
+    virtual HRESULT __stdcall get_Newsgroups (
+        BSTR * pNewsgroups ) = 0;
+    virtual HRESULT __stdcall put_Newsgroups (
+        BSTR pNewsgroups ) = 0;
+    virtual HRESULT __stdcall get_Organization (
+        BSTR * pOrganization ) = 0;
+    virtual HRESULT __stdcall put_Organization (
+        BSTR pOrganization ) = 0;
+    virtual HRESULT __stdcall get_ReceivedTime (
+        DATE * varReceivedTime ) = 0;
+    virtual HRESULT __stdcall get_ReplyTo (
+        BSTR * pReplyTo ) = 0;
+    virtual HRESULT __stdcall put_ReplyTo (
+        BSTR pReplyTo ) = 0;
+    virtual HRESULT __stdcall get_DSNOptions (
+        enum CdoDSNOptions * pDSNOptions ) = 0;
+    virtual HRESULT __stdcall put_DSNOptions (
+        enum CdoDSNOptions pDSNOptions ) = 0;
+    virtual HRESULT __stdcall get_SentOn (
+        DATE * varSentOn ) = 0;
+    virtual HRESULT __stdcall get_Subject (
+        BSTR * pSubject ) = 0;
+    virtual HRESULT __stdcall put_Subject (
+        BSTR pSubject ) = 0;
+    virtual HRESULT __stdcall get_To (
+        BSTR * pTo ) = 0;
+    virtual HRESULT __stdcall put_To (
+        BSTR pTo ) = 0;
+    virtual HRESULT __stdcall get_TextBody (
+        BSTR * pTextBody ) = 0;
+    virtual HRESULT __stdcall put_TextBody (
+        BSTR pTextBody ) = 0;
+    virtual HRESULT __stdcall get_HTMLBody (
+        BSTR * pHTMLBody ) = 0;
+    virtual HRESULT __stdcall put_HTMLBody (
+        BSTR pHTMLBody ) = 0;
+    virtual HRESULT __stdcall get_Attachments (
+        struct IBodyParts * * varAttachments ) = 0;
+    virtual HRESULT __stdcall get_Sender (
+        BSTR * pSender ) = 0;
+    virtual HRESULT __stdcall put_Sender (
+        BSTR pSender ) = 0;
+    virtual HRESULT __stdcall get_Configuration (
+        struct IConfiguration * * pConfiguration ) = 0;
+    virtual HRESULT __stdcall put_Configuration (
+        struct IConfiguration * pConfiguration ) = 0;
+    virtual HRESULT __stdcall putref_Configuration (
+        struct IConfiguration * pConfiguration ) = 0;
+    virtual HRESULT __stdcall get_AutoGenerateTextBody (
+        VARIANT_BOOL * pAutoGenerateTextBody ) = 0;
+    virtual HRESULT __stdcall put_AutoGenerateTextBody (
+        VARIANT_BOOL pAutoGenerateTextBody ) = 0;
+    virtual HRESULT __stdcall get_EnvelopeFields (
+        struct Fields * * varEnvelopeFields ) = 0;
+    virtual HRESULT __stdcall get_TextBodyPart (
+        struct IBodyPart * * varTextBodyPart ) = 0;
+    virtual HRESULT __stdcall get_HTMLBodyPart (
+        struct IBodyPart * * varHTMLBodyPart ) = 0;
+    virtual HRESULT __stdcall get_BodyPart (
+        struct IBodyPart * * varBodyPart ) = 0;
+    virtual HRESULT __stdcall get_DataSource (
+        struct IDataSource * * varDataSource ) = 0;
+    virtual HRESULT __stdcall get_Fields (
+        struct Fields * * varFields ) = 0;
+    virtual HRESULT __stdcall get_MDNRequested (
+        VARIANT_BOOL * pMDNRequested ) = 0;
+    virtual HRESULT __stdcall put_MDNRequested (
+        VARIANT_BOOL pMDNRequested ) = 0;
+    virtual HRESULT __stdcall raw_AddRelatedBodyPart (
+        BSTR URL,
+        BSTR Reference,
+        enum CdoReferenceType ReferenceType,
+        BSTR UserName,
+        BSTR Password,
+        struct IBodyPart * * ppBody ) = 0;
+    virtual HRESULT __stdcall raw_AddAttachment (
+        BSTR URL,
+        BSTR UserName,
+        BSTR Password,
+        struct IBodyPart * * ppBody ) = 0;
+    virtual HRESULT __stdcall raw_CreateMHTMLBody (
+        BSTR URL,
+        enum CdoMHTMLFlags Flags,
+        BSTR UserName,
+        BSTR Password ) = 0;
+    virtual HRESULT __stdcall raw_Forward (
+        struct IMessage * * ppMsg ) = 0;
+    virtual HRESULT __stdcall raw_Post ( ) = 0;
+    virtual HRESULT __stdcall raw_PostReply (
+        struct IMessage * * ppMsg ) = 0;
+    virtual HRESULT __stdcall raw_Reply (
+        struct IMessage * * ppMsg ) = 0;
+    virtual HRESULT __stdcall raw_ReplyAll (
+        struct IMessage * * ppMsg ) = 0;
+    virtual HRESULT __stdcall raw_Send ( ) = 0;
+    virtual HRESULT __stdcall raw_GetStream (
+        struct _Stream * * ppStream ) = 0;
+    virtual HRESULT __stdcall raw_GetInterface (
+        BSTR Interface,
+        IDispatch * * ppUnknown ) = 0;
+};
+
+struct __declspec(uuid("cd000022-8b95-11d1-82db-00c04fb1625d"))
+IConfiguration : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetFields))
+    FieldsPtr Fields;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    FieldsPtr GetFields ( );
+    HRESULT Load (
+        enum CdoConfigSource LoadFrom,
+        _bstr_t URL );
+    IDispatchPtr GetInterface (
+        _bstr_t Interface );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_Fields (
+        struct Fields * * varFields ) = 0;
+    virtual HRESULT __stdcall raw_Load (
+        enum CdoConfigSource LoadFrom,
+        BSTR URL ) = 0;
+    virtual HRESULT __stdcall raw_GetInterface (
+        BSTR Interface,
+        IDispatch * * ppUnknown ) = 0;
+};
+
+struct __declspec(uuid("cd000001-8b95-11d1-82db-00c04fb1625d"))
+Message;
+    // [ default ] interface IMessage
+    // interface IDataSource
+    // interface IBodyPart
+
+struct __declspec(uuid("cd000002-8b95-11d1-82db-00c04fb1625d"))
+Configuration;
+    // [ default ] interface IConfiguration
+
+struct __declspec(uuid("cd000004-8b95-11d1-82db-00c04fb1625d"))
+DropDirectory;
+    // [ default ] interface IDropDirectory
+
+struct __declspec(uuid("cd000024-8b95-11d1-82db-00c04fb1625d"))
+IDropDirectory : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IMessagesPtr GetMessages (
+        _bstr_t DirName );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall raw_GetMessages (
+        BSTR DirName,
+        struct IMessages * * Msgs ) = 0;
+};
+
+struct __declspec(uuid("cd000008-8b95-11d1-82db-00c04fb1625d"))
+SMTPConnector;
+    // [ default ] interface ISMTPScriptConnector
+    // [ default, source ] interface ISMTPOnArrival
+
+struct __declspec(uuid("cd000030-8b95-11d1-82db-00c04fb1625d"))
+ISMTPScriptConnector : IDispatch
+{};
+
+struct __declspec(uuid("cd000026-8b95-11d1-82db-00c04fb1625d"))
+ISMTPOnArrival : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT OnArrival (
+        struct IMessage * Msg,
+        enum CdoEventStatus * EventStatus );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall raw_OnArrival (
+        struct IMessage * Msg,
+        enum CdoEventStatus * EventStatus ) = 0;
+};
+
+struct __declspec(uuid("cd000011-8b95-11d1-82db-00c04fb1625d"))
+NNTPEarlyConnector;
+    // [ default ] interface INNTPEarlyScriptConnector
+    // [ default, source ] interface INNTPOnPostEarly
+
+struct __declspec(uuid("cd000034-8b95-11d1-82db-00c04fb1625d"))
+INNTPEarlyScriptConnector : IDispatch
+{};
+
+struct __declspec(uuid("cd000033-8b95-11d1-82db-00c04fb1625d"))
+INNTPOnPostEarly : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT OnPostEarly (
+        struct IMessage * Msg,
+        enum CdoEventStatus * EventStatus );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall raw_OnPostEarly (
+        struct IMessage * Msg,
+        enum CdoEventStatus * EventStatus ) = 0;
+};
+
+struct __declspec(uuid("cd000009-8b95-11d1-82db-00c04fb1625d"))
+NNTPPostConnector;
+    // [ default ] interface INNTPPostScriptConnector
+    // [ default, source ] interface INNTPOnPost
+
+struct __declspec(uuid("cd000031-8b95-11d1-82db-00c04fb1625d"))
+INNTPPostScriptConnector : IDispatch
+{};
+
+struct __declspec(uuid("cd000027-8b95-11d1-82db-00c04fb1625d"))
+INNTPOnPost : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT OnPost (
+        struct IMessage * Msg,
+        enum CdoEventStatus * EventStatus );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall raw_OnPost (
+        struct IMessage * Msg,
+        enum CdoEventStatus * EventStatus ) = 0;
+};
+
+struct __declspec(uuid("cd000010-8b95-11d1-82db-00c04fb1625d"))
+NNTPFinalConnector;
+    // [ default ] interface INNTPFinalScriptConnector
+    // [ default, source ] interface INNTPOnPostFinal
+
+struct __declspec(uuid("cd000032-8b95-11d1-82db-00c04fb1625d"))
+INNTPFinalScriptConnector : IDispatch
+{};
+
+struct __declspec(uuid("cd000028-8b95-11d1-82db-00c04fb1625d"))
+INNTPOnPostFinal : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT OnPostFinal (
+        struct IMessage * Msg,
+        enum CdoEventStatus * EventStatus );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall raw_OnPostFinal (
+        struct IMessage * Msg,
+        enum CdoEventStatus * EventStatus ) = 0;
+};
+
+struct __declspec(uuid("cd000112-8b95-11d1-82db-00c04fb1625d"))
+Item;
+    // [ default ] interface IItem
+    // interface IDataSource
+
+struct __declspec(uuid("cd000126-8b95-11d1-82db-00c04fb1625d"))
+IItem : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetChildCount))
+    long ChildCount;
+    __declspec(property(get=GetConfiguration,put=PutRefConfiguration))
+    IConfigurationPtr Configuration;
+    __declspec(property(get=GetContentClass,put=PutContentClass))
+    _bstr_t ContentClass;
+    __declspec(property(get=GetCreationDate))
+    DATE CreationDate;
+    __declspec(property(get=GetDataSource))
+    IDataSourcePtr DataSource;
+    __declspec(property(get=GetDisplayName))
+    _bstr_t DisplayName;
+    __declspec(property(get=GetFields))
+    FieldsPtr Fields;
+    __declspec(property(get=GetIsCollection))
+    VARIANT_BOOL IsCollection;
+    __declspec(property(get=GetIsHidden,put=PutIsHidden))
+    VARIANT_BOOL IsHidden;
+    __declspec(property(get=GetIsStructuredDocument))
+    VARIANT_BOOL IsStructuredDocument;
+    __declspec(property(get=GetLastModified))
+    DATE LastModified;
+    __declspec(property(get=GetObjectCount))
+    long ObjectCount;
+    __declspec(property(get=GetParentURL))
+    _bstr_t ParentURL;
+    __declspec(property(get=GetVisibleCount))
+    long VisibleCount;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IDispatchPtr GetInterface (
+        _bstr_t Interface );
+    _StreamPtr GetStream ( );
+    long GetChildCount ( );
+    IConfigurationPtr GetConfiguration ( );
+    void PutConfiguration (
+        struct IConfiguration * pConfiguration );
+    void PutRefConfiguration (
+        struct IConfiguration * pConfiguration );
+    _bstr_t GetContentClass ( );
+    void PutContentClass (
+        _bstr_t pContentClass );
+    DATE GetCreationDate ( );
+    IDataSourcePtr GetDataSource ( );
+    _bstr_t GetDisplayName ( );
+    FieldsPtr GetFields ( );
+    VARIANT_BOOL GetIsCollection ( );
+    VARIANT_BOOL GetIsHidden ( );
+    void PutIsHidden (
+        VARIANT_BOOL pIsHidden );
+    VARIANT_BOOL GetIsStructuredDocument ( );
+    DATE GetLastModified ( );
+    long GetObjectCount ( );
+    _bstr_t GetParentURL ( );
+    long GetVisibleCount ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall raw_GetInterface (
+        BSTR Interface,
+        IDispatch * * ppUnknown ) = 0;
+    virtual HRESULT __stdcall raw_GetStream (
+        struct _Stream * * ppStream ) = 0;
+    virtual HRESULT __stdcall get_ChildCount (
+        long * varChildCount ) = 0;
+    virtual HRESULT __stdcall get_Configuration (
+        struct IConfiguration * * pConfiguration ) = 0;
+    virtual HRESULT __stdcall put_Configuration (
+        struct IConfiguration * pConfiguration ) = 0;
+    virtual HRESULT __stdcall putref_Configuration (
+        struct IConfiguration * pConfiguration ) = 0;
+    virtual HRESULT __stdcall get_ContentClass (
+        BSTR * pContentClass ) = 0;
+    virtual HRESULT __stdcall put_ContentClass (
+        BSTR pContentClass ) = 0;
+    virtual HRESULT __stdcall get_CreationDate (
+        DATE * varCreationDate ) = 0;
+    virtual HRESULT __stdcall get_DataSource (
+        struct IDataSource * * varDataSource ) = 0;
+    virtual HRESULT __stdcall get_DisplayName (
+        BSTR * varDisplayName ) = 0;
+    virtual HRESULT __stdcall get_Fields (
+        struct Fields * * varFields ) = 0;
+    virtual HRESULT __stdcall get_IsCollection (
+        VARIANT_BOOL * varIsCollection ) = 0;
+    virtual HRESULT __stdcall get_IsHidden (
+        VARIANT_BOOL * pIsHidden ) = 0;
+    virtual HRESULT __stdcall put_IsHidden (
+        VARIANT_BOOL pIsHidden ) = 0;
+    virtual HRESULT __stdcall get_IsStructuredDocument (
+        VARIANT_BOOL * varIsStructuredDocument ) = 0;
+    virtual HRESULT __stdcall get_LastModified (
+        DATE * varLastModified ) = 0;
+    virtual HRESULT __stdcall get_ObjectCount (
+        long * varObjectCount ) = 0;
+    virtual HRESULT __stdcall get_ParentURL (
+        BSTR * varParentURL ) = 0;
+    virtual HRESULT __stdcall get_VisibleCount (
+        long * varVisibleCount ) = 0;
+};
+
+struct __declspec(uuid("cd000100-8b95-11d1-82db-00c04fb1625d"))
+Appointment;
+    // [ default ] interface IAppointment
+    // interface IBodyPart
+    // interface IDataSource
+
+struct __declspec(uuid("cd000120-8b95-11d1-82db-00c04fb1625d"))
+IAppointment : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetTextBody,put=PutTextBody))
+    _bstr_t TextBody;
+    __declspec(property(get=GetAttachments))
+    IBodyPartsPtr Attachments;
+    __declspec(property(get=GetAttendees))
+    IAttendeesPtr Attendees;
+    __declspec(property(get=GetResponseText,put=PutResponseText))
+    _bstr_t ResponseText;
+    __declspec(property(get=GetBusyStatus,put=PutBusyStatus))
+    _bstr_t BusyStatus;
+    __declspec(property(get=GetKeywords,put=PutKeywords))
+    _variant_t Keywords;
+    __declspec(property(get=GetConfiguration,put=PutRefConfiguration))
+    IConfigurationPtr Configuration;
+    __declspec(property(get=GetContact,put=PutContact))
+    _bstr_t Contact;
+    __declspec(property(get=GetContactURL,put=PutContactURL))
+    _bstr_t ContactURL;
+    __declspec(property(get=GetDataSource))
+    IDataSourcePtr DataSource;
+    __declspec(property(get=GetEndTime,put=PutEndTime))
+    DATE EndTime;
+    __declspec(property(get=GetExceptions))
+    IExceptionsPtr Exceptions;
+    __declspec(property(get=GetDuration,put=PutDuration))
+    long Duration;
+    __declspec(property(get=GetFields))
+    FieldsPtr Fields;
+    __declspec(property(get=GetLocation,put=PutLocation))
+    _bstr_t Location;
+    __declspec(property(get=GetLocationURL,put=PutLocationURL))
+    _bstr_t LocationURL;
+    __declspec(property(get=GetPriority,put=PutPriority))
+    long Priority;
+    __declspec(property(get=GetReplyTime))
+    DATE ReplyTime;
+    __declspec(property(get=GetResources,put=PutResources))
+    _bstr_t Resources;
+    __declspec(property(get=GetResponseRequested,put=PutResponseRequested))
+    VARIANT_BOOL ResponseRequested;
+    __declspec(property(get=GetRecurrencePatterns))
+    IRecurrencePatternsPtr RecurrencePatterns;
+    __declspec(property(get=GetSensitivity,put=PutSensitivity))
+    long Sensitivity;
+    __declspec(property(get=GetStartTime,put=PutStartTime))
+    DATE StartTime;
+    __declspec(property(get=GetMeetingStatus,put=PutMeetingStatus))
+    _bstr_t MeetingStatus;
+    __declspec(property(get=GetSubject,put=PutSubject))
+    _bstr_t Subject;
+    __declspec(property(get=GetTransparent,put=PutTransparent))
+    _bstr_t Transparent;
+    __declspec(property(get=GetBodyPart))
+    IBodyPartPtr BodyPart;
+    __declspec(property(get=GetGEOLatitude,put=PutGEOLatitude))
+    double GEOLatitude;
+    __declspec(property(get=GetGEOLongitude,put=PutGEOLongitude))
+    double GEOLongitude;
+    __declspec(property(get=GetAllDayEvent,put=PutAllDayEvent))
+    VARIANT_BOOL AllDayEvent;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IBodyPartsPtr GetAttachments ( );
+    IAttendeesPtr GetAttendees ( );
+    _bstr_t GetBusyStatus ( );
+    void PutBusyStatus (
+        _bstr_t pBusyStatus );
+    _variant_t GetKeywords ( );
+    void PutKeywords (
+        const _variant_t & pKeywords );
+    IConfigurationPtr GetConfiguration ( );
+    void PutConfiguration (
+        struct IConfiguration * pConfiguration );
+    void PutRefConfiguration (
+        struct IConfiguration * pConfiguration );
+    _bstr_t GetContact ( );
+    void PutContact (
+        _bstr_t pContact );
+    _bstr_t GetContactURL ( );
+    void PutContactURL (
+        _bstr_t pContactURL );
+    IDataSourcePtr GetDataSource ( );
+    DATE GetEndTime ( );
+    void PutEndTime (
+        DATE pEndTime );
+    IExceptionsPtr GetExceptions ( );
+    long GetDuration ( );
+    void PutDuration (
+        long pDuration );
+    FieldsPtr GetFields ( );
+    _bstr_t GetLocation ( );
+    void PutLocation (
+        _bstr_t pLocation );
+    _bstr_t GetLocationURL ( );
+    void PutLocationURL (
+        _bstr_t pLocationURL );
+    long GetPriority ( );
+    void PutPriority (
+        long pPriority );
+    DATE GetReplyTime ( );
+    _bstr_t GetResources ( );
+    void PutResources (
+        _bstr_t pResources );
+    VARIANT_BOOL GetResponseRequested ( );
+    void PutResponseRequested (
+        VARIANT_BOOL pResponseRequested );
+    IRecurrencePatternsPtr GetRecurrencePatterns ( );
+    long GetSensitivity ( );
+    void PutSensitivity (
+        long pSensitivity );
+    DATE GetStartTime ( );
+    void PutStartTime (
+        DATE pStartTime );
+    _bstr_t GetMeetingStatus ( );
+    void PutMeetingStatus (
+        _bstr_t pMeetingStatus );
+    _bstr_t GetSubject ( );
+    void PutSubject (
+        _bstr_t pSubject );
+    _bstr_t GetTransparent ( );
+    void PutTransparent (
+        _bstr_t pTransparent );
+    IBodyPartPtr GetBodyPart ( );
+    double GetGEOLatitude ( );
+    void PutGEOLatitude (
+        double pGEOLatitude );
+    double GetGEOLongitude ( );
+    void PutGEOLongitude (
+        double pGEOLongitude );
+    VARIANT_BOOL GetAllDayEvent ( );
+    void PutAllDayEvent (
+        VARIANT_BOOL pAllDayEvent );
+    _bstr_t GetTextBody ( );
+    void PutTextBody (
+        _bstr_t pTextBody );
+    _bstr_t GetResponseText ( );
+    void PutResponseText (
+        _bstr_t pResponseText );
+    ICalendarMessagePtr Accept ( );
+    ICalendarMessagePtr AcceptTentative ( );
+    ICalendarMessagePtr Cancel (
+        _bstr_t EmailList,
+        VARIANT_BOOL CleanupCalendar,
+        _bstr_t UserName,
+        _bstr_t Password );
+    ICalendarMessagePtr CreateRequest ( );
+    ICalendarMessagePtr Decline (
+        VARIANT_BOOL CleanupCalendar,
+        _bstr_t UserName,
+        _bstr_t Password );
+    ICalendarMessagePtr Invite (
+        _bstr_t EmailList );
+    ICalendarMessagePtr Publish ( );
+    IAppointmentPtr GetFirstInstance (
+        DATE MinDate,
+        DATE MaxDate );
+    IAppointmentPtr GetNextInstance ( );
+    IDispatchPtr GetInterface (
+        _bstr_t Interface );
+    IAppointmentPtr GetRecurringMaster (
+        _bstr_t CalendarLocation,
+        _bstr_t UserName,
+        _bstr_t Password );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_Attachments (
+        struct IBodyParts * * varAttachments ) = 0;
+    virtual HRESULT __stdcall get_Attendees (
+        struct IAttendees * * varAttendees ) = 0;
+    virtual HRESULT __stdcall get_BusyStatus (
+        BSTR * pBusyStatus ) = 0;
+    virtual HRESULT __stdcall put_BusyStatus (
+        BSTR pBusyStatus ) = 0;
+    virtual HRESULT __stdcall get_Keywords (
+        VARIANT * pKeywords ) = 0;
+    virtual HRESULT __stdcall put_Keywords (
+        VARIANT pKeywords ) = 0;
+    virtual HRESULT __stdcall get_Configuration (
+        struct IConfiguration * * pConfiguration ) = 0;
+    virtual HRESULT __stdcall put_Configuration (
+        struct IConfiguration * pConfiguration ) = 0;
+    virtual HRESULT __stdcall putref_Configuration (
+        struct IConfiguration * pConfiguration ) = 0;
+    virtual HRESULT __stdcall get_Contact (
+        BSTR * pContact ) = 0;
+    virtual HRESULT __stdcall put_Contact (
+        BSTR pContact ) = 0;
+    virtual HRESULT __stdcall get_ContactURL (
+        BSTR * pContactURL ) = 0;
+    virtual HRESULT __stdcall put_ContactURL (
+        BSTR pContactURL ) = 0;
+    virtual HRESULT __stdcall get_DataSource (
+        struct IDataSource * * varDataSource ) = 0;
+    virtual HRESULT __stdcall get_EndTime (
+        DATE * pEndTime ) = 0;
+    virtual HRESULT __stdcall put_EndTime (
+        DATE pEndTime ) = 0;
+    virtual HRESULT __stdcall get_Exceptions (
+        struct IExceptions * * varExceptions ) = 0;
+    virtual HRESULT __stdcall get_Duration (
+        long * pDuration ) = 0;
+    virtual HRESULT __stdcall put_Duration (
+        long pDuration ) = 0;
+    virtual HRESULT __stdcall get_Fields (
+        struct Fields * * varFields ) = 0;
+    virtual HRESULT __stdcall get_Location (
+        BSTR * pLocation ) = 0;
+    virtual HRESULT __stdcall put_Location (
+        BSTR pLocation ) = 0;
+    virtual HRESULT __stdcall get_LocationURL (
+        BSTR * pLocationURL ) = 0;
+    virtual HRESULT __stdcall put_LocationURL (
+        BSTR pLocationURL ) = 0;
+    virtual HRESULT __stdcall get_Priority (
+        long * pPriority ) = 0;
+    virtual HRESULT __stdcall put_Priority (
+        long pPriority ) = 0;
+    virtual HRESULT __stdcall get_ReplyTime (
+        DATE * varReplyTime ) = 0;
+    virtual HRESULT __stdcall get_Resources (
+        BSTR * pResources ) = 0;
+    virtual HRESULT __stdcall put_Resources (
+        BSTR pResources ) = 0;
+    virtual HRESULT __stdcall get_ResponseRequested (
+        VARIANT_BOOL * pResponseRequested ) = 0;
+    virtual HRESULT __stdcall put_ResponseRequested (
+        VARIANT_BOOL pResponseRequested ) = 0;
+    virtual HRESULT __stdcall get_RecurrencePatterns (
+        struct IRecurrencePatterns * * varRecurrencePatterns ) = 0;
+    virtual HRESULT __stdcall get_Sensitivity (
+        long * pSensitivity ) = 0;
+    virtual HRESULT __stdcall put_Sensitivity (
+        long pSensitivity ) = 0;
+    virtual HRESULT __stdcall get_StartTime (
+        DATE * pStartTime ) = 0;
+    virtual HRESULT __stdcall put_StartTime (
+        DATE pStartTime ) = 0;
+    virtual HRESULT __stdcall get_MeetingStatus (
+        BSTR * pMeetingStatus ) = 0;
+    virtual HRESULT __stdcall put_MeetingStatus (
+        BSTR pMeetingStatus ) = 0;
+    virtual HRESULT __stdcall get_Subject (
+        BSTR * pSubject ) = 0;
+    virtual HRESULT __stdcall put_Subject (
+        BSTR pSubject ) = 0;
+    virtual HRESULT __stdcall get_Transparent (
+        BSTR * pTransparent ) = 0;
+    virtual HRESULT __stdcall put_Transparent (
+        BSTR pTransparent ) = 0;
+    virtual HRESULT __stdcall get_BodyPart (
+        struct IBodyPart * * varBodyPart ) = 0;
+    virtual HRESULT __stdcall get_GEOLatitude (
+        double * pGEOLatitude ) = 0;
+    virtual HRESULT __stdcall put_GEOLatitude (
+        double pGEOLatitude ) = 0;
+    virtual HRESULT __stdcall get_GEOLongitude (
+        double * pGEOLongitude ) = 0;
+    virtual HRESULT __stdcall put_GEOLongitude (
+        double pGEOLongitude ) = 0;
+    virtual HRESULT __stdcall get_AllDayEvent (
+        VARIANT_BOOL * pAllDayEvent ) = 0;
+    virtual HRESULT __stdcall put_AllDayEvent (
+        VARIANT_BOOL pAllDayEvent ) = 0;
+    virtual HRESULT __stdcall get_TextBody (
+        BSTR * pTextBody ) = 0;
+    virtual HRESULT __stdcall put_TextBody (
+        BSTR pTextBody ) = 0;
+    virtual HRESULT __stdcall get_ResponseText (
+        BSTR * pResponseText ) = 0;
+    virtual HRESULT __stdcall put_ResponseText (
+        BSTR pResponseText ) = 0;
+    virtual HRESULT __stdcall raw_Accept (
+        struct ICalendarMessage * * Response ) = 0;
+    virtual HRESULT __stdcall raw_AcceptTentative (
+        struct ICalendarMessage * * Response ) = 0;
+    virtual HRESULT __stdcall raw_Cancel (
+        BSTR EmailList,
+        VARIANT_BOOL CleanupCalendar,
+        BSTR UserName,
+        BSTR Password,
+        struct ICalendarMessage * * Request ) = 0;
+    virtual HRESULT __stdcall raw_CreateRequest (
+        struct ICalendarMessage * * Request ) = 0;
+    virtual HRESULT __stdcall raw_Decline (
+        VARIANT_BOOL CleanupCalendar,
+        BSTR UserName,
+        BSTR Password,
+        struct ICalendarMessage * * Response ) = 0;
+    virtual HRESULT __stdcall raw_Invite (
+        BSTR EmailList,
+        struct ICalendarMessage * * Request ) = 0;
+    virtual HRESULT __stdcall raw_Publish (
+        struct ICalendarMessage * * Request ) = 0;
+    virtual HRESULT __stdcall raw_GetFirstInstance (
+        DATE MinDate,
+        DATE MaxDate,
+        struct IAppointment * * Appointment ) = 0;
+    virtual HRESULT __stdcall raw_GetNextInstance (
+        struct IAppointment * * Appointment ) = 0;
+    virtual HRESULT __stdcall raw_GetInterface (
+        BSTR Interface,
+        IDispatch * * ppUnknown ) = 0;
+    virtual HRESULT __stdcall raw_GetRecurringMaster (
+        BSTR CalendarLocation,
+        BSTR UserName,
+        BSTR Password,
+        struct IAppointment * * Appointment ) = 0;
+};
+
+struct __declspec(uuid("cd000136-8b95-11d1-82db-00c04fb1625d"))
+IAttendees : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IAttendeePtr GetItem (
+        long Index );
+    long GetCount ( );
+    HRESULT Delete (
+        long Index );
+    IAttendeePtr Add (
+        _bstr_t Address );
+    IUnknownPtr Get_NewEnum ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_Item (
+        long Index,
+        struct IAttendee * * Attendee ) = 0;
+    virtual HRESULT __stdcall get_Count (
+        long * Count ) = 0;
+    virtual HRESULT __stdcall raw_Delete (
+        long Index ) = 0;
+    virtual HRESULT __stdcall raw_Add (
+        BSTR Address,
+        struct IAttendee * * Attendee ) = 0;
+    virtual HRESULT __stdcall get__NewEnum (
+        IUnknown * * Unknown ) = 0;
+};
+
+struct __declspec(uuid("cd000135-8b95-11d1-82db-00c04fb1625d"))
+IAttendee : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetDisplayName,put=PutDisplayName))
+    _bstr_t DisplayName;
+    __declspec(property(get=GetType,put=PutType))
+    _bstr_t Type;
+    __declspec(property(get=GetAddress,put=PutAddress))
+    _bstr_t Address;
+    __declspec(property(get=GetIsOrganizer,put=PutIsOrganizer))
+    VARIANT_BOOL IsOrganizer;
+    __declspec(property(get=GetRole,put=PutRole))
+    enum CdoAttendeeRoleValues Role;
+    __declspec(property(get=GetStatus,put=PutStatus))
+    enum CdoAttendeeStatusValues Status;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _bstr_t GetDisplayName ( );
+    void PutDisplayName (
+        _bstr_t pDisplayName );
+    _bstr_t GetType ( );
+    void PutType (
+        _bstr_t pType );
+    _bstr_t GetAddress ( );
+    void PutAddress (
+        _bstr_t pAddress );
+    VARIANT_BOOL GetIsOrganizer ( );
+    void PutIsOrganizer (
+        VARIANT_BOOL pIsOrganizer );
+    enum CdoAttendeeRoleValues GetRole ( );
+    void PutRole (
+        enum CdoAttendeeRoleValues pRole );
+    enum CdoAttendeeStatusValues GetStatus ( );
+    void PutStatus (
+        enum CdoAttendeeStatusValues pStatus );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_DisplayName (
+        BSTR * pDisplayName ) = 0;
+    virtual HRESULT __stdcall put_DisplayName (
+        BSTR pDisplayName ) = 0;
+    virtual HRESULT __stdcall get_Type (
+        BSTR * pType ) = 0;
+    virtual HRESULT __stdcall put_Type (
+        BSTR pType ) = 0;
+    virtual HRESULT __stdcall get_Address (
+        BSTR * pAddress ) = 0;
+    virtual HRESULT __stdcall put_Address (
+        BSTR pAddress ) = 0;
+    virtual HRESULT __stdcall get_IsOrganizer (
+        VARIANT_BOOL * pIsOrganizer ) = 0;
+    virtual HRESULT __stdcall put_IsOrganizer (
+        VARIANT_BOOL pIsOrganizer ) = 0;
+    virtual HRESULT __stdcall get_Role (
+        enum CdoAttendeeRoleValues * pRole ) = 0;
+    virtual HRESULT __stdcall put_Role (
+        enum CdoAttendeeRoleValues pRole ) = 0;
+    virtual HRESULT __stdcall get_Status (
+        enum CdoAttendeeStatusValues * pStatus ) = 0;
+    virtual HRESULT __stdcall put_Status (
+        enum CdoAttendeeStatusValues pStatus ) = 0;
+};
+
+struct __declspec(uuid("cd00012d-8b95-11d1-82db-00c04fb1625d"))
+IExceptions : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IExceptionPtr GetItem (
+        long Index );
+    long GetCount ( );
+    HRESULT Delete (
+        long Index );
+    IExceptionPtr Add (
+        _bstr_t Type );
+    IUnknownPtr Get_NewEnum ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_Item (
+        long Index,
+        struct IException * * Exception ) = 0;
+    virtual HRESULT __stdcall get_Count (
+        long * Count ) = 0;
+    virtual HRESULT __stdcall raw_Delete (
+        long Index ) = 0;
+    virtual HRESULT __stdcall raw_Add (
+        BSTR Type,
+        struct IException * * Exception ) = 0;
+    virtual HRESULT __stdcall get__NewEnum (
+        IUnknown * * Unknown ) = 0;
+};
+
+struct __declspec(uuid("cd000124-8b95-11d1-82db-00c04fb1625d"))
+IException : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetType))
+    _bstr_t Type;
+    __declspec(property(get=GetRecurrenceIDRange,put=PutRecurrenceIDRange))
+    _bstr_t RecurrenceIDRange;
+    __declspec(property(get=GetRecurrenceID,put=PutRecurrenceID))
+    DATE RecurrenceID;
+    __declspec(property(get=GetStartTime,put=PutStartTime))
+    DATE StartTime;
+    __declspec(property(get=GetEndTime,put=PutEndTime))
+    DATE EndTime;
+    __declspec(property(get=GetFields))
+    FieldsPtr Fields;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _bstr_t GetType ( );
+    _bstr_t GetRecurrenceIDRange ( );
+    void PutRecurrenceIDRange (
+        _bstr_t pRecurrenceIDRange );
+    DATE GetRecurrenceID ( );
+    void PutRecurrenceID (
+        DATE pRecurrenceID );
+    DATE GetStartTime ( );
+    void PutStartTime (
+        DATE pStartTime );
+    DATE GetEndTime ( );
+    void PutEndTime (
+        DATE pEndTime );
+    FieldsPtr GetFields ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_Type (
+        BSTR * varType ) = 0;
+    virtual HRESULT __stdcall get_RecurrenceIDRange (
+        BSTR * pRecurrenceIDRange ) = 0;
+    virtual HRESULT __stdcall put_RecurrenceIDRange (
+        BSTR pRecurrenceIDRange ) = 0;
+    virtual HRESULT __stdcall get_RecurrenceID (
+        DATE * pRecurrenceID ) = 0;
+    virtual HRESULT __stdcall put_RecurrenceID (
+        DATE pRecurrenceID ) = 0;
+    virtual HRESULT __stdcall get_StartTime (
+        DATE * pStartTime ) = 0;
+    virtual HRESULT __stdcall put_StartTime (
+        DATE pStartTime ) = 0;
+    virtual HRESULT __stdcall get_EndTime (
+        DATE * pEndTime ) = 0;
+    virtual HRESULT __stdcall put_EndTime (
+        DATE pEndTime ) = 0;
+    virtual HRESULT __stdcall get_Fields (
+        struct Fields * * varFields ) = 0;
+};
+
+struct __declspec(uuid("cd00012c-8b95-11d1-82db-00c04fb1625d"))
+IRecurrencePatterns : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IRecurrencePatternPtr GetItem (
+        long Index );
+    long GetCount ( );
+    HRESULT Delete (
+        long Index );
+    IRecurrencePatternPtr Add (
+        _bstr_t Type );
+    IUnknownPtr Get_NewEnum ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_Item (
+        long Index,
+        struct IRecurrencePattern * * RecurrencePattern ) = 0;
+    virtual HRESULT __stdcall get_Count (
+        long * Count ) = 0;
+    virtual HRESULT __stdcall raw_Delete (
+        long Index ) = 0;
+    virtual HRESULT __stdcall raw_Add (
+        BSTR Type,
+        struct IRecurrencePattern * * RecurrencePattern ) = 0;
+    virtual HRESULT __stdcall get__NewEnum (
+        IUnknown * * Unknown ) = 0;
+};
+
+struct __declspec(uuid("cd000123-8b95-11d1-82db-00c04fb1625d"))
+IRecurrencePattern : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetInterval,put=PutInterval))
+    long Interval;
+    __declspec(property(get=GetInstances,put=PutInstances))
+    long Instances;
+    __declspec(property(get=GetFrequency,put=PutFrequency))
+    enum CdoFrequency Frequency;
+    __declspec(property(get=GetPatternEndDate,put=PutPatternEndDate))
+    DATE PatternEndDate;
+    __declspec(property(get=GetType))
+    _bstr_t Type;
+    __declspec(property(get=GetEndType,put=PutEndType))
+    enum CdoPatternEndType EndType;
+    __declspec(property(get=GetFirstDayOfWeek,put=PutFirstDayOfWeek))
+    enum CdoDayOfWeek FirstDayOfWeek;
+    __declspec(property(get=GetDaysOfMonth))
+    IIntegersPtr DaysOfMonth;
+    __declspec(property(get=GetDaysOfWeek))
+    IIntegersPtr DaysOfWeek;
+    __declspec(property(get=GetDaysOfYear))
+    IIntegersPtr DaysOfYear;
+    __declspec(property(get=GetSecondsOfMinute))
+    IIntegersPtr SecondsOfMinute;
+    __declspec(property(get=GetMinutesOfHour))
+    IIntegersPtr MinutesOfHour;
+    __declspec(property(get=GetHoursOfDay))
+    IIntegersPtr HoursOfDay;
+    __declspec(property(get=GetWeekDays))
+    IVariantsPtr WeekDays;
+    __declspec(property(get=GetWeeksOfYear))
+    IIntegersPtr WeeksOfYear;
+    __declspec(property(get=GetMonthsOfYear))
+    IIntegersPtr MonthsOfYear;
+    __declspec(property(get=GetByPosition))
+    IIntegersPtr ByPosition;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetInterval ( );
+    void PutInterval (
+        long pInterval );
+    long GetInstances ( );
+    void PutInstances (
+        long pInstances );
+    enum CdoFrequency GetFrequency ( );
+    void PutFrequency (
+        enum CdoFrequency pFrequency );
+    DATE GetPatternEndDate ( );
+    void PutPatternEndDate (
+        DATE pPatternEndDate );
+    _bstr_t GetType ( );
+    enum CdoPatternEndType GetEndType ( );
+    void PutEndType (
+        enum CdoPatternEndType pEndType );
+    enum CdoDayOfWeek GetFirstDayOfWeek ( );
+    void PutFirstDayOfWeek (
+        enum CdoDayOfWeek pFirstDayOfWeek );
+    IIntegersPtr GetDaysOfMonth ( );
+    IIntegersPtr GetDaysOfWeek ( );
+    IIntegersPtr GetDaysOfYear ( );
+    IIntegersPtr GetSecondsOfMinute ( );
+    IIntegersPtr GetMinutesOfHour ( );
+    IIntegersPtr GetHoursOfDay ( );
+    IVariantsPtr GetWeekDays ( );
+    IIntegersPtr GetWeeksOfYear ( );
+    IIntegersPtr GetMonthsOfYear ( );
+    IIntegersPtr GetByPosition ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_Interval (
+        long * pInterval ) = 0;
+    virtual HRESULT __stdcall put_Interval (
+        long pInterval ) = 0;
+    virtual HRESULT __stdcall get_Instances (
+        long * pInstances ) = 0;
+    virtual HRESULT __stdcall put_Instances (
+        long pInstances ) = 0;
+    virtual HRESULT __stdcall get_Frequency (
+        enum CdoFrequency * pFrequency ) = 0;
+    virtual HRESULT __stdcall put_Frequency (
+        enum CdoFrequency pFrequency ) = 0;
+    virtual HRESULT __stdcall get_PatternEndDate (
+        DATE * pPatternEndDate ) = 0;
+    virtual HRESULT __stdcall put_PatternEndDate (
+        DATE pPatternEndDate ) = 0;
+    virtual HRESULT __stdcall get_Type (
+        BSTR * varType ) = 0;
+    virtual HRESULT __stdcall get_EndType (
+        enum CdoPatternEndType * pEndType ) = 0;
+    virtual HRESULT __stdcall put_EndType (
+        enum CdoPatternEndType pEndType ) = 0;
+    virtual HRESULT __stdcall get_FirstDayOfWeek (
+        enum CdoDayOfWeek * pFirstDayOfWeek ) = 0;
+    virtual HRESULT __stdcall put_FirstDayOfWeek (
+        enum CdoDayOfWeek pFirstDayOfWeek ) = 0;
+    virtual HRESULT __stdcall get_DaysOfMonth (
+        struct IIntegers * * varDaysOfMonth ) = 0;
+    virtual HRESULT __stdcall get_DaysOfWeek (
+        struct IIntegers * * varDaysOfWeek ) = 0;
+    virtual HRESULT __stdcall get_DaysOfYear (
+        struct IIntegers * * varDaysOfYear ) = 0;
+    virtual HRESULT __stdcall get_SecondsOfMinute (
+        struct IIntegers * * varSecondsOfMinute ) = 0;
+    virtual HRESULT __stdcall get_MinutesOfHour (
+        struct IIntegers * * varMinutesOfHour ) = 0;
+    virtual HRESULT __stdcall get_HoursOfDay (
+        struct IIntegers * * varHoursOfDay ) = 0;
+    virtual HRESULT __stdcall get_WeekDays (
+        struct IVariants * * varWeekDays ) = 0;
+    virtual HRESULT __stdcall get_WeeksOfYear (
+        struct IIntegers * * varWeeksOfYear ) = 0;
+    virtual HRESULT __stdcall get_MonthsOfYear (
+        struct IIntegers * * varMonthsOfYear ) = 0;
+    virtual HRESULT __stdcall get_ByPosition (
+        struct IIntegers * * varByPosition ) = 0;
+};
+
+struct __declspec(uuid("cd00012e-8b95-11d1-82db-00c04fb1625d"))
+IIntegers : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetItem (
+        long Index );
+    long GetCount ( );
+    HRESULT Delete (
+        long * Value );
+    HRESULT Add (
+        long NewValue );
+    IUnknownPtr Get_NewEnum ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_Item (
+        long Index,
+        long * Value ) = 0;
+    virtual HRESULT __stdcall get_Count (
+        long * Count ) = 0;
+    virtual HRESULT __stdcall raw_Delete (
+        long * Value ) = 0;
+    virtual HRESULT __stdcall raw_Add (
+        long NewValue ) = 0;
+    virtual HRESULT __stdcall get__NewEnum (
+        IUnknown * * Unknown ) = 0;
+};
+
+struct __declspec(uuid("cd00012f-8b95-11d1-82db-00c04fb1625d"))
+IVariants : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _variant_t GetItem (
+        long Index );
+    long GetCount ( );
+    HRESULT Delete (
+        VARIANT * Value );
+    HRESULT Add (
+        const _variant_t & NewValue );
+    IUnknownPtr Get_NewEnum ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_Item (
+        long Index,
+        VARIANT * Value ) = 0;
+    virtual HRESULT __stdcall get_Count (
+        long * Count ) = 0;
+    virtual HRESULT __stdcall raw_Delete (
+        VARIANT * Value ) = 0;
+    virtual HRESULT __stdcall raw_Add (
+        VARIANT NewValue ) = 0;
+    virtual HRESULT __stdcall get__NewEnum (
+        IUnknown * * Unknown ) = 0;
+};
+
+struct __declspec(uuid("cd000122-8b95-11d1-82db-00c04fb1625d"))
+ICalendarMessage : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetCalendarParts))
+    ICalendarPartsPtr CalendarParts;
+    __declspec(property(get=GetMessage))
+    IMessagePtr Message;
+    __declspec(property(get=GetDataSource))
+    IDataSourcePtr DataSource;
+    __declspec(property(get=GetConfiguration,put=PutRefConfiguration))
+    IConfigurationPtr Configuration;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IDispatchPtr GetInterface (
+        _bstr_t Interface );
+    ICalendarPartsPtr GetCalendarParts ( );
+    IMessagePtr GetMessage ( );
+    IDataSourcePtr GetDataSource ( );
+    IConfigurationPtr GetConfiguration ( );
+    void PutConfiguration (
+        struct IConfiguration * pConfiguration );
+    void PutRefConfiguration (
+        struct IConfiguration * pConfiguration );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall raw_GetInterface (
+        BSTR Interface,
+        IDispatch * * ppUnknown ) = 0;
+    virtual HRESULT __stdcall get_CalendarParts (
+        struct ICalendarParts * * varCalendarParts ) = 0;
+    virtual HRESULT __stdcall get_Message (
+        struct IMessage * * varMessage ) = 0;
+    virtual HRESULT __stdcall get_DataSource (
+        struct IDataSource * * varDataSource ) = 0;
+    virtual HRESULT __stdcall get_Configuration (
+        struct IConfiguration * * pConfiguration ) = 0;
+    virtual HRESULT __stdcall put_Configuration (
+        struct IConfiguration * pConfiguration ) = 0;
+    virtual HRESULT __stdcall putref_Configuration (
+        struct IConfiguration * pConfiguration ) = 0;
+};
+
+struct __declspec(uuid("cd000130-8b95-11d1-82db-00c04fb1625d"))
+ICalendarParts : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    ICalendarPartPtr GetItem (
+        long Index );
+    long GetCount ( );
+    HRESULT Delete (
+        long Index );
+    HRESULT Add (
+        IUnknown * CalendarPart,
+        enum CdoComponentType ComponentType );
+    IUnknownPtr Get_NewEnum ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_Item (
+        long Index,
+        struct ICalendarPart * * CalendarPart ) = 0;
+    virtual HRESULT __stdcall get_Count (
+        long * Count ) = 0;
+    virtual HRESULT __stdcall raw_Delete (
+        long Index ) = 0;
+    virtual HRESULT __stdcall raw_Add (
+        IUnknown * CalendarPart,
+        enum CdoComponentType ComponentType ) = 0;
+    virtual HRESULT __stdcall get__NewEnum (
+        IUnknown * * Unknown ) = 0;
+};
+
+struct __declspec(uuid("cd000133-8b95-11d1-82db-00c04fb1625d"))
+ICalendarPart : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetComponentType))
+    enum CdoComponentType ComponentType;
+    __declspec(property(get=GetProdID))
+    _bstr_t ProdID;
+    __declspec(property(get=GetCalendarVersion))
+    _bstr_t CalendarVersion;
+    __declspec(property(get=GetCalendarMethod))
+    _bstr_t CalendarMethod;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IDispatchPtr GetAssociatedItem (
+        _bstr_t CalendarLocation,
+        _bstr_t UserName,
+        _bstr_t Password );
+    IDispatchPtr GetInterface (
+        _bstr_t Interface );
+    enum CdoComponentType GetComponentType ( );
+    _bstr_t GetProdID ( );
+    _bstr_t GetCalendarVersion ( );
+    _bstr_t GetCalendarMethod ( );
+    IDispatchPtr GetUpdatedItem (
+        _bstr_t CalendarLocation,
+        _bstr_t UserName,
+        _bstr_t Password );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall raw_GetAssociatedItem (
+        BSTR CalendarLocation,
+        BSTR UserName,
+        BSTR Password,
+        IDispatch * * Item ) = 0;
+    virtual HRESULT __stdcall raw_GetInterface (
+        BSTR Interface,
+        IDispatch * * ppUnknown ) = 0;
+    virtual HRESULT __stdcall get_ComponentType (
+        enum CdoComponentType * varComponentType ) = 0;
+    virtual HRESULT __stdcall get_ProdID (
+        BSTR * varProdID ) = 0;
+    virtual HRESULT __stdcall get_CalendarVersion (
+        BSTR * varCalendarVersion ) = 0;
+    virtual HRESULT __stdcall get_CalendarMethod (
+        BSTR * varCalendarMethod ) = 0;
+    virtual HRESULT __stdcall raw_GetUpdatedItem (
+        BSTR CalendarLocation,
+        BSTR UserName,
+        BSTR Password,
+        IDispatch * * Item ) = 0;
+};
+
+struct __declspec(uuid("cd000102-8b95-11d1-82db-00c04fb1625d"))
+CalendarMessage;
+    // [ default ] interface ICalendarMessage
+    // interface IMessage
+    // interface IBodyPart
+    // interface IDataSource
+
+struct __declspec(uuid("cd00010e-8b95-11d1-82db-00c04fb1625d"))
+Folder;
+    // [ default ] interface IFolder
+    // interface IDataSource
+
+struct __declspec(uuid("cd000132-8b95-11d1-82db-00c04fb1625d"))
+IFolder : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetDisplayName))
+    _bstr_t DisplayName;
+    __declspec(property(get=GetConfiguration,put=PutRefConfiguration))
+    IConfigurationPtr Configuration;
+    __declspec(property(get=GetDataSource))
+    IDataSourcePtr DataSource;
+    __declspec(property(get=GetEmailAddress))
+    _bstr_t EmailAddress;
+    __declspec(property(get=GetUnreadItemCount))
+    long UnreadItemCount;
+    __declspec(property(get=GetVisibleCount))
+    long VisibleCount;
+    __declspec(property(get=GetItemCount))
+    long ItemCount;
+    __declspec(property(get=GetHasSubFolders))
+    VARIANT_BOOL HasSubFolders;
+    __declspec(property(get=GetDescription,put=PutDescription))
+    _bstr_t Description;
+    __declspec(property(get=GetFields))
+    FieldsPtr Fields;
+    __declspec(property(get=GetContentClass,put=PutContentClass))
+    _bstr_t ContentClass;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _bstr_t GetDisplayName ( );
+    IConfigurationPtr GetConfiguration ( );
+    void PutConfiguration (
+        struct IConfiguration * pConfiguration );
+    void PutRefConfiguration (
+        struct IConfiguration * pConfiguration );
+    IDataSourcePtr GetDataSource ( );
+    _bstr_t GetEmailAddress ( );
+    long GetUnreadItemCount ( );
+    long GetVisibleCount ( );
+    long GetItemCount ( );
+    VARIANT_BOOL GetHasSubFolders ( );
+    _bstr_t GetDescription ( );
+    void PutDescription (
+        _bstr_t pDescription );
+    FieldsPtr GetFields ( );
+    _bstr_t GetContentClass ( );
+    void PutContentClass (
+        _bstr_t pContentClass );
+    IDispatchPtr GetInterface (
+        _bstr_t Interface );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_DisplayName (
+        BSTR * varDisplayName ) = 0;
+    virtual HRESULT __stdcall get_Configuration (
+        struct IConfiguration * * pConfiguration ) = 0;
+    virtual HRESULT __stdcall put_Configuration (
+        struct IConfiguration * pConfiguration ) = 0;
+    virtual HRESULT __stdcall putref_Configuration (
+        struct IConfiguration * pConfiguration ) = 0;
+    virtual HRESULT __stdcall get_DataSource (
+        struct IDataSource * * varDataSource ) = 0;
+    virtual HRESULT __stdcall get_EmailAddress (
+        BSTR * varEmailAddress ) = 0;
+    virtual HRESULT __stdcall get_UnreadItemCount (
+        long * varUnreadItemCount ) = 0;
+    virtual HRESULT __stdcall get_VisibleCount (
+        long * varVisibleCount ) = 0;
+    virtual HRESULT __stdcall get_ItemCount (
+        long * varItemCount ) = 0;
+    virtual HRESULT __stdcall get_HasSubFolders (
+        VARIANT_BOOL * varHasSubFolders ) = 0;
+    virtual HRESULT __stdcall get_Description (
+        BSTR * pDescription ) = 0;
+    virtual HRESULT __stdcall put_Description (
+        BSTR pDescription ) = 0;
+    virtual HRESULT __stdcall get_Fields (
+        struct Fields * * varFields ) = 0;
+    virtual HRESULT __stdcall get_ContentClass (
+        BSTR * pContentClass ) = 0;
+    virtual HRESULT __stdcall put_ContentClass (
+        BSTR pContentClass ) = 0;
+    virtual HRESULT __stdcall raw_GetInterface (
+        BSTR Interface,
+        IDispatch * * ppUnknown ) = 0;
+};
+
+struct __declspec(uuid("cd000107-8b95-11d1-82db-00c04fb1625d"))
+Person;
+    // [ default ] interface IPerson
+    // interface IMailbox
+    // interface IDataSource
+
+struct __declspec(uuid("cd000127-8b95-11d1-82db-00c04fb1625d"))
+IPerson : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetDataSource))
+    IDataSourcePtr DataSource;
+    __declspec(property(get=GetConfiguration,put=PutRefConfiguration))
+    IConfigurationPtr Configuration;
+    __declspec(property(get=GetFields))
+    FieldsPtr Fields;
+    __declspec(property(get=GetMailingAddressID,put=PutMailingAddressID))
+    enum CdoMailingAddressIdValues MailingAddressID;
+    __declspec(property(get=GetMailingAddress))
+    _bstr_t MailingAddress;
+    __declspec(property(get=GetFileAsMapping,put=PutFileAsMapping))
+    enum CdoFileAsMappingId FileAsMapping;
+    __declspec(property(get=GetFileAs,put=PutFileAs))
+    _bstr_t FileAs;
+    __declspec(property(get=GetWorkPhone,put=PutWorkPhone))
+    _bstr_t WorkPhone;
+    __declspec(property(get=GetWorkFax,put=PutWorkFax))
+    _bstr_t WorkFax;
+    __declspec(property(get=GetHomePhone,put=PutHomePhone))
+    _bstr_t HomePhone;
+    __declspec(property(get=GetMobilePhone,put=PutMobilePhone))
+    _bstr_t MobilePhone;
+    __declspec(property(get=GetFirstName,put=PutFirstName))
+    _bstr_t FirstName;
+    __declspec(property(get=GetLastName,put=PutLastName))
+    _bstr_t LastName;
+    __declspec(property(get=GetNamePrefix,put=PutNamePrefix))
+    _bstr_t NamePrefix;
+    __declspec(property(get=GetNameSuffix,put=PutNameSuffix))
+    _bstr_t NameSuffix;
+    __declspec(property(get=GetEmail,put=PutEmail))
+    _bstr_t Email;
+    __declspec(property(get=GetEmail2,put=PutEmail2))
+    _bstr_t Email2;
+    __declspec(property(get=GetEmail3,put=PutEmail3))
+    _bstr_t Email3;
+    __declspec(property(get=GetWorkStreet,put=PutWorkStreet))
+    _bstr_t WorkStreet;
+    __declspec(property(get=GetWorkCity,put=PutWorkCity))
+    _bstr_t WorkCity;
+    __declspec(property(get=GetWorkCountry,put=PutWorkCountry))
+    _bstr_t WorkCountry;
+    __declspec(property(get=GetWorkPostalCode,put=PutWorkPostalCode))
+    _bstr_t WorkPostalCode;
+    __declspec(property(get=GetWorkPostOfficeBox,put=PutWorkPostOfficeBox))
+    _bstr_t WorkPostOfficeBox;
+    __declspec(property(get=GetWorkPostalAddress))
+    _bstr_t WorkPostalAddress;
+    __declspec(property(get=GetWorkState,put=PutWorkState))
+    _bstr_t WorkState;
+    __declspec(property(get=GetWorkPager,put=PutWorkPager))
+    _bstr_t WorkPager;
+    __declspec(property(get=GetHomeStreet,put=PutHomeStreet))
+    _bstr_t HomeStreet;
+    __declspec(property(get=GetHomeCity,put=PutHomeCity))
+    _bstr_t HomeCity;
+    __declspec(property(get=GetHomeCountry,put=PutHomeCountry))
+    _bstr_t HomeCountry;
+    __declspec(property(get=GetHomePostalCode,put=PutHomePostalCode))
+    _bstr_t HomePostalCode;
+    __declspec(property(get=GetHomePostOfficeBox,put=PutHomePostOfficeBox))
+    _bstr_t HomePostOfficeBox;
+    __declspec(property(get=GetHomePostalAddress))
+    _bstr_t HomePostalAddress;
+    __declspec(property(get=GetHomeState,put=PutHomeState))
+    _bstr_t HomeState;
+    __declspec(property(get=GetHomeFax,put=PutHomeFax))
+    _bstr_t HomeFax;
+    __declspec(property(get=GetMiddleName,put=PutMiddleName))
+    _bstr_t MiddleName;
+    __declspec(property(get=GetInitials,put=PutInitials))
+    _bstr_t Initials;
+    __declspec(property(get=GetEmailAddresses,put=PutEmailAddresses))
+    _variant_t EmailAddresses;
+    __declspec(property(get=GetCompany,put=PutCompany))
+    _bstr_t Company;
+    __declspec(property(get=GetTitle,put=PutTitle))
+    _bstr_t Title;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IDataSourcePtr GetDataSource ( );
+    IConfigurationPtr GetConfiguration ( );
+    void PutConfiguration (
+        struct IConfiguration * pConfiguration );
+    void PutRefConfiguration (
+        struct IConfiguration * pConfiguration );
+    FieldsPtr GetFields ( );
+    enum CdoMailingAddressIdValues GetMailingAddressID ( );
+    void PutMailingAddressID (
+        enum CdoMailingAddressIdValues pMailingAddressID );
+    _bstr_t GetMailingAddress ( );
+    enum CdoFileAsMappingId GetFileAsMapping ( );
+    void PutFileAsMapping (
+        enum CdoFileAsMappingId pFileAsMapping );
+    _bstr_t GetFileAs ( );
+    void PutFileAs (
+        _bstr_t pFileAs );
+    _bstr_t GetWorkPhone ( );
+    void PutWorkPhone (
+        _bstr_t pWorkPhone );
+    _bstr_t GetWorkFax ( );
+    void PutWorkFax (
+        _bstr_t pWorkFax );
+    _bstr_t GetHomePhone ( );
+    void PutHomePhone (
+        _bstr_t pHomePhone );
+    _bstr_t GetMobilePhone ( );
+    void PutMobilePhone (
+        _bstr_t pMobilePhone );
+    _bstr_t GetFirstName ( );
+    void PutFirstName (
+        _bstr_t pFirstName );
+    _bstr_t GetLastName ( );
+    void PutLastName (
+        _bstr_t pLastName );
+    _bstr_t GetNamePrefix ( );
+    void PutNamePrefix (
+        _bstr_t pNamePrefix );
+    _bstr_t GetNameSuffix ( );
+    void PutNameSuffix (
+        _bstr_t pNameSuffix );
+    _bstr_t GetEmail ( );
+    void PutEmail (
+        _bstr_t pEmail );
+    _bstr_t GetEmail2 ( );
+    void PutEmail2 (
+        _bstr_t pEmail2 );
+    _bstr_t GetEmail3 ( );
+    void PutEmail3 (
+        _bstr_t pEmail3 );
+    _StreamPtr GetVCardStream ( );
+    IDispatchPtr GetInterface (
+        _bstr_t Interface );
+    _bstr_t GetWorkStreet ( );
+    void PutWorkStreet (
+        _bstr_t pWorkStreet );
+    _bstr_t GetWorkCity ( );
+    void PutWorkCity (
+        _bstr_t pWorkCity );
+    _bstr_t GetWorkCountry ( );
+    void PutWorkCountry (
+        _bstr_t pWorkCountry );
+    _bstr_t GetWorkPostalCode ( );
+    void PutWorkPostalCode (
+        _bstr_t pWorkPostalCode );
+    _bstr_t GetWorkPostOfficeBox ( );
+    void PutWorkPostOfficeBox (
+        _bstr_t pWorkPostOfficeBox );
+    _bstr_t GetWorkPostalAddress ( );
+    _bstr_t GetWorkState ( );
+    void PutWorkState (
+        _bstr_t pWorkState );
+    _bstr_t GetWorkPager ( );
+    void PutWorkPager (
+        _bstr_t pWorkPager );
+    _bstr_t GetHomeStreet ( );
+    void PutHomeStreet (
+        _bstr_t pHomeStreet );
+    _bstr_t GetHomeCity ( );
+    void PutHomeCity (
+        _bstr_t pHomeCity );
+    _bstr_t GetHomeCountry ( );
+    void PutHomeCountry (
+        _bstr_t pHomeCountry );
+    _bstr_t GetHomePostalCode ( );
+    void PutHomePostalCode (
+        _bstr_t pHomePostalCode );
+    _bstr_t GetHomePostOfficeBox ( );
+    void PutHomePostOfficeBox (
+        _bstr_t pHomePostOfficeBox );
+    _bstr_t GetHomePostalAddress ( );
+    _bstr_t GetHomeState ( );
+    void PutHomeState (
+        _bstr_t pHomeState );
+    _bstr_t GetHomeFax ( );
+    void PutHomeFax (
+        _bstr_t pHomeFax );
+    _bstr_t GetMiddleName ( );
+    void PutMiddleName (
+        _bstr_t pMiddleName );
+    _bstr_t GetInitials ( );
+    void PutInitials (
+        _bstr_t pInitials );
+    _variant_t GetEmailAddresses ( );
+    void PutEmailAddresses (
+        const _variant_t & pEmailAddresses );
+    _bstr_t GetCompany ( );
+    void PutCompany (
+        _bstr_t pCompany );
+    _bstr_t GetTitle ( );
+    void PutTitle (
+        _bstr_t pTitle );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_DataSource (
+        struct IDataSource * * varDataSource ) = 0;
+    virtual HRESULT __stdcall get_Configuration (
+        struct IConfiguration * * pConfiguration ) = 0;
+    virtual HRESULT __stdcall put_Configuration (
+        struct IConfiguration * pConfiguration ) = 0;
+    virtual HRESULT __stdcall putref_Configuration (
+        struct IConfiguration * pConfiguration ) = 0;
+    virtual HRESULT __stdcall get_Fields (
+        struct Fields * * varFields ) = 0;
+    virtual HRESULT __stdcall get_MailingAddressID (
+        enum CdoMailingAddressIdValues * pMailingAddressID ) = 0;
+    virtual HRESULT __stdcall put_MailingAddressID (
+        enum CdoMailingAddressIdValues pMailingAddressID ) = 0;
+    virtual HRESULT __stdcall get_MailingAddress (
+        BSTR * varMailingAddress ) = 0;
+    virtual HRESULT __stdcall get_FileAsMapping (
+        enum CdoFileAsMappingId * pFileAsMapping ) = 0;
+    virtual HRESULT __stdcall put_FileAsMapping (
+        enum CdoFileAsMappingId pFileAsMapping ) = 0;
+    virtual HRESULT __stdcall get_FileAs (
+        BSTR * pFileAs ) = 0;
+    virtual HRESULT __stdcall put_FileAs (
+        BSTR pFileAs ) = 0;
+    virtual HRESULT __stdcall get_WorkPhone (
+        BSTR * pWorkPhone ) = 0;
+    virtual HRESULT __stdcall put_WorkPhone (
+        BSTR pWorkPhone ) = 0;
+    virtual HRESULT __stdcall get_WorkFax (
+        BSTR * pWorkFax ) = 0;
+    virtual HRESULT __stdcall put_WorkFax (
+        BSTR pWorkFax ) = 0;
+    virtual HRESULT __stdcall get_HomePhone (
+        BSTR * pHomePhone ) = 0;
+    virtual HRESULT __stdcall put_HomePhone (
+        BSTR pHomePhone ) = 0;
+    virtual HRESULT __stdcall get_MobilePhone (
+        BSTR * pMobilePhone ) = 0;
+    virtual HRESULT __stdcall put_MobilePhone (
+        BSTR pMobilePhone ) = 0;
+    virtual HRESULT __stdcall get_FirstName (
+        BSTR * pFirstName ) = 0;
+    virtual HRESULT __stdcall put_FirstName (
+        BSTR pFirstName ) = 0;
+    virtual HRESULT __stdcall get_LastName (
+        BSTR * pLastName ) = 0;
+    virtual HRESULT __stdcall put_LastName (
+        BSTR pLastName ) = 0;
+    virtual HRESULT __stdcall get_NamePrefix (
+        BSTR * pNamePrefix ) = 0;
+    virtual HRESULT __stdcall put_NamePrefix (
+        BSTR pNamePrefix ) = 0;
+    virtual HRESULT __stdcall get_NameSuffix (
+        BSTR * pNameSuffix ) = 0;
+    virtual HRESULT __stdcall put_NameSuffix (
+        BSTR pNameSuffix ) = 0;
+    virtual HRESULT __stdcall get_Email (
+        BSTR * pEmail ) = 0;
+    virtual HRESULT __stdcall put_Email (
+        BSTR pEmail ) = 0;
+    virtual HRESULT __stdcall get_Email2 (
+        BSTR * pEmail2 ) = 0;
+    virtual HRESULT __stdcall put_Email2 (
+        BSTR pEmail2 ) = 0;
+    virtual HRESULT __stdcall get_Email3 (
+        BSTR * pEmail3 ) = 0;
+    virtual HRESULT __stdcall put_Email3 (
+        BSTR pEmail3 ) = 0;
+    virtual HRESULT __stdcall raw_GetVCardStream (
+        struct _Stream * * Stream ) = 0;
+    virtual HRESULT __stdcall raw_GetInterface (
+        BSTR Interface,
+        IDispatch * * ppUnknown ) = 0;
+    virtual HRESULT __stdcall get_WorkStreet (
+        BSTR * pWorkStreet ) = 0;
+    virtual HRESULT __stdcall put_WorkStreet (
+        BSTR pWorkStreet ) = 0;
+    virtual HRESULT __stdcall get_WorkCity (
+        BSTR * pWorkCity ) = 0;
+    virtual HRESULT __stdcall put_WorkCity (
+        BSTR pWorkCity ) = 0;
+    virtual HRESULT __stdcall get_WorkCountry (
+        BSTR * pWorkCountry ) = 0;
+    virtual HRESULT __stdcall put_WorkCountry (
+        BSTR pWorkCountry ) = 0;
+    virtual HRESULT __stdcall get_WorkPostalCode (
+        BSTR * pWorkPostalCode ) = 0;
+    virtual HRESULT __stdcall put_WorkPostalCode (
+        BSTR pWorkPostalCode ) = 0;
+    virtual HRESULT __stdcall get_WorkPostOfficeBox (
+        BSTR * pWorkPostOfficeBox ) = 0;
+    virtual HRESULT __stdcall put_WorkPostOfficeBox (
+        BSTR pWorkPostOfficeBox ) = 0;
+    virtual HRESULT __stdcall get_WorkPostalAddress (
+        BSTR * varWorkPostalAddress ) = 0;
+    virtual HRESULT __stdcall get_WorkState (
+        BSTR * pWorkState ) = 0;
+    virtual HRESULT __stdcall put_WorkState (
+        BSTR pWorkState ) = 0;
+    virtual HRESULT __stdcall get_WorkPager (
+        BSTR * pWorkPager ) = 0;
+    virtual HRESULT __stdcall put_WorkPager (
+        BSTR pWorkPager ) = 0;
+    virtual HRESULT __stdcall get_HomeStreet (
+        BSTR * pHomeStreet ) = 0;
+    virtual HRESULT __stdcall put_HomeStreet (
+        BSTR pHomeStreet ) = 0;
+    virtual HRESULT __stdcall get_HomeCity (
+        BSTR * pHomeCity ) = 0;
+    virtual HRESULT __stdcall put_HomeCity (
+        BSTR pHomeCity ) = 0;
+    virtual HRESULT __stdcall get_HomeCountry (
+        BSTR * pHomeCountry ) = 0;
+    virtual HRESULT __stdcall put_HomeCountry (
+        BSTR pHomeCountry ) = 0;
+    virtual HRESULT __stdcall get_HomePostalCode (
+        BSTR * pHomePostalCode ) = 0;
+    virtual HRESULT __stdcall put_HomePostalCode (
+        BSTR pHomePostalCode ) = 0;
+    virtual HRESULT __stdcall get_HomePostOfficeBox (
+        BSTR * pHomePostOfficeBox ) = 0;
+    virtual HRESULT __stdcall put_HomePostOfficeBox (
+        BSTR pHomePostOfficeBox ) = 0;
+    virtual HRESULT __stdcall get_HomePostalAddress (
+        BSTR * varHomePostalAddress ) = 0;
+    virtual HRESULT __stdcall get_HomeState (
+        BSTR * pHomeState ) = 0;
+    virtual HRESULT __stdcall put_HomeState (
+        BSTR pHomeState ) = 0;
+    virtual HRESULT __stdcall get_HomeFax (
+        BSTR * pHomeFax ) = 0;
+    virtual HRESULT __stdcall put_HomeFax (
+        BSTR pHomeFax ) = 0;
+    virtual HRESULT __stdcall get_MiddleName (
+        BSTR * pMiddleName ) = 0;
+    virtual HRESULT __stdcall put_MiddleName (
+        BSTR pMiddleName ) = 0;
+    virtual HRESULT __stdcall get_Initials (
+        BSTR * pInitials ) = 0;
+    virtual HRESULT __stdcall put_Initials (
+        BSTR pInitials ) = 0;
+    virtual HRESULT __stdcall get_EmailAddresses (
+        VARIANT * pEmailAddresses ) = 0;
+    virtual HRESULT __stdcall put_EmailAddresses (
+        VARIANT pEmailAddresses ) = 0;
+    virtual HRESULT __stdcall get_Company (
+        BSTR * pCompany ) = 0;
+    virtual HRESULT __stdcall put_Company (
+        BSTR pCompany ) = 0;
+    virtual HRESULT __stdcall get_Title (
+        BSTR * pTitle ) = 0;
+    virtual HRESULT __stdcall put_Title (
+        BSTR pTitle ) = 0;
+};
+
+struct __declspec(uuid("cd000125-8b95-11d1-82db-00c04fb1625d"))
+IMailbox : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetBaseFolder))
+    _bstr_t BaseFolder;
+    __declspec(property(get=GetRootFolder))
+    _bstr_t RootFolder;
+    __declspec(property(get=GetInbox))
+    _bstr_t Inbox;
+    __declspec(property(get=GetOutbox))
+    _bstr_t Outbox;
+    __declspec(property(get=GetSentItems))
+    _bstr_t SentItems;
+    __declspec(property(get=GetDrafts))
+    _bstr_t Drafts;
+    __declspec(property(get=GetDeletedItems))
+    _bstr_t DeletedItems;
+    __declspec(property(get=GetCalendar))
+    _bstr_t Calendar;
+    __declspec(property(get=GetTasks))
+    _bstr_t Tasks;
+    __declspec(property(get=GetContacts))
+    _bstr_t Contacts;
+    __declspec(property(get=GetNotes))
+    _bstr_t Notes;
+    __declspec(property(get=GetJournal))
+    _bstr_t Journal;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _bstr_t GetBaseFolder ( );
+    _bstr_t GetRootFolder ( );
+    _bstr_t GetInbox ( );
+    _bstr_t GetOutbox ( );
+    _bstr_t GetSentItems ( );
+    _bstr_t GetDrafts ( );
+    _bstr_t GetDeletedItems ( );
+    _bstr_t GetCalendar ( );
+    _bstr_t GetTasks ( );
+    _bstr_t GetContacts ( );
+    _bstr_t GetNotes ( );
+    _bstr_t GetJournal ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_BaseFolder (
+        BSTR * varBaseFolder ) = 0;
+    virtual HRESULT __stdcall get_RootFolder (
+        BSTR * varRootFolder ) = 0;
+    virtual HRESULT __stdcall get_Inbox (
+        BSTR * varInbox ) = 0;
+    virtual HRESULT __stdcall get_Outbox (
+        BSTR * varOutbox ) = 0;
+    virtual HRESULT __stdcall get_SentItems (
+        BSTR * varSentItems ) = 0;
+    virtual HRESULT __stdcall get_Drafts (
+        BSTR * varDrafts ) = 0;
+    virtual HRESULT __stdcall get_DeletedItems (
+        BSTR * varDeletedItems ) = 0;
+    virtual HRESULT __stdcall get_Calendar (
+        BSTR * varCalendar ) = 0;
+    virtual HRESULT __stdcall get_Tasks (
+        BSTR * varTasks ) = 0;
+    virtual HRESULT __stdcall get_Contacts (
+        BSTR * varContacts ) = 0;
+    virtual HRESULT __stdcall get_Notes (
+        BSTR * varNotes ) = 0;
+    virtual HRESULT __stdcall get_Journal (
+        BSTR * varJournal ) = 0;
+};
+
+struct __declspec(uuid("cd00010d-8b95-11d1-82db-00c04fb1625d"))
+Attendee;
+    // [ default ] interface IAttendee
+
+struct __declspec(uuid("cd000110-8b95-11d1-82db-00c04fb1625d"))
+Addressee;
+    // [ default ] interface IAddressee
+    // interface IDataSource
+
+struct __declspec(uuid("cd000139-8b95-11d1-82db-00c04fb1625d"))
+IAddressee : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetFields))
+    FieldsPtr Fields;
+    __declspec(property(get=GetConfiguration,put=PutRefConfiguration))
+    IConfigurationPtr Configuration;
+    __declspec(property(get=GetDisplayName,put=PutDisplayName))
+    _bstr_t DisplayName;
+    __declspec(property(get=GetEmailAddress,put=PutEmailAddress))
+    _bstr_t EmailAddress;
+    __declspec(property(get=GetDataSource))
+    IDataSourcePtr DataSource;
+    __declspec(property(get=GetDirURL))
+    _bstr_t DirURL;
+    __declspec(property(get=GetResolvedStatus,put=PutResolvedStatus))
+    enum CdoResolvedStatus ResolvedStatus;
+    __declspec(property(get=GetContentClass))
+    _bstr_t ContentClass;
+    __declspec(property(get=GetAmbiguousNames))
+    IAddresseesPtr AmbiguousNames;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    FieldsPtr GetFields ( );
+    IConfigurationPtr GetConfiguration ( );
+    void PutConfiguration (
+        struct IConfiguration * pConfiguration );
+    void PutRefConfiguration (
+        struct IConfiguration * pConfiguration );
+    _bstr_t GetDisplayName ( );
+    void PutDisplayName (
+        _bstr_t pDisplayName );
+    _bstr_t GetEmailAddress ( );
+    void PutEmailAddress (
+        _bstr_t pEmailAddress );
+    IDataSourcePtr GetDataSource ( );
+    _bstr_t GetDirURL ( );
+    enum CdoResolvedStatus GetResolvedStatus ( );
+    void PutResolvedStatus (
+        enum CdoResolvedStatus pResolvedStatus );
+    _bstr_t GetContentClass ( );
+    IAddresseesPtr GetAmbiguousNames ( );
+    IDispatchPtr GetInterface (
+        _bstr_t Interface );
+    _bstr_t GetFreeBusy (
+        DATE StartTime,
+        DATE EndTime,
+        long Interval,
+        _bstr_t HTTPHost,
+        _bstr_t VRoot,
+        _bstr_t UserName,
+        _bstr_t Password );
+    VARIANT_BOOL CheckName (
+        _bstr_t Directory,
+        _bstr_t UserName,
+        _bstr_t Password );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_Fields (
+        struct Fields * * varFields ) = 0;
+    virtual HRESULT __stdcall get_Configuration (
+        struct IConfiguration * * pConfiguration ) = 0;
+    virtual HRESULT __stdcall put_Configuration (
+        struct IConfiguration * pConfiguration ) = 0;
+    virtual HRESULT __stdcall putref_Configuration (
+        struct IConfiguration * pConfiguration ) = 0;
+    virtual HRESULT __stdcall get_DisplayName (
+        BSTR * pDisplayName ) = 0;
+    virtual HRESULT __stdcall put_DisplayName (
+        BSTR pDisplayName ) = 0;
+    virtual HRESULT __stdcall get_EmailAddress (
+        BSTR * pEmailAddress ) = 0;
+    virtual HRESULT __stdcall put_EmailAddress (
+        BSTR pEmailAddress ) = 0;
+    virtual HRESULT __stdcall get_DataSource (
+        struct IDataSource * * varDataSource ) = 0;
+    virtual HRESULT __stdcall get_DirURL (
+        BSTR * varDirURL ) = 0;
+    virtual HRESULT __stdcall get_ResolvedStatus (
+        enum CdoResolvedStatus * pResolvedStatus ) = 0;
+    virtual HRESULT __stdcall put_ResolvedStatus (
+        enum CdoResolvedStatus pResolvedStatus ) = 0;
+    virtual HRESULT __stdcall get_ContentClass (
+        BSTR * varContentClass ) = 0;
+    virtual HRESULT __stdcall get_AmbiguousNames (
+        struct IAddressees * * varAmbiguousNames ) = 0;
+    virtual HRESULT __stdcall raw_GetInterface (
+        BSTR Interface,
+        IDispatch * * ppUnknown ) = 0;
+    virtual HRESULT __stdcall raw_GetFreeBusy (
+        DATE StartTime,
+        DATE EndTime,
+        long Interval,
+        BSTR HTTPHost,
+        BSTR VRoot,
+        BSTR UserName,
+        BSTR Password,
+        BSTR * pbstrRet ) = 0;
+    virtual HRESULT __stdcall raw_CheckName (
+        BSTR Directory,
+        BSTR UserName,
+        BSTR Password,
+        VARIANT_BOOL * pBRet ) = 0;
+};
+
+struct __declspec(uuid("cd000142-8b95-11d1-82db-00c04fb1625d"))
+IAddressees : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IAddresseePtr GetItem (
+        long Index );
+    long GetCount ( );
+    IUnknownPtr Get_NewEnum ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_Item (
+        long Index,
+        struct IAddressee * * Value ) = 0;
+    virtual HRESULT __stdcall get_Count (
+        long * Count ) = 0;
+    virtual HRESULT __stdcall get__NewEnum (
+        IUnknown * * Unknown ) = 0;
+};
+
+//
+// Wrapper method implementations
+//
+
+#include "cdoex.tli"
+
+#pragma pack(pop)
