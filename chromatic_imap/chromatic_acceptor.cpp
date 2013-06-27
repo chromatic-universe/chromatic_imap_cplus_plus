@@ -7,8 +7,8 @@
 
 
 //suppress from adaptive communication environment
-#pragma clang diagnostic ignored "-Wself-assign"
-#pragma clang diagnostic ignored "-Wconstant-logical-operand"
+//#pragma clang diagnostic ignored "-Wself-assign"
+//#pragma clang diagnostic ignored "-Wconstant-logical-operand"
 
 #include "chromatic_imap.h"
 
