@@ -1,7 +1,7 @@
-//ace_imap.h
+//chromatic_imap.h
 //created on: May 28, 2013
 //author: William K. Johnson
-//c++11 with llvm & clang++
+//c++11
 
 //suppress from adaptive communication environment
 //#pragma clang diagnostic ignored "-Wself-assign"

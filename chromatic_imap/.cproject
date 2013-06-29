@@ -30,6 +30,9 @@
 									<listOptionValue builtIn="false" value="/dev_tools/SQLAPI/include"/>
 									<listOptionValue builtIn="false" value="/dev_tools/ACE_wrappers"/>
 								</option>
+								<option id="gnu.cpp.compiler.option.preprocessor.def.2013627588" superClass="gnu.cpp.compiler.option.preprocessor.def" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="ACE_NTRACE=0"/>
+								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.507948673" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.compiler.exe.debug.743314337" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.debug">
