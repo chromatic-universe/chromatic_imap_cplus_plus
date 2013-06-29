@@ -24,4 +24,11 @@
 		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>include</name>
+			<type>2</type>
+			<location>/media/wiljoh/55FE-3B01/chromatic_universe_gcc_11/trunk/include</location>
+		</link>
+	</linkedResources>
 </projectDescription>
