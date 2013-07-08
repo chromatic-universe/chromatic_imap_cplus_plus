@@ -122,6 +122,7 @@ namespace chromatic_imap_protocol_impl
 						if( sz != std::string::npos )
 						{
 							group_moniker = addr.substr( 0 , sz );
+							boost::algorithm::trim( group_moniker );
 							b_ret = true;
 						}
 
