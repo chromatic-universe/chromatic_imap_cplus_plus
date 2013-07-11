@@ -58,6 +58,12 @@ namespace chromatic_imap_protocol_impl
 			const std::string left_angle( "<" );
 			const std::string right_angle( ">" );
 			const std::string crlf( "\n" );
+			const std::string date( "Date" );
+			const std::string subject( "Subject" );
+			const std::string in_reply_to( "In-Reply-To" );
+			const std::string message_id( "Message-ID" );
+			const std::string sender( "Sender" );
+			const std::string reply_to( "Reply-To" );
 
 			enum class addr_type : unsigned long
 			{
@@ -92,12 +98,16 @@ namespace chromatic_imap_protocol_impl
 
 						assert( b_ret );
 
-
-						str_env_field_to_stream( "Date" );
-						str_env_field_to_stream( "Subject" );
+						//field
+						str_env_field_to_stream( date );
+						//field
+						str_env_field_to_stream( subject );
+						//addresses
 						fetch_addrs( addr_type::atFrom );
-						str_env_field_to_stream( "In-Reply-To" );
-						str_env_field_to_stream( "Message-ID" );
+						//field
+						str_env_field_to_stream( in_reply_to );
+						//field
+						str_env_field_to_stream( message_id );
 					 }
 
 					 //dtor
@@ -114,7 +124,7 @@ namespace chromatic_imap_protocol_impl
 					addr_container m_ac;
 
 					//helpers
-					bool check_for_group_addr( const std::string& addr , std::string& group_moniker )
+					inline bool check_for_group_addr( const std::string& addr , std::string& group_moniker )
 					{
 						bool b_ret( false );
 
@@ -129,15 +139,16 @@ namespace chromatic_imap_protocol_impl
 						return b_ret;
 					}
 
-					void process_group_addrs( const std::string& addrs )
+					inline void process_group_addrs( const std::string& addrs )
 					{
 						//todo
 					}
 
-					std::string addr_atom( const std::string& line )
+					inline std::string addr_atom( const std::string& line )
 					{
 						std::ostringstream strstr;
 
+						//nil if empty
 						line.empty() == true ? strstr << nil
 													  << space
 											 : strstr << quote
@@ -148,33 +159,38 @@ namespace chromatic_imap_protocol_impl
 						return strstr.str();
 					}
 
-					void single_sender_addr_line( const std::string& sender )
+					inline void single_sender_addr_line( const std::string& sender )
 					{
+						//left delimiter
 						std::string::size_type sz = sender.find( left_angle );
 						if( sz != std::string::npos )
 						{
 							std::string addr{};
+							//right delimiter
 							std::string::size_type sz2 = sender.find( right_angle , sz );
+							//address atom
 							if( sz2 != std::string::npos ) { addr = sender.substr( sz , sz2 ); }
+							//name atom
 							std::string moniker( sender.substr( 0 , sz ) );
+							//trim moniker
 							boost::algorithm::trim( moniker );
 							std::ostringstream ostr;
-
-							 moniker.find( quote , 0 ) != std::string::npos ? ostr << moniker : ostr << quote << moniker << quote
-							 << space
-							 << nil
-							 << space
-							 << nil
-							 << space
-							 << quote
-							 << addr
-							 << quote;
+							//name may be unquoted
+							moniker.find( quote , 0 ) != std::string::npos ? ostr << moniker : ostr << quote << moniker << quote
+							<< space
+							<< nil
+							<< space
+							<< nil
+							<< space
+							<< quote
+							<< addr
+							<< quote;
 
 							single_addr_line( ostr.str() );
-						}
+						 }
 					}
 
-					void single_addr_line( const std::string& moniker )
+					inline void single_addr_line( const std::string& moniker )
 					{
 
 						*m_ptr_ostr << left_paren
@@ -187,7 +203,7 @@ namespace chromatic_imap_protocol_impl
 									<< crlf;
 					}
 
-					void multiple_addr_lines( const std::string& moniker )
+					inline void multiple_addr_lines( const std::string& moniker )
 					{
 						*m_ptr_ostr << left_paren
 									<< moniker
@@ -195,7 +211,7 @@ namespace chromatic_imap_protocol_impl
 									<< crlf;
 					}
 
-					void nil_addr_line()
+					inline void nil_addr_line()
 					{
 						*m_ptr_ostr << nil << crlf;
 					}
@@ -203,12 +219,12 @@ namespace chromatic_imap_protocol_impl
 					//services
 
 					//---------------------------------------------------------------------------------------
-					void process_multiple_addrs( addr_container& adrc )
+					inline void process_multiple_addrs( addr_container& adrc )
 					{
 						unsigned long dw { adrc.size() };
 						std::ostringstream line_strm;
 
-
+						//open singleton address
 						if( dw > 1 )  *m_ptr_ostr << left_paren << space;
 						for ( unsigned long i = 0; i < dw; i++ )
 						{
@@ -217,7 +233,7 @@ namespace chromatic_imap_protocol_impl
 							line_strm << addr_atom( adrc[i].first );
 
 							//smtp route
-							line_strm << addr_atom( "" );
+							line_strm << addr_atom( empty );
 
 							//friendly name
 							std::string friendly( friendly_name( adrc[i].second ) );
@@ -230,9 +246,11 @@ namespace chromatic_imap_protocol_impl
 							line_strm.str( empty );
 
 							boost::algorithm::trim( str );
+							// ? open : open-close
 							dw == 1 ? single_addr_line( str  ) : multiple_addr_lines( str );
 
 						}
+						//close singleton address
 						if( dw > 1 ) *m_ptr_ostr << space << right_paren << crlf;
 					}
 
@@ -241,6 +259,7 @@ namespace chromatic_imap_protocol_impl
 
 						std::string str( moniker );
 						std::string::size_type sz = str.find( ampersand );
+						//first atom of address
 						if( sz != std::string::npos ) { str = str.substr( 0 , sz ); }
 
 						return str;
@@ -249,8 +268,11 @@ namespace chromatic_imap_protocol_impl
 					//---------------------------------------------------------------------------------------
 					inline void fetch_addrs( addr_type at )
 					{
+						//cached line
 						std::string cached_addr{};
+						//cached address
 						std::string cached_from{};
+						//addr line
 						std::ostringstream line_strm;
 
 						while( at != addr_type::atNoMoreAddrs )
@@ -260,7 +282,6 @@ namespace chromatic_imap_protocol_impl
 								case addr_type::atFrom :
 								{
 									CkString cks;
-
 
 									//personal
 									m_email_ptr->get_FromName( cks );
@@ -295,7 +316,8 @@ namespace chromatic_imap_protocol_impl
 								case addr_type::atSender :
 								{
 									CkString cks;
-									bool b_ret = m_email_ptr->GetHeaderField( "Sender" , cks );
+									//treatment often ambigous by client and server
+									bool b_ret = m_email_ptr->GetHeaderField( sender.c_str() , cks );
 									//no sender , use from
 									if( b_ret == false ) { single_addr_line( cached_addr ); }
 									else single_sender_addr_line( cks.getString() );
@@ -308,7 +330,7 @@ namespace chromatic_imap_protocol_impl
 								{
 
 									CkString cks;
-									bool b_ret = m_email_ptr->GetHeaderField( "Reply-To" , cks );
+									bool b_ret = m_email_ptr->GetHeaderField( reply_to.c_str() , cks );
 
 
 									//no reply to , use from
@@ -393,7 +415,7 @@ namespace chromatic_imap_protocol_impl
 						 //string.[3501]
 						 if( ( b_ret == true ) && ( str.empty() == true ) ) { *m_ptr_ostr << quote << quote; }
 						 else if( str.empty() ) { *m_ptr_ostr << nil; }
-						 else { *m_ptr_ostr << "\"" << str << "\""; }
+						 else { *m_ptr_ostr << quote << str << quote; }
 						 *m_ptr_ostr << crlf;
 					}
 
