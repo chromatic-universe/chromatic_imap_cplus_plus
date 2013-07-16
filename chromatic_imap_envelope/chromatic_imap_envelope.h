@@ -34,6 +34,7 @@
 namespace chromatic_imap_protocol_impl
 {
 
+			//types
 			typedef CkMime ck_mime;
 			typedef CkEmail ck_email;
 			typedef ck_email* ck_email_ptr;
@@ -43,8 +44,7 @@ namespace chromatic_imap_protocol_impl
 			typedef std::pair<std::string,std::string> addr_pr;
 			typedef std::vector<addr_pr> addr_container;
 
-
-
+			//constant
 			const std::string constMimeUnlockCode = "SFCNICOMSMIME_sK7NCgi98C5p";
 			const std::string constMailUnlockCode = "SFCNICOMMAILQ_5NklwCi28R6H";
 			const std::string space(" ");
@@ -65,6 +65,7 @@ namespace chromatic_imap_protocol_impl
 			const std::string sender( "Sender" );
 			const std::string reply_to( "Reply-To" );
 
+			//enumerations
 			enum class addr_type : unsigned long
 			{
 				atFrom ,
@@ -77,15 +78,20 @@ namespace chromatic_imap_protocol_impl
 				atNoMoreAddrs
 			};
 
+			//class envelope parser
 			class envelope_parser
 			{
 				public:
 
+
 					//ctor
-					envelope_parser( ostr_ptr ostr , const std::string& file_name  ) :  m_ptr_ostr ( ostr ) ,
-																						m_mime_ptr { new ( ck_mime ) } ,
-																						m_email_ptr { new ( ck_email ) } ,
-																						m_filename{ file_name }
+					envelope_parser( ostr_ptr ostr ,
+									 const std::string& file_name ,
+									 bool parse_on_construct = true ) : m_ptr_ostr ( ostr ) ,
+																		m_mime_ptr { new ( ck_mime ) } ,
+																		m_email_ptr { new ( ck_email ) } ,
+																		m_filename{ file_name } ,
+																		m_b_parse_on_construct { parse_on_construct }
 
 					{
 						m_ac.clear();
@@ -93,26 +99,22 @@ namespace chromatic_imap_protocol_impl
 						assert( ostr );
 						assert( m_mime_ptr->UnlockComponent( constMimeUnlockCode.c_str() ) );
 
-						bool b_ret = m_mime_ptr->LoadMimeFile( m_filename.c_str() );
-						m_email_ptr->SetFromMimeObject( *m_mime_ptr.get() );
+						if( parse_on_construct == true ) { parse(); }
 
-						assert( b_ret );
-
-						//field
-						str_env_field_to_stream( date );
-						//field
-						str_env_field_to_stream( subject );
-						//addresses
-						fetch_addrs( addr_type::atFrom );
-						//field
-						str_env_field_to_stream( in_reply_to );
-						//field
-						str_env_field_to_stream( message_id );
 					 }
 
 					 //dtor
-					 ~envelope_parser()
+					 virtual ~envelope_parser()
 					{}
+
+				private:
+
+					 //no copy
+					 envelope_parser( const envelope_parser& ep );
+					 //no assign
+					 const envelope_parser& operator= ( const envelope_parser ep );
+					 //no compare
+					 bool operator== ( const envelope_parser& ep );
 
 				protected:
 
@@ -122,6 +124,7 @@ namespace chromatic_imap_protocol_impl
 					std::unique_ptr<ck_email> m_email_ptr;
 					std::string m_filename;
 					addr_container m_ac;
+					bool m_b_parse_on_construct;
 
 					//helpers
 					inline bool check_for_group_addr( const std::string& addr , std::string& group_moniker )
@@ -139,11 +142,13 @@ namespace chromatic_imap_protocol_impl
 						return b_ret;
 					}
 
+					//---------------------------------------------------------------------------------------
 					inline void process_group_addrs( const std::string& addrs )
 					{
 						//todo
 					}
 
+					//---------------------------------------------------------------------------------------
 					inline std::string addr_atom( const std::string& line )
 					{
 						std::ostringstream strstr;
@@ -156,9 +161,11 @@ namespace chromatic_imap_protocol_impl
 													  << quote
 													  << space;
 
+
 						return strstr.str();
 					}
 
+					//---------------------------------------------------------------------------------------
 					inline void single_sender_addr_line( const std::string& sender )
 					{
 						//left delimiter
@@ -190,9 +197,9 @@ namespace chromatic_imap_protocol_impl
 						 }
 					}
 
+					//---------------------------------------------------------------------------------------
 					inline void single_addr_line( const std::string& moniker )
 					{
-
 						*m_ptr_ostr << left_paren
 									<< space
 									<< left_paren
@@ -203,6 +210,7 @@ namespace chromatic_imap_protocol_impl
 									<< crlf;
 					}
 
+					//---------------------------------------------------------------------------------------
 					inline void multiple_addr_lines( const std::string& moniker )
 					{
 						*m_ptr_ostr << left_paren
@@ -211,6 +219,7 @@ namespace chromatic_imap_protocol_impl
 									<< crlf;
 					}
 
+					//---------------------------------------------------------------------------------------
 					inline void nil_addr_line()
 					{
 						*m_ptr_ostr << nil << crlf;
@@ -254,6 +263,7 @@ namespace chromatic_imap_protocol_impl
 						if( dw > 1 ) *m_ptr_ostr << space << right_paren << crlf;
 					}
 
+					//---------------------------------------------------------------------------------------
 					std::string friendly_name( const std::string& moniker )
 					{
 
@@ -421,7 +431,33 @@ namespace chromatic_imap_protocol_impl
 
 				public:
 
-					//
+					//services
+					//---------------------------------------------------------------------------------------
+					void parse()
+					{
+						bool b_ret = m_mime_ptr->LoadMimeFile( m_filename.c_str() );
+						m_email_ptr->SetFromMimeObject( *m_mime_ptr.get() );
+
+						assert( b_ret );
+
+						//field
+						str_env_field_to_stream( date );
+						//field
+						str_env_field_to_stream( subject );
+						//addresses
+						fetch_addrs( addr_type::atFrom );
+						//field
+						str_env_field_to_stream( in_reply_to );
+						//field
+						str_env_field_to_stream( message_id );
+					}
+
+					//accessors-inspectors
+					inline std::string filename() noexcept { return m_filename; }
+
+					//mutators
+					inline void filename( const std::string& name ) { m_filename = name; }
+
 			};
 }
 
