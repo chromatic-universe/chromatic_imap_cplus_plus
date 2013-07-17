@@ -9,6 +9,7 @@
 #include "chromatic_imap_bodystructure.h"
 
 using namespace chromatic_imap_protocol_impl;
+namespace cipi = chromatic_imap_protocol_impl;
 
 using std::cout;
 using std::unique_ptr;
@@ -23,11 +24,11 @@ int main()
 {
 	unique_ptr<ostringstream> ostr( new ( ostringstream ) );
 
-	*ostr << "ENVELOPE" << "(";
+	//*ostr << "ENVELOPE" << "(";
 	unique_ptr<bodystructure_parser> bsp( new  bodystructure_parser( ostr.get() , "Senior.eml" ) ) ;
-	*ostr << ")";
+	bsp->mime_traverse();
+	//*ostr << ")";
 
-	bsp->parse();
 	cout << ostr->str();
 
 	return 0;
