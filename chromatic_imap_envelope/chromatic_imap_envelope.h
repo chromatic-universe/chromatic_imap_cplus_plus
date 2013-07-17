@@ -47,6 +47,7 @@ namespace chromatic_imap_protocol_impl
 			//constant
 			const std::string constMimeUnlockCode = "SFCNICOMSMIME_sK7NCgi98C5p";
 			const std::string constMailUnlockCode = "SFCNICOMMAILQ_5NklwCi28R6H";
+			//tokens
 			const std::string space(" ");
 			const std::string right_paren( ")" );
 			const std::string left_paren( "(" );
@@ -58,6 +59,7 @@ namespace chromatic_imap_protocol_impl
 			const std::string left_angle( "<" );
 			const std::string right_angle( ">" );
 			const std::string crlf( "\n" );
+			//named tokens
 			const std::string date( "Date" );
 			const std::string subject( "Subject" );
 			const std::string in_reply_to( "In-Reply-To" );
@@ -86,20 +88,17 @@ namespace chromatic_imap_protocol_impl
 
 					//ctor
 					envelope_parser( ostr_ptr ostr ,
-									 const std::string& file_name ,
-									 bool parse_on_construct = true ) : m_ptr_ostr ( ostr ) ,
-																		m_mime_ptr { new ( ck_mime ) } ,
-																		m_email_ptr { new ( ck_email ) } ,
-																		m_filename{ file_name } ,
-																		m_b_parse_on_construct { parse_on_construct }
-
+									 const std::string& file_name ) : m_ptr_ostr ( ostr ) ,
+																	  m_mime_ptr { new ( ck_mime ) } ,
+																	  m_email_ptr { new ( ck_email ) } ,
+																	  m_filename{ file_name }
 					{
 						m_ac.clear();
 
 						assert( ostr );
 						assert( m_mime_ptr->UnlockComponent( constMimeUnlockCode.c_str() ) );
 
-						if( parse_on_construct == true ) { parse(); }
+						parse();
 
 					 }
 
@@ -124,7 +123,6 @@ namespace chromatic_imap_protocol_impl
 					std::unique_ptr<ck_email> m_email_ptr;
 					std::string m_filename;
 					addr_container m_ac;
-					bool m_b_parse_on_construct;
 
 					//helpers
 					inline bool check_for_group_addr( const std::string& addr , std::string& group_moniker )
