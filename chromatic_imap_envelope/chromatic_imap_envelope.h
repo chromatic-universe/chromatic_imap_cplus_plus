@@ -262,7 +262,7 @@ namespace chromatic_imap_protocol_impl
 					}
 
 					//---------------------------------------------------------------------------------------
-					std::string friendly_name( const std::string& moniker )
+					inline std::string friendly_name( const std::string& moniker )
 					{
 
 						std::string str( moniker );
@@ -431,7 +431,7 @@ namespace chromatic_imap_protocol_impl
 
 					//services
 					//---------------------------------------------------------------------------------------
-					void parse()
+					inline void parse()
 					{
 						bool b_ret = m_mime_ptr->LoadMimeFile( m_filename.c_str() );
 						m_email_ptr->SetFromMimeObject( *m_mime_ptr.get() );
