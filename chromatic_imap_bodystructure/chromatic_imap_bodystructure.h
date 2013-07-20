@@ -41,7 +41,6 @@ namespace chromatic_imap_protocol_impl
 		//types
 		typedef std::pair<std::string,std::string> mime_pr;
 
-
 		//constant
 		//tokens
 		const std::string forward_slash( "/" );
@@ -76,17 +75,16 @@ namespace chromatic_imap_protocol_impl
 				 //no copy
 				 bodystructure_parser( const bodystructure_parser& ep );
 				 //no assign
-				 const bodystructure_parser& operator= ( const bodystructure_parser ep );
+				 const bodystructure_parser& operator= ( const bodystructure_parser& ep );
 				 //no compare
 				 bool operator== ( const bodystructure_parser& ep );
 
 			protected:
 
-				//attributes
+				 //attributes
 				 std::unique_ptr<std::ostringstream> m_ptr_mime_str;
 
 				 //helpers
-
 				 inline bool _S( const std::string& moniker , const std::string& token , std::string::size_type& sz )
 				 {
 					 bool b_ret( false );
@@ -102,10 +100,11 @@ namespace chromatic_imap_protocol_impl
 					 std::string::size_type sz;
 
 					 if( _S( category , token , sz ) == true ){ pr.first = category.substr( 0 , sz );
-						 	 	 	 	 	 	 	 	 	    pr.second = category.substr( ++sz ); }
-					 std::ostringstream ostr;
-					 ostr << quote << pr.first << quote; pr.first = ostr.str(); ostr.str( "" );
-					 ostr << quote << pr.second << quote; pr.second = ostr.str();
+						 	 	 	 	 	 	 	 	 	    pr.second = category.substr( ++sz );
+						 	 	 	 	 	 	 	 	 	    std::ostringstream ostr;
+						 	 	 	 	 	 	 	 	 	    ostr << quote << pr.first << quote; pr.first = ostr.str(); ostr.str( "" );
+						 	 	 	 	 	 	 	 	 	    ostr << quote << pr.second << quote; pr.second = ostr.str();
+					 	 	 	 	 	 	 	 	 	 	   }
 
 					 return ( pr );
 				 }
@@ -113,7 +112,10 @@ namespace chromatic_imap_protocol_impl
 			public:
 
 				 //services
+
+				 //canonical message
 				 inline void mime_traverse() { mime_traverse( m_mime_ptr.get() , 0 ); };
+				 //mime tree
 				 inline void mime_traverse( ck_mime_ptr ptr_mime , int level )
 				 {
 					  CkString strContentType;
@@ -123,17 +125,17 @@ namespace chromatic_imap_protocol_impl
 					  mime_pr cr( splice( ptr_mime->charset() , dash ) );
 					  *m_ptr_ostr << content_type
 							      << colon
-							      << pr.first << " " << pr.second
+							      << pr.first << space << pr.second
 							      << crlf
 							      << charset
 							      << colon
-							      << cr.first << " " << cr.second
+							      << cr.first << space << cr.second
 							      << crlf;
 
 					  int num_parts = ptr_mime->get_NumParts();
 					  for ( int i = 0; i < num_parts; i++ )
 					  {
-						std::cout << i << "\n";
+						std::cout << i << crlf;
 						std::unique_ptr<CkMime> mime_part( ptr_mime->GetPart( i ) );
 						mime_traverse( mime_part.get() , level + 1 );
 					  }
