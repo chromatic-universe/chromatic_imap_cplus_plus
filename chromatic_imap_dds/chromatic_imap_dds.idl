@@ -1,0 +1,26 @@
+//chromatic_imap_dds.idl William K. Johnson original version July 2013
+
+
+module chromatic_imap_dds
+{
+	const long max_command_len = 32;
+	typedef string<max_command_len> command_type;
+
+	struct chromatic_imap_command
+	{
+		//session id
+		long session_idx;
+		//locale id
+		long locale_idx;
+		//moniker
+		string moniker;
+		//command
+		string command;
+		//payload
+		string payload;
+	};
+
+	#pragma keylist chromatic_imap_command session_idx
+	
+
+};
