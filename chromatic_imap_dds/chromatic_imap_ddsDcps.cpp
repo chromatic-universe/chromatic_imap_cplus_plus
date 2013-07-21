@@ -4,13 +4,16 @@
 //  
 //  File name: chromatic_imap_ddsDcps.cpp
 //  Source: chromatic_imap_ddsDcps.idl
-//  Generated: Sat Jul 20 22:57:31 2013
+//  Generated: Sun Jul 21 00:54:47 2013
 //  OpenSplice V6.3.0OSS
 //  
 //******************************************************************
 
 #include "chromatic_imap_ddsDcps.h"
 
+#if DDS_USE_EXPLICIT_TEMPLATES
+template class DDS_DCPSUVLSeq < chromatic_imap_dds::chromatic_name_service, struct chromatic_name_serviceSeq_uniq_>;
+#endif
 #if DDS_USE_EXPLICIT_TEMPLATES
 template class DDS_DCPSUVLSeq < chromatic_imap_dds::chromatic_imap_command, struct chromatic_imap_commandSeq_uniq_>;
 #endif
@@ -187,6 +190,182 @@ chromatic_imap_dds::chromatic_imap_commandDataReaderView_ptr chromatic_imap_dds:
 {
    chromatic_imap_dds::chromatic_imap_commandDataReaderView_ptr result;
    result = dynamic_cast < chromatic_imap_dds::chromatic_imap_commandDataReaderView_ptr> (p);
+   if (result) result->m_count++;
+   return result;
+}
+
+const char * chromatic_imap_dds::chromatic_name_serviceTypeSupportInterface::_local_id = "IDL:chromatic_imap_dds/chromatic_name_serviceTypeSupportInterface:1.0";
+
+chromatic_imap_dds::chromatic_name_serviceTypeSupportInterface_ptr chromatic_imap_dds::chromatic_name_serviceTypeSupportInterface::_duplicate (chromatic_imap_dds::chromatic_name_serviceTypeSupportInterface_ptr p)
+{
+   if (p) p->m_count++;
+   return p;
+}
+
+DDS::Boolean chromatic_imap_dds::chromatic_name_serviceTypeSupportInterface::_local_is_a (const char * _id)
+{
+   if (strcmp (_id, chromatic_imap_dds::chromatic_name_serviceTypeSupportInterface::_local_id) == 0)
+   {
+      return true;
+   }
+
+   typedef DDS::TypeSupport NestedBase_1;
+
+   if (NestedBase_1::_local_is_a (_id))
+   {
+      return true;
+   }
+
+   return false;
+}
+
+chromatic_imap_dds::chromatic_name_serviceTypeSupportInterface_ptr chromatic_imap_dds::chromatic_name_serviceTypeSupportInterface::_narrow (DDS::Object_ptr p)
+{
+   chromatic_imap_dds::chromatic_name_serviceTypeSupportInterface_ptr result = NULL;
+   if (p && p->_is_a (chromatic_imap_dds::chromatic_name_serviceTypeSupportInterface::_local_id))
+   {
+      result = dynamic_cast < chromatic_imap_dds::chromatic_name_serviceTypeSupportInterface_ptr> (p);
+      if (result) result->m_count++;
+   }
+   return result;
+}
+
+chromatic_imap_dds::chromatic_name_serviceTypeSupportInterface_ptr chromatic_imap_dds::chromatic_name_serviceTypeSupportInterface::_unchecked_narrow (DDS::Object_ptr p)
+{
+   chromatic_imap_dds::chromatic_name_serviceTypeSupportInterface_ptr result;
+   result = dynamic_cast < chromatic_imap_dds::chromatic_name_serviceTypeSupportInterface_ptr> (p);
+   if (result) result->m_count++;
+   return result;
+}
+
+const char * chromatic_imap_dds::chromatic_name_serviceDataWriter::_local_id = "IDL:chromatic_imap_dds/chromatic_name_serviceDataWriter:1.0";
+
+chromatic_imap_dds::chromatic_name_serviceDataWriter_ptr chromatic_imap_dds::chromatic_name_serviceDataWriter::_duplicate (chromatic_imap_dds::chromatic_name_serviceDataWriter_ptr p)
+{
+   if (p) p->m_count++;
+   return p;
+}
+
+DDS::Boolean chromatic_imap_dds::chromatic_name_serviceDataWriter::_local_is_a (const char * _id)
+{
+   if (strcmp (_id, chromatic_imap_dds::chromatic_name_serviceDataWriter::_local_id) == 0)
+   {
+      return true;
+   }
+
+   typedef DDS::DataWriter NestedBase_1;
+
+   if (NestedBase_1::_local_is_a (_id))
+   {
+      return true;
+   }
+
+   return false;
+}
+
+chromatic_imap_dds::chromatic_name_serviceDataWriter_ptr chromatic_imap_dds::chromatic_name_serviceDataWriter::_narrow (DDS::Object_ptr p)
+{
+   chromatic_imap_dds::chromatic_name_serviceDataWriter_ptr result = NULL;
+   if (p && p->_is_a (chromatic_imap_dds::chromatic_name_serviceDataWriter::_local_id))
+   {
+      result = dynamic_cast < chromatic_imap_dds::chromatic_name_serviceDataWriter_ptr> (p);
+      if (result) result->m_count++;
+   }
+   return result;
+}
+
+chromatic_imap_dds::chromatic_name_serviceDataWriter_ptr chromatic_imap_dds::chromatic_name_serviceDataWriter::_unchecked_narrow (DDS::Object_ptr p)
+{
+   chromatic_imap_dds::chromatic_name_serviceDataWriter_ptr result;
+   result = dynamic_cast < chromatic_imap_dds::chromatic_name_serviceDataWriter_ptr> (p);
+   if (result) result->m_count++;
+   return result;
+}
+
+const char * chromatic_imap_dds::chromatic_name_serviceDataReader::_local_id = "IDL:chromatic_imap_dds/chromatic_name_serviceDataReader:1.0";
+
+chromatic_imap_dds::chromatic_name_serviceDataReader_ptr chromatic_imap_dds::chromatic_name_serviceDataReader::_duplicate (chromatic_imap_dds::chromatic_name_serviceDataReader_ptr p)
+{
+   if (p) p->m_count++;
+   return p;
+}
+
+DDS::Boolean chromatic_imap_dds::chromatic_name_serviceDataReader::_local_is_a (const char * _id)
+{
+   if (strcmp (_id, chromatic_imap_dds::chromatic_name_serviceDataReader::_local_id) == 0)
+   {
+      return true;
+   }
+
+   typedef DDS::DataReader NestedBase_1;
+
+   if (NestedBase_1::_local_is_a (_id))
+   {
+      return true;
+   }
+
+   return false;
+}
+
+chromatic_imap_dds::chromatic_name_serviceDataReader_ptr chromatic_imap_dds::chromatic_name_serviceDataReader::_narrow (DDS::Object_ptr p)
+{
+   chromatic_imap_dds::chromatic_name_serviceDataReader_ptr result = NULL;
+   if (p && p->_is_a (chromatic_imap_dds::chromatic_name_serviceDataReader::_local_id))
+   {
+      result = dynamic_cast < chromatic_imap_dds::chromatic_name_serviceDataReader_ptr> (p);
+      if (result) result->m_count++;
+   }
+   return result;
+}
+
+chromatic_imap_dds::chromatic_name_serviceDataReader_ptr chromatic_imap_dds::chromatic_name_serviceDataReader::_unchecked_narrow (DDS::Object_ptr p)
+{
+   chromatic_imap_dds::chromatic_name_serviceDataReader_ptr result;
+   result = dynamic_cast < chromatic_imap_dds::chromatic_name_serviceDataReader_ptr> (p);
+   if (result) result->m_count++;
+   return result;
+}
+
+const char * chromatic_imap_dds::chromatic_name_serviceDataReaderView::_local_id = "IDL:chromatic_imap_dds/chromatic_name_serviceDataReaderView:1.0";
+
+chromatic_imap_dds::chromatic_name_serviceDataReaderView_ptr chromatic_imap_dds::chromatic_name_serviceDataReaderView::_duplicate (chromatic_imap_dds::chromatic_name_serviceDataReaderView_ptr p)
+{
+   if (p) p->m_count++;
+   return p;
+}
+
+DDS::Boolean chromatic_imap_dds::chromatic_name_serviceDataReaderView::_local_is_a (const char * _id)
+{
+   if (strcmp (_id, chromatic_imap_dds::chromatic_name_serviceDataReaderView::_local_id) == 0)
+   {
+      return true;
+   }
+
+   typedef DDS::DataReaderView NestedBase_1;
+
+   if (NestedBase_1::_local_is_a (_id))
+   {
+      return true;
+   }
+
+   return false;
+}
+
+chromatic_imap_dds::chromatic_name_serviceDataReaderView_ptr chromatic_imap_dds::chromatic_name_serviceDataReaderView::_narrow (DDS::Object_ptr p)
+{
+   chromatic_imap_dds::chromatic_name_serviceDataReaderView_ptr result = NULL;
+   if (p && p->_is_a (chromatic_imap_dds::chromatic_name_serviceDataReaderView::_local_id))
+   {
+      result = dynamic_cast < chromatic_imap_dds::chromatic_name_serviceDataReaderView_ptr> (p);
+      if (result) result->m_count++;
+   }
+   return result;
+}
+
+chromatic_imap_dds::chromatic_name_serviceDataReaderView_ptr chromatic_imap_dds::chromatic_name_serviceDataReaderView::_unchecked_narrow (DDS::Object_ptr p)
+{
+   chromatic_imap_dds::chromatic_name_serviceDataReaderView_ptr result;
+   result = dynamic_cast < chromatic_imap_dds::chromatic_name_serviceDataReaderView_ptr> (p);
    if (result) result->m_count++;
    return result;
 }

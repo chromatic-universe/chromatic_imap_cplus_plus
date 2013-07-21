@@ -349,6 +349,344 @@ namespace chromatic_imap_dds {
         void operator= (const chromatic_imap_commandDataReaderView &);
     };
     
+    class  chromatic_name_serviceTypeSupportFactory : public ::DDS::TypeSupportFactory_impl
+    {
+    public:
+        chromatic_name_serviceTypeSupportFactory() {}
+        virtual ~chromatic_name_serviceTypeSupportFactory() {}
+    private:
+        ::DDS::DataWriter_ptr
+        create_datawriter (gapi_dataWriter handle);
+    
+        ::DDS::DataReader_ptr
+        create_datareader (gapi_dataReader handle);
+    
+        ::DDS::DataReaderView_ptr
+        create_view (gapi_dataReaderView handle);
+    };
+    
+    class  chromatic_name_serviceTypeSupport : public virtual chromatic_name_serviceTypeSupportInterface,
+                                   public ::DDS::TypeSupport_impl
+    {
+    public:
+        virtual ::DDS::ReturnCode_t register_type(
+            ::DDS::DomainParticipant_ptr participant,
+            const char * type_name) THROW_ORB_EXCEPTIONS;
+    
+        virtual char * get_type_name() THROW_ORB_EXCEPTIONS;
+    
+        chromatic_name_serviceTypeSupport (void);
+        virtual ~chromatic_name_serviceTypeSupport (void);
+    
+    private:
+        chromatic_name_serviceTypeSupport (const chromatic_name_serviceTypeSupport &);
+        void operator= (const chromatic_name_serviceTypeSupport &);
+    
+        static const char *metaDescriptor[];
+        static const CORBA::ULong metaDescriptorArrLength;
+    };
+    
+    typedef chromatic_name_serviceTypeSupportInterface_var chromatic_name_serviceTypeSupport_var;
+    typedef chromatic_name_serviceTypeSupportInterface_ptr chromatic_name_serviceTypeSupport_ptr;
+    
+    class  chromatic_name_serviceDataWriter_impl : public virtual chromatic_name_serviceDataWriter,
+                                        public ::DDS::DataWriter_impl
+    {
+    public:
+    
+        virtual ::DDS::InstanceHandle_t register_instance(
+            const chromatic_name_service & instance_data) THROW_ORB_EXCEPTIONS;
+    
+        virtual ::DDS::InstanceHandle_t register_instance_w_timestamp(
+            const chromatic_name_service & instance_data,
+            const ::DDS::Time_t & source_timestamp) THROW_ORB_EXCEPTIONS;
+    
+        virtual ::DDS::ReturnCode_t unregister_instance(
+            const chromatic_name_service & instance_data,
+            ::DDS::InstanceHandle_t handle) THROW_ORB_EXCEPTIONS;
+    
+        virtual ::DDS::ReturnCode_t unregister_instance_w_timestamp(
+            const chromatic_name_service & instance_data,
+            ::DDS::InstanceHandle_t handle,
+            const ::DDS::Time_t & source_timestamp) THROW_ORB_EXCEPTIONS;
+    
+        virtual ::DDS::ReturnCode_t write(
+            const chromatic_name_service & instance_data,
+            ::DDS::InstanceHandle_t handle) THROW_ORB_EXCEPTIONS;
+    
+        virtual ::DDS::ReturnCode_t write_w_timestamp(
+            const chromatic_name_service & instance_data,
+            ::DDS::InstanceHandle_t handle,
+            const ::DDS::Time_t & source_timestamp) THROW_ORB_EXCEPTIONS;
+    
+        virtual ::DDS::ReturnCode_t dispose(
+            const chromatic_name_service & instance_data,
+            ::DDS::InstanceHandle_t handle) THROW_ORB_EXCEPTIONS;
+    
+        virtual ::DDS::ReturnCode_t dispose_w_timestamp(
+            const chromatic_name_service & instance_data,
+            ::DDS::InstanceHandle_t handle,
+            const ::DDS::Time_t & source_timestamp) THROW_ORB_EXCEPTIONS;
+    
+        virtual ::DDS::ReturnCode_t writedispose(
+            const chromatic_name_service & instance_data,
+            ::DDS::InstanceHandle_t handle) THROW_ORB_EXCEPTIONS;
+    
+        virtual ::DDS::ReturnCode_t writedispose_w_timestamp(
+            const chromatic_name_service & instance_data,
+            ::DDS::InstanceHandle_t handle,
+            const ::DDS::Time_t & source_timestamp) THROW_ORB_EXCEPTIONS;
+    
+        virtual ::DDS::ReturnCode_t get_key_value(
+            chromatic_name_service & key_holder,
+            ::DDS::InstanceHandle_t handle) THROW_ORB_EXCEPTIONS;
+    
+        virtual ::DDS::InstanceHandle_t lookup_instance(
+            const chromatic_name_service & instance_data) THROW_ORB_EXCEPTIONS;
+    
+    
+        chromatic_name_serviceDataWriter_impl (
+            gapi_dataWriter handle
+        );
+    
+        virtual ~chromatic_name_serviceDataWriter_impl (void);
+    
+    private:
+        chromatic_name_serviceDataWriter_impl(const chromatic_name_serviceDataWriter_impl &);
+        void operator= (const chromatic_name_serviceDataWriter &);
+    };
+    
+    class  chromatic_name_serviceDataReader_impl : public virtual chromatic_name_serviceDataReader,
+                                        public ::DDS::DataReader_impl
+    {
+        friend class chromatic_name_serviceDataReaderView_impl;
+    public:
+        virtual ::DDS::ReturnCode_t read(
+            chromatic_name_serviceSeq & received_data,
+            ::DDS::SampleInfoSeq & info_seq,
+            CORBA::Long max_samples,
+            ::DDS::SampleStateMask sample_states,
+            ::DDS::ViewStateMask view_states,
+            ::DDS::InstanceStateMask instance_states) THROW_ORB_EXCEPTIONS;
+    
+        virtual ::DDS::ReturnCode_t take(
+            chromatic_name_serviceSeq & received_data,
+            ::DDS::SampleInfoSeq & info_seq,
+            CORBA::Long max_samples,
+            ::DDS::SampleStateMask sample_states,
+            ::DDS::ViewStateMask view_states,
+            ::DDS::InstanceStateMask instance_states) THROW_ORB_EXCEPTIONS;
+    
+        virtual ::DDS::ReturnCode_t read_w_condition(
+            chromatic_name_serviceSeq & received_data,
+            ::DDS::SampleInfoSeq & info_seq,
+            CORBA::Long max_samples,
+            ::DDS::ReadCondition_ptr a_condition) THROW_ORB_EXCEPTIONS;
+    
+        virtual ::DDS::ReturnCode_t take_w_condition(
+            chromatic_name_serviceSeq & received_data,
+            ::DDS::SampleInfoSeq & info_seq,
+            CORBA::Long max_samples,
+            ::DDS::ReadCondition_ptr a_condition) THROW_ORB_EXCEPTIONS;
+    
+        virtual ::DDS::ReturnCode_t read_next_sample(
+            chromatic_name_service & received_data,
+            ::DDS::SampleInfo & sample_info) THROW_ORB_EXCEPTIONS;
+    
+        virtual ::DDS::ReturnCode_t take_next_sample(
+            chromatic_name_service & received_data,
+            ::DDS::SampleInfo & sample_info) THROW_ORB_EXCEPTIONS;
+    
+        virtual ::DDS::ReturnCode_t read_instance(
+            chromatic_name_serviceSeq & received_data,
+            ::DDS::SampleInfoSeq & info_seq,
+            CORBA::Long max_samples,
+            ::DDS::InstanceHandle_t a_handle,
+            ::DDS::SampleStateMask sample_states,
+            ::DDS::ViewStateMask view_states,
+            ::DDS::InstanceStateMask instance_states) THROW_ORB_EXCEPTIONS;
+    
+        virtual ::DDS::ReturnCode_t take_instance(
+            chromatic_name_serviceSeq & received_data,
+            ::DDS::SampleInfoSeq & info_seq,
+            CORBA::Long max_samples,
+            ::DDS::InstanceHandle_t a_handle,
+            ::DDS::SampleStateMask sample_states,
+            ::DDS::ViewStateMask view_states,
+            ::DDS::InstanceStateMask instance_states) THROW_ORB_EXCEPTIONS;
+    
+        virtual ::DDS::ReturnCode_t read_next_instance(
+            chromatic_name_serviceSeq & received_data,
+            ::DDS::SampleInfoSeq & info_seq,
+            CORBA::Long max_samples,
+            ::DDS::InstanceHandle_t a_handle,
+            ::DDS::SampleStateMask sample_states,
+            ::DDS::ViewStateMask view_states,
+            ::DDS::InstanceStateMask instance_states) THROW_ORB_EXCEPTIONS;
+    
+        virtual ::DDS::ReturnCode_t take_next_instance(
+            chromatic_name_serviceSeq & received_data,
+            ::DDS::SampleInfoSeq & info_seq,
+            CORBA::Long max_samples,
+            ::DDS::InstanceHandle_t a_handle,
+            ::DDS::SampleStateMask sample_states,
+            ::DDS::ViewStateMask view_states,
+            ::DDS::InstanceStateMask instance_states) THROW_ORB_EXCEPTIONS;
+    
+        virtual ::DDS::ReturnCode_t read_next_instance_w_condition(
+            chromatic_name_serviceSeq & received_data,
+            ::DDS::SampleInfoSeq & info_seq,
+            CORBA::Long max_samples,
+            ::DDS::InstanceHandle_t a_handle,
+            ::DDS::ReadCondition_ptr a_condition) THROW_ORB_EXCEPTIONS;
+    
+        virtual ::DDS::ReturnCode_t take_next_instance_w_condition(
+            chromatic_name_serviceSeq & received_data,
+            ::DDS::SampleInfoSeq & info_seq,
+            CORBA::Long max_samples,
+            ::DDS::InstanceHandle_t a_handle,
+            ::DDS::ReadCondition_ptr a_condition) THROW_ORB_EXCEPTIONS;
+    
+        virtual ::DDS::ReturnCode_t return_loan(
+            chromatic_name_serviceSeq & received_data,
+            ::DDS::SampleInfoSeq & info_seq) THROW_ORB_EXCEPTIONS;
+    
+        virtual ::DDS::ReturnCode_t get_key_value(
+            chromatic_name_service & key_holder,
+            ::DDS::InstanceHandle_t handle) THROW_ORB_EXCEPTIONS;
+    
+        virtual ::DDS::InstanceHandle_t lookup_instance(
+            const chromatic_name_service & instance) THROW_ORB_EXCEPTIONS;
+    
+        chromatic_name_serviceDataReader_impl (
+            gapi_dataReader handle
+        );
+    
+        virtual ~chromatic_name_serviceDataReader_impl(void);
+    
+    private:
+        chromatic_name_serviceDataReader_impl(const chromatic_name_serviceDataReader &);
+        void operator= (const chromatic_name_serviceDataReader &);
+    
+        static ::DDS::ReturnCode_t check_preconditions(
+            chromatic_name_serviceSeq & received_data,
+            ::DDS::SampleInfoSeq & info_seq,
+            CORBA::Long max_samples
+        );
+    };
+    
+    class  chromatic_name_serviceDataReaderView_impl : public virtual chromatic_name_serviceDataReaderView,
+                                        public ::DDS::DataReaderView_impl
+    {
+    public:
+        virtual ::DDS::ReturnCode_t read(
+            chromatic_name_serviceSeq & received_data,
+            ::DDS::SampleInfoSeq & info_seq,
+            CORBA::Long max_samples,
+            ::DDS::SampleStateMask sample_states,
+            ::DDS::ViewStateMask view_states,
+            ::DDS::InstanceStateMask instance_states) THROW_ORB_EXCEPTIONS;
+    
+        virtual ::DDS::ReturnCode_t take(
+            chromatic_name_serviceSeq & received_data,
+            ::DDS::SampleInfoSeq & info_seq,
+            CORBA::Long max_samples,
+            ::DDS::SampleStateMask sample_states,
+            ::DDS::ViewStateMask view_states,
+            ::DDS::InstanceStateMask instance_states) THROW_ORB_EXCEPTIONS;
+    
+        virtual ::DDS::ReturnCode_t read_w_condition(
+            chromatic_name_serviceSeq & received_data,
+            ::DDS::SampleInfoSeq & info_seq,
+            CORBA::Long max_samples,
+            ::DDS::ReadCondition_ptr a_condition) THROW_ORB_EXCEPTIONS;
+    
+        virtual ::DDS::ReturnCode_t take_w_condition(
+            chromatic_name_serviceSeq & received_data,
+            ::DDS::SampleInfoSeq & info_seq,
+            CORBA::Long max_samples,
+            ::DDS::ReadCondition_ptr a_condition) THROW_ORB_EXCEPTIONS;
+    
+        virtual ::DDS::ReturnCode_t read_next_sample(
+            chromatic_name_service & received_data,
+            ::DDS::SampleInfo & sample_info) THROW_ORB_EXCEPTIONS;
+    
+        virtual ::DDS::ReturnCode_t take_next_sample(
+            chromatic_name_service & received_data,
+            ::DDS::SampleInfo & sample_info) THROW_ORB_EXCEPTIONS;
+    
+        virtual ::DDS::ReturnCode_t read_instance(
+            chromatic_name_serviceSeq & received_data,
+            ::DDS::SampleInfoSeq & info_seq,
+            CORBA::Long max_samples,
+            ::DDS::InstanceHandle_t a_handle,
+            ::DDS::SampleStateMask sample_states,
+            ::DDS::ViewStateMask view_states,
+            ::DDS::InstanceStateMask instance_states) THROW_ORB_EXCEPTIONS;
+    
+        virtual ::DDS::ReturnCode_t take_instance(
+            chromatic_name_serviceSeq & received_data,
+            ::DDS::SampleInfoSeq & info_seq,
+            CORBA::Long max_samples,
+            ::DDS::InstanceHandle_t a_handle,
+            ::DDS::SampleStateMask sample_states,
+            ::DDS::ViewStateMask view_states,
+            ::DDS::InstanceStateMask instance_states) THROW_ORB_EXCEPTIONS;
+    
+        virtual ::DDS::ReturnCode_t read_next_instance(
+            chromatic_name_serviceSeq & received_data,
+            ::DDS::SampleInfoSeq & info_seq,
+            CORBA::Long max_samples,
+            ::DDS::InstanceHandle_t a_handle,
+            ::DDS::SampleStateMask sample_states,
+            ::DDS::ViewStateMask view_states,
+            ::DDS::InstanceStateMask instance_states) THROW_ORB_EXCEPTIONS;
+    
+        virtual ::DDS::ReturnCode_t take_next_instance(
+            chromatic_name_serviceSeq & received_data,
+            ::DDS::SampleInfoSeq & info_seq,
+            CORBA::Long max_samples,
+            ::DDS::InstanceHandle_t a_handle,
+            ::DDS::SampleStateMask sample_states,
+            ::DDS::ViewStateMask view_states,
+            ::DDS::InstanceStateMask instance_states) THROW_ORB_EXCEPTIONS;
+    
+        virtual ::DDS::ReturnCode_t read_next_instance_w_condition(
+            chromatic_name_serviceSeq & received_data,
+            ::DDS::SampleInfoSeq & info_seq,
+            CORBA::Long max_samples,
+            ::DDS::InstanceHandle_t a_handle,
+            ::DDS::ReadCondition_ptr a_condition) THROW_ORB_EXCEPTIONS;
+    
+        virtual ::DDS::ReturnCode_t take_next_instance_w_condition(
+            chromatic_name_serviceSeq & received_data,
+            ::DDS::SampleInfoSeq & info_seq,
+            CORBA::Long max_samples,
+            ::DDS::InstanceHandle_t a_handle,
+            ::DDS::ReadCondition_ptr a_condition) THROW_ORB_EXCEPTIONS;
+    
+        virtual ::DDS::ReturnCode_t return_loan(
+            chromatic_name_serviceSeq & received_data,
+            ::DDS::SampleInfoSeq & info_seq) THROW_ORB_EXCEPTIONS;
+    
+        virtual ::DDS::ReturnCode_t get_key_value(
+            chromatic_name_service & key_holder,
+            ::DDS::InstanceHandle_t handle) THROW_ORB_EXCEPTIONS;
+    
+        virtual ::DDS::InstanceHandle_t lookup_instance(
+            const chromatic_name_service & instance) THROW_ORB_EXCEPTIONS;
+    
+        chromatic_name_serviceDataReaderView_impl (
+            gapi_dataReader handle
+        );
+    
+        virtual ~chromatic_name_serviceDataReaderView_impl(void);
+    
+    private:
+        chromatic_name_serviceDataReaderView_impl(const chromatic_name_serviceDataReaderView &);
+        void operator= (const chromatic_name_serviceDataReaderView &);
+    };
+    
 }
 
 #endif

@@ -4,12 +4,12 @@
 //  
 //  File name: chromatic_imap_dds.cpp
 //  Source: chromatic_imap_dds.idl
-//  Generated: Sat Jul 20 22:57:31 2013
+//  Generated: Sun Jul 21 00:54:47 2013
 //  OpenSplice V6.3.0OSS
 //  
 //******************************************************************
 
-#include "chromatic_imap_dds.h"
+#include "chromatic_imap_dds_ext.h"
 
 int main( int argc , char* argv[] )
 {

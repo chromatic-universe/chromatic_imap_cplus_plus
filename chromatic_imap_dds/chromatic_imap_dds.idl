@@ -5,6 +5,7 @@ module chromatic_imap_dds
 {
 	const long max_command_len = 32;
 	typedef string<max_command_len> command_type;
+	typedef string<max_command_len> user_id;
 
 	struct chromatic_imap_command
 	{
@@ -15,12 +16,20 @@ module chromatic_imap_dds
 		//moniker
 		string moniker;
 		//command
-		string command;
+		command_type command;
 		//payload
 		string payload;
 	};
 
 	#pragma keylist chromatic_imap_command session_idx
 	
+	struct chromatic_name_service
+	{
+		//session id
+		long session_idx;
+		//user
+		user_id user_name;
+	};
 
+	#pragma keylist chromatic_name_service session_idx
 };
