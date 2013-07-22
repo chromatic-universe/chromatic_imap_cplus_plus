@@ -25,6 +25,7 @@ chromatic_imap_handler.d: ../chromatic_imap_handler.cpp \
  /dev_tools/ACE_wrappers/ace/os_include/os_ucontext.h \
  /dev_tools/ACE_wrappers/ace/Atomic_Op.h \
  /dev_tools/ACE_wrappers/ace/config-all.h \
+ /dev_tools/ACE_wrappers/ace/Trace.h \
  /dev_tools/ACE_wrappers/ace/OS_main.h \
  /dev_tools/ACE_wrappers/ace/Thread_Mutex.h \
  /dev_tools/ACE_wrappers/ace/OS_NS_Thread.h \
@@ -350,7 +351,6 @@ chromatic_imap_handler.d: ../chromatic_imap_handler.cpp \
  /dev_tools/ACE_wrappers/ace/INET_Addr.inl \
  /dev_tools/ACE_wrappers/ace/SOCK_Stream.inl \
  /dev_tools/ACE_wrappers/ace/SOCK_Acceptor.inl \
- /dev_tools/ACE_wrappers/ace/Trace.h \
  /dev_tools/ACE_wrappers/ace/Timer_Queue_T.h \
  /dev_tools/ACE_wrappers/ace/Timer_Queue_T.inl \
  /dev_tools/ACE_wrappers/ace/Timer_Queue_T.cpp \
@@ -365,9 +365,9 @@ chromatic_imap_handler.d: ../chromatic_imap_handler.cpp \
  /dev_tools/chilkat-9.4.0-x86-linux-gcc/include/CkEmail.h \
  /dev_tools/chilkat-9.4.0-x86-linux-gcc/include/CkMailMan.h \
  /dev_tools/chilkat-9.4.0-x86-linux-gcc/include/CkCrypt2.h \
- /media/wiljoh/55FE-3B01/chromatic_universe/trunk/c++/include/generic.h \
+ /media/wiljoh/55FE-3B01/chromatic_universe_gcc_11/trunk/include/generic.h \
  ../chromatic_types.h \
- /media/wiljoh/55FE-3B01/chromatic_universe/trunk/c++/include/chromatic_strings.h
+ /media/wiljoh/55FE-3B01/chromatic_universe_gcc_11/trunk/include/chromatic_strings.h
 
 ../chromatic_imap.h:
 
@@ -424,6 +424,8 @@ chromatic_imap_handler.d: ../chromatic_imap_handler.cpp \
 /dev_tools/ACE_wrappers/ace/Atomic_Op.h:
 
 /dev_tools/ACE_wrappers/ace/config-all.h:
+
+/dev_tools/ACE_wrappers/ace/Trace.h:
 
 /dev_tools/ACE_wrappers/ace/OS_main.h:
 
@@ -1087,8 +1089,6 @@ chromatic_imap_handler.d: ../chromatic_imap_handler.cpp \
 
 /dev_tools/ACE_wrappers/ace/SOCK_Acceptor.inl:
 
-/dev_tools/ACE_wrappers/ace/Trace.h:
-
 /dev_tools/ACE_wrappers/ace/Timer_Queue_T.h:
 
 /dev_tools/ACE_wrappers/ace/Timer_Queue_T.inl:
@@ -1117,8 +1117,8 @@ chromatic_imap_handler.d: ../chromatic_imap_handler.cpp \
 
 /dev_tools/chilkat-9.4.0-x86-linux-gcc/include/CkCrypt2.h:
 
-/media/wiljoh/55FE-3B01/chromatic_universe/trunk/c++/include/generic.h:
+/media/wiljoh/55FE-3B01/chromatic_universe_gcc_11/trunk/include/generic.h:
 
 ../chromatic_types.h:
 
-/media/wiljoh/55FE-3B01/chromatic_universe/trunk/c++/include/chromatic_strings.h:
+/media/wiljoh/55FE-3B01/chromatic_universe_gcc_11/trunk/include/chromatic_strings.h:

@@ -35,7 +35,7 @@ CPP_DEPS += \
 %.o: ../%.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
-	g++ -I/media/wiljoh/55FE-3B01/chromatic_universe/trunk/c++/include -I/dev_tools/chilkat-9.4.0-x86-linux-gcc/include -I/dev_tools/SQLAPI/include -I/dev_tools/ACE_wrappers -O0 -g3 -Wall -c -fmessage-length=0  -std=c++11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
+	g++ -DACE_NTRACE=0 -I/media/wiljoh/55FE-3B01/chromatic_universe_gcc_11/trunk/include -I/dev_tools/chilkat-9.4.0-x86-linux-gcc/include -I/dev_tools/SQLAPI/include -I/dev_tools/ACE_wrappers -O0 -g3 -Wall -c -fmessage-length=0  -std=c++11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
