@@ -72,7 +72,7 @@
 //db
 #include <SQLAPI.h>
 
-//chilka
+//chilkat
 #include "CkMime.h"
 #include "CkXml.h"
 #include "CkString.h"
@@ -414,7 +414,8 @@ namespace chromatic_imap_protocol_impl
 
 					  //types
 					  typedef ACE_Svc_Handler <ACE_SOCK_STREAM, ACE_NULL_SYNCH> inherited;
-					  typedef int (chromatic_handler::*ptrToFunction)( const std::string& strParams );//function pointer prototype
+					  //function pointer prototype
+					  typedef int ( chromatic_handler::*ptrToFunction )( const std::string& strParams );
 					  typedef std::map<std::string , ptrToFunction> map_of_commands;
 
 					  //ctor
@@ -429,12 +430,10 @@ namespace chromatic_imap_protocol_impl
 					  //close handler
 					  int close ( u_long flags = 0 );
 
-
 					  virtual int handle_close (ACE_HANDLE handle = ACE_INVALID_HANDLE,
 												ACE_Reactor_Mask mask = ACE_Event_Handler::ALL_EVENTS_MASK);
 
 					  int handle_timeout( const ACE_Time_Value& now , const void* act );
-
 
 
 					private:
@@ -547,18 +546,18 @@ namespace chromatic_imap_protocol_impl
 						static const std::string constServerName;
 
 						//accessors
-						bool uid() const throw() { return ( m_bUid ); }
-						inline std::string computer_name() const throw() { return ( m_strComputerName ); }
-						inline std::string token() const throw()  { return ( m_strToken ); }
+						bool uid() noexcept { return ( m_bUid ); }
+						inline std::string computer_name() noexcept { return ( m_strComputerName ); }
+						inline std::string token() noexcept  { return ( m_strToken ); }
 						inline std::string command_str() { return ( ucase( m_strCommand ) ); }
-						inline chromatic_command command() const throw()  { return ( m_currentCommand ); }
-						inline chromatic_packet_error error_packet() const throw() { return ( m_chromatic_packet_error ); }
-						inline std::string current_context()  const throw() { return ( m_currentContext ); }
+						inline chromatic_command command() noexcept  { return ( m_currentCommand ); }
+						inline chromatic_packet_error error_packet() noexcept { return ( m_chromatic_packet_error ); }
+						inline std::string current_context()  noexcept { return ( m_currentContext ); }
 						inline bool silent() { return ( m_bSilent ); }
 						inline std::string specify()  { return ( m_strSpecify ); }
 						inline std::string module_string()  { return ( m_strCurrentModule ); }
 						inline bool server_info() { return ( m_bServerInfo ); }
-						inline bool feflex() { return ( m_bReflex ); }
+						inline bool reflex() { return ( m_bReflex ); }
 						inline bool prompt() { return ( m_bPrompt ); }
 
 
