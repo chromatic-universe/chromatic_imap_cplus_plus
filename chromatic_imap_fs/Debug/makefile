@@ -37,19 +37,19 @@ endif
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: /dev_lib/libchromatic_strings.so
+all: /dev_bin/chromatic_imap_fs
 
 # Tool invocations
-/dev_lib/libchromatic_strings.so: $(OBJS) $(USER_OBJS)
+/dev_bin/chromatic_imap_fs: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++ -shared -o "/dev_lib/libchromatic_strings.so" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++  -o "/dev_bin/chromatic_imap_fs" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(OBJS)$(C++_DEPS)$(C_DEPS)$(CC_DEPS)$(LIBRARIES)$(CPP_DEPS)$(CXX_DEPS)$(C_UPPER_DEPS) /dev_lib/libchromatic_strings.so
+	-$(RM) $(OBJS)$(C++_DEPS)$(C_DEPS)$(CC_DEPS)$(CPP_DEPS)$(EXECUTABLES)$(CXX_DEPS)$(C_UPPER_DEPS) /dev_bin/chromatic_imap_fs
 	-@echo ' '
 
 .PHONY: all clean dependents
