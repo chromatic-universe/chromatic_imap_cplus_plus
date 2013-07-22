@@ -10,10 +10,9 @@
 
 
 using namespace chromatic_imap_dds;
+using namespace chromatic_imap_protocol_impl;
 
-//static initilialization
-//const check_status::status_map sm
-
+using std::string;
 
 
 

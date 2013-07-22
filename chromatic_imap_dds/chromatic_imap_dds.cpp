@@ -11,6 +11,10 @@
 
 #include "chromatic_imap_dds_ext.h"
 
+using namespace chromatic_imap_protocol_impl;
+using namespace chromatic_imap_dds;
+
+
 int main( int argc , char* argv[] )
 {
 	return 0;

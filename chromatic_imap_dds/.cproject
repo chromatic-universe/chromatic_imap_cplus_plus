@@ -26,6 +26,7 @@
 								<option id="gnu.cpp.compiler.option.other.other.339800653" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-c -fmessage-length=0 -std=c++11" valueType="string"/>
 								<option id="gnu.cpp.compiler.option.include.paths.477097994" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="/dev_tools/HDE/x86.linux2.6/include"/>
+									<listOptionValue builtIn="false" value="/media/wiljoh/55FE-3B01/chromatic_universe_gcc_11/trunk/include"/>
 									<listOptionValue builtIn="false" value="/dev_tools/HDE/x86.linux2.6/include/dcps/C++/CCPP"/>
 									<listOptionValue builtIn="false" value="/dev_tools/HDE/x86.linux2.6/include/sys"/>
 									<listOptionValue builtIn="false" value="/dev_tools/HDE/x86.linux2.6/include/dcps/C++/SACPP"/>
@@ -41,9 +42,11 @@
 							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug.818760077" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug">
 								<option id="gnu.cpp.link.option.paths.109903212" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
 									<listOptionValue builtIn="false" value="/dev_tools/HDE/x86.linux2.6/lib"/>
+									<listOptionValue builtIn="false" value="/dev_lib"/>
 								</option>
 								<option id="gnu.cpp.link.option.libs.803433992" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
 									<listOptionValue builtIn="false" value="ddskernel"/>
+									<listOptionValue builtIn="false" value="chromatic_strings"/>
 									<listOptionValue builtIn="false" value="ddsos"/>
 									<listOptionValue builtIn="false" value="dcpssacpp"/>
 									<listOptionValue builtIn="false" value="ddsserialization"/>
