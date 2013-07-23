@@ -114,7 +114,6 @@ namespace chromatic_imap_protocol_impl
 
 					//helpers
 					bool check_for_group_addr( const std::string& addr , std::string& group_moniker );
-					void process_group_addrs( const std::string& addrs );
 					std::string addr_atom( const std::string& line );
 					void single_sender_addr_line( const std::string& sender );
 					void single_addr_line( const std::string& moniker );
@@ -124,6 +123,7 @@ namespace chromatic_imap_protocol_impl
 
 					//services
 					void process_multiple_addrs( addr_container& adrc );
+					void process_group_addrs( const std::string& addrs );
 					void fetch_addrs( addr_type at );
 					void str_env_field_to_stream( const std::string& field_moniker );
 

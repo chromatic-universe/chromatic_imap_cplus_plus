@@ -185,6 +185,8 @@ void envelope_parser::fetch_addrs( addr_type at )
 	//addr line
 	ostringstream line_strm;
 
+	////
+
 	while( at != addr_type::atNoMoreAddrs )
 	{
 		switch ( at )
