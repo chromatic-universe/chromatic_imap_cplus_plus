@@ -5,8 +5,8 @@
  *      Author: wiljoh
  */
 
-#ifndef THE_LINUX_PROGRAMMING_INTERFACE_H_
-#define THE_LINUX_PROGRAMMING_INTERFACE_H_
+#ifndef TLPI_H_
+#define TLPI_H_
 
 
 
@@ -386,4 +386,4 @@ namespace tlpi
 			}
 
 }
-#endif /* THE_LINUX_PROGRAMMING_INTERFACE_H_ */
+#endif //TLPI
